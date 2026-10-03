@@ -23,6 +23,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ros-humble-rqt-tf-tree \
     ros-humble-rqt-robot-steering \
     && rm -rf /var/lib/apt/lists/*
+    && pip3 install --no-cache-dir gdown
 
 # Helps Qt apps (rqt, rviz2) behave over X11 forwarding
 ENV QT_X11_NO_MITSHM=1

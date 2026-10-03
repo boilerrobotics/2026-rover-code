@@ -1,0 +1,61 @@
+{
+    "name": "brc-ros2-humble",
+    "build": {
+      "dockerfile": "Dockerfile",
+      "context": "."
+    },
+  
+    // No workspaceMount/workspaceFolder override — VS Code's default is to
+    // bind-mount the whole repo (this folder, the one containing
+    // .devcontainer/) into the container at /workspaces/<repo-folder-name>,
+    // and open the container there. That's the repo root, including src/
+    // and .devcontainer/ itself, all visible inside the container too.
+  
+    "remoteUser": "devuser",
+  
+    // Keep this OFF by default. --network=host behaves inconsistently across
+    // Linux/macOS/Windows (see README), and Stage 1 doesn't need real network
+    // discovery anyway — it's local-only mock/bag-file work.
+    // "runArgs": ["--network=host"],
+  
+    
+    "containerEnv": {
+        "ROS_DOMAIN_ID": "0",
+        "DISPLAY": ":1",
+        "QT_X11_NO_MITSHM": "1"
+    },
+  
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "Ranch-Hand-Robotics.rde-ros-2",
+          "ms-python.python",
+          "ms-python.vscode-pylance",
+          "ms-vscode.cpptools",
+          "redhat.vscode-yaml"
+        ],
+        "settings": {
+          "python.defaultInterpreterPath": "/usr/bin/python3",
+          "terminal.integrated.defaultProfile.linux": "bash"
+        }
+      }
+    },
+
+
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1": {}
+  },
+
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": { "label": "Desktop (noVNC)", "onAutoForward": "openBrowser" }
+  },
+
+  
+    // Update rosdep's package index and pull in dependencies for whatever
+    // packages already exist under src/ (harmless / fast if src/ is empty).
+    "postCreateCommand": "rosdep update && sudo rosdep install --from-paths src --ignore-src -r -y || true",
+  
+    "postStartCommand": "echo 'ROS2 Humble dev container ready. Run: colcon build && source install/setup.bash'"
+  }
+  

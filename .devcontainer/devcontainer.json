@@ -54,8 +54,8 @@
   
     // Update rosdep's package index and pull in dependencies for whatever
     // packages already exist under src/ (harmless / fast if src/ is empty).
-    "postCreateCommand": "rosdep update && sudo rosdep install --from-paths src --ignore-src -r -y || true",
+    "postCreateCommand": "bash /workspaces/2026-rover-code/post_create.sh",
   
-    "postStartCommand": "echo 'ROS2 Humble dev container ready. Run: colcon build && source install/setup.bash'"
+    "postStartCommand": "bash /workspaces/2026-rover-code/fetch_bags.sh"
   }
   

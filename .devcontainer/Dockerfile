@@ -8,7 +8,7 @@ ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 
 # --- Base tooling -------------------------------------------------------
-RUN apt-get update && apt-get install -y --no-install-recommends \
+    RUN apt-get update && apt-get install -y --no-install-recommends \
     python3-pip \
     python3-colcon-common-extensions \
     python3-rosdep \
@@ -22,8 +22,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ros-humble-rqt-common-plugins \
     ros-humble-rqt-tf-tree \
     ros-humble-rqt-robot-steering \
-    && rm -rf /var/lib/apt/lists/*
-    && pip3 install --no-cache-dir gdown
+    # rosbag2 + MCAP storage plugin
+    ros-humble-rosbag2 \
+    ros-humble-rosbag2-storage-mcap \
+    && rm -rf /var/lib/apt/lists/* \
+    && pip3 install --no-cache-dir gdown mcap
 
 # Helps Qt apps (rqt, rviz2) behave over X11 forwarding
 ENV QT_X11_NO_MITSHM=1

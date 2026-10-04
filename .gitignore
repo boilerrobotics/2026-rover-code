@@ -3,6 +3,6 @@ build/
 bin/
 lib/
 install/
-ros_odrive
+ros_odrive/
 .vscode
 bags/

@@ -1,0 +1,24 @@
+[1.428s] Invoking command in '/workspaces/2026-rover-code/src/telemetry_pkg': PYTHONPATH=/workspaces/2026-rover-code/src/build/telemetry_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/2026-rover-code/src/install/telemetry_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/telemetry_pkg build --build-base /workspaces/2026-rover-code/src/build/telemetry_pkg/build install --record /workspaces/2026-rover-code/src/build/telemetry_pkg/install.log --install-scripts $base/lib/telemetry_pkg --single-version-externally-managed install_data
+[1.900s] running egg_info
+[1.901s] writing ../build/telemetry_pkg/telemetry_pkg.egg-info/PKG-INFO
+[1.902s] writing dependency_links to ../build/telemetry_pkg/telemetry_pkg.egg-info/dependency_links.txt
+[1.904s] writing entry points to ../build/telemetry_pkg/telemetry_pkg.egg-info/entry_points.txt
+[1.905s] writing requirements to ../build/telemetry_pkg/telemetry_pkg.egg-info/requires.txt
+[1.907s] writing top-level names to ../build/telemetry_pkg/telemetry_pkg.egg-info/top_level.txt
+[1.914s] reading manifest file '../build/telemetry_pkg/telemetry_pkg.egg-info/SOURCES.txt'
+[1.917s] writing manifest file '../build/telemetry_pkg/telemetry_pkg.egg-info/SOURCES.txt'
+[1.918s] running build
+[1.919s] running build_py
+[1.921s] copying telemetry_pkg/telemetry_node.py -> /workspaces/2026-rover-code/src/build/telemetry_pkg/build/lib/telemetry_pkg
+[1.922s] running install
+[1.924s] running install_lib
+[1.927s] copying /workspaces/2026-rover-code/src/build/telemetry_pkg/build/lib/telemetry_pkg/telemetry_node.py -> /workspaces/2026-rover-code/src/install/telemetry_pkg/lib/python3.10/site-packages/telemetry_pkg
+[1.934s] byte-compiling /workspaces/2026-rover-code/src/install/telemetry_pkg/lib/python3.10/site-packages/telemetry_pkg/telemetry_node.py to telemetry_node.cpython-310.pyc
+[1.943s] running install_data
+[1.944s] running install_egg_info
+[1.951s] removing '/workspaces/2026-rover-code/src/install/telemetry_pkg/lib/python3.10/site-packages/telemetry_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[1.957s] Copying ../build/telemetry_pkg/telemetry_pkg.egg-info to /workspaces/2026-rover-code/src/install/telemetry_pkg/lib/python3.10/site-packages/telemetry_pkg-0.0.0-py3.10.egg-info
+[1.970s] running install_scripts
+[2.014s] Installing telemetry_node script to /workspaces/2026-rover-code/src/install/telemetry_pkg/lib/telemetry_pkg
+[2.017s] writing list of installed files to '/workspaces/2026-rover-code/src/build/telemetry_pkg/install.log'
+[2.118s] Invoked command in '/workspaces/2026-rover-code/src/telemetry_pkg' returned '0': PYTHONPATH=/workspaces/2026-rover-code/src/build/telemetry_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/2026-rover-code/src/install/telemetry_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/telemetry_pkg build --build-base /workspaces/2026-rover-code/src/build/telemetry_pkg/build install --record /workspaces/2026-rover-code/src/build/telemetry_pkg/install.log --install-scripts $base/lib/telemetry_pkg --single-version-externally-managed install_data

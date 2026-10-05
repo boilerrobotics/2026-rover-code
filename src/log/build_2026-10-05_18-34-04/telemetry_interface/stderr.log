@@ -1,0 +1,15 @@
+[31mCMake Error at CMakeLists.txt:35:
+  Parse error.  Function missing ending ")".  Instead found unterminated
+  string with text "msg/Telemetry.msg
+
+    
+
+  )
+
+  
+
+  ament_package()
+
+  ".
+
+[0m

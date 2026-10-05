@@ -1,0 +1,5 @@
+  File "/workspaces/2026-rover-code/src/install/telemetry_pkg/lib/python3.10/site-packages/telemetry_pkg/telemetry_node.py", line 118
+    estimated_pos = [i['pos_estimate'] if i['can_id'] < 8 and i['can_id'] % 2 == 0]
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: expected 'else' after 'if' expression
+

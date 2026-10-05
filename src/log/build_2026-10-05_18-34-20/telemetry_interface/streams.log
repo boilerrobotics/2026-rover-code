@@ -1,0 +1,18 @@
+[0.038s] Invoking command in '/workspaces/2026-rover-code/src/build/telemetry_interface': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspaces/2026-rover-code/src/telemetry_interface -DCMAKE_INSTALL_PREFIX=/workspaces/2026-rover-code/src/install/telemetry_interface
+[0.047s] [31mCMake Error at CMakeLists.txt:35:
+[0.048s]   Parse error.  Function missing ending ")".  Instead found unterminated
+[0.049s]   string with text "msg/Telemetry.msg
+[0.052s] 
+[0.057s]     
+[0.059s] 
+[0.061s]   )
+[0.062s] 
+[0.063s]   
+[0.064s] 
+[0.065s]   ament_package()
+[0.066s] 
+[0.068s]   ".
+[0.069s] 
+[0.071s] [0m
+[0.072s] -- Configuring incomplete, errors occurred!
+[0.437s] Invoked command in '/workspaces/2026-rover-code/src/build/telemetry_interface' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspaces/2026-rover-code/src/telemetry_interface -DCMAKE_INSTALL_PREFIX=/workspaces/2026-rover-code/src/install/telemetry_interface

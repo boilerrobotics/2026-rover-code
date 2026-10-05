@@ -1,0 +1,476 @@
+[0.000000] (-) TimerEvent: {}
+[0.004525] (telemetry_interface) JobQueued: {'identifier': 'telemetry_interface', 'dependencies': OrderedDict()}
+[0.005025] (telemetry_pkg) JobQueued: {'identifier': 'telemetry_pkg', 'dependencies': OrderedDict()}
+[0.005234] (telemetry_interface) JobStarted: {'identifier': 'telemetry_interface'}
+[0.021912] (telemetry_pkg) JobStarted: {'identifier': 'telemetry_pkg'}
+[0.056405] (telemetry_interface) JobProgress: {'identifier': 'telemetry_interface', 'progress': 'cmake'}
+[0.061967] (telemetry_interface) JobProgress: {'identifier': 'telemetry_interface', 'progress': 'build'}
+[0.066957] (telemetry_interface) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspaces/2026-rover-code/src/build/telemetry_interface', '--', '-j16', '-l16'], 'cwd': '/workspaces/2026-rover-code/src/build/telemetry_interface', 'env': OrderedDict([('HOSTNAME', 'a938be853f6d'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/2242ebbb54efeeb0129e08e919e7e8d43033cd83/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/workspaces/2026-rover-code/src/install/telemetry_interface/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/2242ebbb54efeeb0129e08e919e7e8d43033cd83/bin/helpers/browser.sh'), ('HOME', '/home/devuser'), ('OLDPWD', '/workspaces/2026-rover-code'), ('TERM_PROGRAM_VERSION', '1.139.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-06911207-6555-4a4e-8220-9ce54f5cbc3a.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/2242ebbb54efeeb0129e08e919e7e8d43033cd83/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/2242ebbb54efeeb0129e08e919e7e8d43033cd83/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/workspaces/2026-rover-code/src/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-56696dfd-3b9c-4a7a-8c9b-e468dbdb0d43.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/home/devuser/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/devuser/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-x64/2242ebbb54efeeb0129e08e919e7e8d43033cd83/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-56696dfd-3b9c-4a7a-8c9b-e468dbdb0d43.sock","/home/devuser/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-a9ce9d0256.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-56696dfd-3b9c-4a7a-8c9b-e468dbdb0d43.sock'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/workspaces/2026-rover-code/src/install/telemetry_pkg:/workspaces/2026-rover-code/src/install/telemetry_interface:/opt/ros/humble'), ('SHELL', '/bin/sh'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/workspaces/2026-rover-code/src/build/telemetry_interface'), ('LC_ALL', 'C.UTF-8'), ('COPILOT_DEBUG_NONCE', 'db11eb875aea3baacef2c682a2a702e1'), ('PYTHONPATH', '/workspaces/2026-rover-code/src/install/telemetry_pkg/lib/python3.10/site-packages:/workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspaces/2026-rover-code/src/install/telemetry_interface:/workspaces/2026-rover-code/src/install/telemetry_pkg:/opt/ros/humble')]), 'shell': False}
+[0.098220] (-) TimerEvent: {}
+[0.160525] (telemetry_interface) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.198406] (-) TimerEvent: {}
+[0.299105] (-) TimerEvent: {}
+[0.400168] (-) TimerEvent: {}
+[0.428350] (telemetry_interface) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.500334] (-) TimerEvent: {}
+[0.584791] (telemetry_interface) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.589724] (telemetry_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.597577] (telemetry_interface) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.600478] (-) TimerEvent: {}
+[0.650949] (telemetry_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.700685] (-) TimerEvent: {}
+[0.802308] (-) TimerEvent: {}
+[0.903529] (-) TimerEvent: {}
+[1.004555] (-) TimerEvent: {}
+[1.103495] (telemetry_interface) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[1.108200] (-) TimerEvent: {}
+[1.209162] (-) TimerEvent: {}
+[1.219698] (telemetry_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/telemetry_pkg', 'build', '--build-base', '/workspaces/2026-rover-code/src/build/telemetry_pkg/build', 'install', '--record', '/workspaces/2026-rover-code/src/build/telemetry_pkg/install.log', '--install-scripts', '$base/lib/telemetry_pkg', '--single-version-externally-managed', 'install_data'], 'cwd': '/workspaces/2026-rover-code/src/telemetry_pkg', 'env': {'HOSTNAME': 'a938be853f6d', 'GIT_ASKPASS': '/vscode/vscode-server/bin/linux-x64/2242ebbb54efeeb0129e08e919e7e8d43033cd83/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/workspaces/2026-rover-code/src/install/telemetry_interface/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/vscode/vscode-server/bin/linux-x64/2242ebbb54efeeb0129e08e919e7e8d43033cd83/bin/helpers/browser.sh', 'HOME': '/home/devuser', 'OLDPWD': '/workspaces/2026-rover-code', 'TERM_PROGRAM_VERSION': '1.139.0', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-06911207-6555-4a4e-8220-9ce54f5cbc3a.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/vscode/vscode-server/bin/linux-x64/2242ebbb54efeeb0129e08e919e7e8d43033cd83/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/vscode/vscode-server/bin/linux-x64/2242ebbb54efeeb0129e08e919e7e8d43033cd83/node', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'COLCON_PREFIX_PATH': '/workspaces/2026-rover-code/src/install', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-56696dfd-3b9c-4a7a-8c9b-e468dbdb0d43.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/humble/bin:/home/devuser/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/devuser/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-x64/2242ebbb54efeeb0129e08e919e7e8d43033cd83/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/vscode-ssh-auth-56696dfd-3b9c-4a7a-8c9b-e468dbdb0d43.sock","/home/devuser/.gnupg/S.gpg-agent"]', 'DISPLAY': ':1', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-a9ce9d0256.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/vscode-ssh-auth-56696dfd-3b9c-4a7a-8c9b-e468dbdb0d43.sock', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/workspaces/2026-rover-code/src/install/telemetry_pkg:/workspaces/2026-rover-code/src/install/telemetry_interface:/opt/ros/humble', 'SHELL': '/bin/sh', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/workspaces/2026-rover-code/src/build/telemetry_pkg', 'LC_ALL': 'C.UTF-8', 'COPILOT_DEBUG_NONCE': 'db11eb875aea3baacef2c682a2a702e1', 'PYTHONPATH': '/workspaces/2026-rover-code/src/build/telemetry_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/2026-rover-code/src/install/telemetry_pkg/lib/python3.10/site-packages:/workspaces/2026-rover-code/src/install/telemetry_pkg/lib/python3.10/site-packages:/workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspaces/2026-rover-code/src/install/telemetry_interface'}, 'shell': False}
+[1.310170] (-) TimerEvent: {}
+[1.411135] (-) TimerEvent: {}
+[1.478978] (telemetry_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.511365] (-) TimerEvent: {}
+[1.604138] (telemetry_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[1.605736] (telemetry_pkg) StdoutLine: {'line': b'writing ../build/telemetry_pkg/telemetry_pkg.egg-info/PKG-INFO\n'}
+[1.607449] (telemetry_pkg) StdoutLine: {'line': b'writing dependency_links to ../build/telemetry_pkg/telemetry_pkg.egg-info/dependency_links.txt\n'}
+[1.608686] (telemetry_pkg) StdoutLine: {'line': b'writing entry points to ../build/telemetry_pkg/telemetry_pkg.egg-info/entry_points.txt\n'}
+[1.609881] (telemetry_pkg) StdoutLine: {'line': b'writing requirements to ../build/telemetry_pkg/telemetry_pkg.egg-info/requires.txt\n'}
+[1.610990] (telemetry_pkg) StdoutLine: {'line': b'writing top-level names to ../build/telemetry_pkg/telemetry_pkg.egg-info/top_level.txt\n'}
+[1.612178] (-) TimerEvent: {}
+[1.618622] (telemetry_pkg) StdoutLine: {'line': b"reading manifest file '../build/telemetry_pkg/telemetry_pkg.egg-info/SOURCES.txt'\n"}
+[1.621840] (telemetry_pkg) StdoutLine: {'line': b"writing manifest file '../build/telemetry_pkg/telemetry_pkg.egg-info/SOURCES.txt'\n"}
+[1.622960] (telemetry_pkg) StdoutLine: {'line': b'running build\n'}
+[1.624175] (telemetry_pkg) StdoutLine: {'line': b'running build_py\n'}
+[1.625185] (telemetry_pkg) StdoutLine: {'line': b'copying telemetry_pkg/telemetry_node.py -> /workspaces/2026-rover-code/src/build/telemetry_pkg/build/lib/telemetry_pkg\n'}
+[1.627710] (telemetry_pkg) StdoutLine: {'line': b'running install\n'}
+[1.628796] (telemetry_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[1.632713] (telemetry_pkg) StdoutLine: {'line': b'copying /workspaces/2026-rover-code/src/build/telemetry_pkg/build/lib/telemetry_pkg/telemetry_node.py -> /workspaces/2026-rover-code/src/install/telemetry_pkg/lib/python3.10/site-packages/telemetry_pkg\n'}
+[1.636998] (telemetry_pkg) StdoutLine: {'line': b'byte-compiling /workspaces/2026-rover-code/src/install/telemetry_pkg/lib/python3.10/site-packages/telemetry_pkg/telemetry_node.py to telemetry_node.cpython-310.pyc\n'}
+[1.642666] (telemetry_pkg) StdoutLine: {'line': b'running install_data\n'}
+[1.643895] (telemetry_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.649178] (telemetry_pkg) StdoutLine: {'line': b"removing '/workspaces/2026-rover-code/src/install/telemetry_pkg/lib/python3.10/site-packages/telemetry_pkg-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[1.651360] (telemetry_pkg) StdoutLine: {'line': b'Copying ../build/telemetry_pkg/telemetry_pkg.egg-info to /workspaces/2026-rover-code/src/install/telemetry_pkg/lib/python3.10/site-packages/telemetry_pkg-0.0.0-py3.10.egg-info\n'}
+[1.672483] (telemetry_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[1.704286] (telemetry_pkg) StdoutLine: {'line': b'Installing telemetry_node script to /workspaces/2026-rover-code/src/install/telemetry_pkg/lib/telemetry_pkg\n'}
+[1.707714] (telemetry_pkg) StdoutLine: {'line': b"writing list of installed files to '/workspaces/2026-rover-code/src/build/telemetry_pkg/install.log'\n"}
+[1.712327] (-) TimerEvent: {}
+[1.752183] (telemetry_pkg) CommandEnded: {'returncode': 0}
+[1.813033] (-) TimerEvent: {}
+[1.816545] (telemetry_pkg) JobEnded: {'identifier': 'telemetry_pkg', 'rc': 0}
+[1.913210] (-) TimerEvent: {}
+[2.005360] (telemetry_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.013378] (-) TimerEvent: {}
+[2.051179] (telemetry_interface) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[2.087142] (telemetry_interface) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[2.088430] (telemetry_interface) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[2.089307] (telemetry_interface) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[2.113569] (-) TimerEvent: {}
+[2.216246] (-) TimerEvent: {}
+[2.287653] (telemetry_interface) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.307155] (telemetry_interface) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.316366] (-) TimerEvent: {}
+[2.348463] (telemetry_interface) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.416540] (-) TimerEvent: {}
+[2.517357] (-) TimerEvent: {}
+[2.618010] (-) TimerEvent: {}
+[2.663096] (telemetry_interface) StdoutLine: {'line': b'-- Generating done\n'}
+[2.718232] (-) TimerEvent: {}
+[2.770188] (telemetry_interface) StdoutLine: {'line': b'-- Build files have been written to: /workspaces/2026-rover-code/src/build/telemetry_interface\n'}
+[2.818465] (-) TimerEvent: {}
+[2.873675] (telemetry_interface) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[2.908252] (telemetry_interface) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating Rust code for ROS interfaces\x1b[0m\n'}
+[2.918619] (-) TimerEvent: {}
+[2.919655] (telemetry_interface) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[2.983445] (telemetry_interface) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_copy_telemetry_interface\n'}
+[3.018871] (-) TimerEvent: {}
+[3.120161] (-) TimerEvent: {}
+[3.221270] (-) TimerEvent: {}
+[3.323160] (-) TimerEvent: {}
+[3.369134] (telemetry_interface) StdoutLine: {'line': b'running egg_info\n'}
+[3.372211] (telemetry_interface) StdoutLine: {'line': b'writing telemetry_interface.egg-info/PKG-INFO\n'}
+[3.375121] (telemetry_interface) StdoutLine: {'line': b'writing dependency_links to telemetry_interface.egg-info/dependency_links.txt\n'}
+[3.377851] (telemetry_interface) StdoutLine: {'line': b'writing top-level names to telemetry_interface.egg-info/top_level.txt\n'}
+[3.390917] (telemetry_interface) StdoutLine: {'line': b"reading manifest file 'telemetry_interface.egg-info/SOURCES.txt'\n"}
+[3.394150] (telemetry_interface) StdoutLine: {'line': b"writing manifest file 'telemetry_interface.egg-info/SOURCES.txt'\n"}
+[3.411022] (telemetry_interface) StdoutLine: {'line': b'[  5%] Built target telemetry_interface__rs\n'}
+[3.426159] (-) TimerEvent: {}
+[3.455219] (telemetry_interface) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_build_telemetry_interface_egg\n'}
+[3.526334] (-) TimerEvent: {}
+[3.627593] (-) TimerEvent: {}
+[3.728274] (-) TimerEvent: {}
+[3.805296] (telemetry_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target telemetry_interface__rosidl_generator_c\x1b[0m\n'}
+[3.826440] (telemetry_interface) StdoutLine: {'line': b'[  5%] Built target telemetry_interface__cpp\n'}
+[3.828363] (-) TimerEvent: {}
+[3.889951] (telemetry_interface) StdoutLine: {'line': b'[  7%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[3.904876] (telemetry_interface) StdoutLine: {'line': b'[  8%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[3.914899] (telemetry_interface) StdoutLine: {'line': b'[ 10%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[3.928969] (-) TimerEvent: {}
+[3.964259] (telemetry_interface) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/telemetry_interface__rosidl_generator_c.dir/rosidl_generator_c/telemetry_interface/msg/detail/controller_status__functions.c.o\x1b[0m\n'}
+[3.967190] (telemetry_interface) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding C object CMakeFiles/telemetry_interface__rosidl_generator_c.dir/rosidl_generator_c/telemetry_interface/msg/detail/telemetry_data__functions.c.o\x1b[0m\n'}
+[3.969176] (telemetry_interface) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/telemetry_interface__rosidl_generator_c.dir/rosidl_generator_c/telemetry_interface/msg/detail/o_drive_status__functions.c.o\x1b[0m\n'}
+[3.971715] (telemetry_interface) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/telemetry_interface__rosidl_generator_c.dir/rosidl_generator_c/telemetry_interface/msg/detail/control_message__functions.c.o\x1b[0m\n'}
+[4.029190] (-) TimerEvent: {}
+[4.108948] (telemetry_interface) StdoutLine: {'line': b'[ 19%] \x1b[32m\x1b[1mLinking C shared library libtelemetry_interface__rosidl_generator_c.so\x1b[0m\n'}
+[4.129341] (-) TimerEvent: {}
+[4.209442] (telemetry_interface) StdoutLine: {'line': b'[ 19%] Built target telemetry_interface__rosidl_generator_c\n'}
+[4.229495] (-) TimerEvent: {}
+[4.254196] (telemetry_interface) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[4.256855] (telemetry_interface) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[4.259312] (telemetry_interface) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[4.330164] (-) TimerEvent: {}
+[4.426607] (telemetry_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target telemetry_interface__rosidl_typesupport_cpp\x1b[0m\n'}
+[4.430281] (-) TimerEvent: {}
+[4.530880] (-) TimerEvent: {}
+[4.631744] (-) TimerEvent: {}
+[4.683146] (telemetry_interface) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/telemetry_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/telemetry_interface/msg/controller_status__type_support.cpp.o\x1b[0m\n'}
+[4.691202] (telemetry_interface) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/telemetry_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/telemetry_interface/msg/control_message__type_support.cpp.o\x1b[0m\n'}
+[4.711357] (telemetry_interface) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/telemetry_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/telemetry_interface/msg/telemetry_data__type_support.cpp.o\x1b[0m\n'}
+[4.712912] (telemetry_interface) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/telemetry_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/telemetry_interface/msg/o_drive_status__type_support.cpp.o\x1b[0m\n'}
+[4.718196] (telemetry_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target telemetry_interface__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[4.721227] (telemetry_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target telemetry_interface__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[4.731903] (-) TimerEvent: {}
+[4.832726] (-) TimerEvent: {}
+[4.878141] (telemetry_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target telemetry_interface__rosidl_typesupport_c\x1b[0m\n'}
+[4.932935] (-) TimerEvent: {}
+[5.034204] (-) TimerEvent: {}
+[5.135618] (-) TimerEvent: {}
+[5.205297] (telemetry_interface) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/telemetry_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/telemetry_interface/msg/controller_status__type_support.cpp.o\x1b[0m\n'}
+[5.208846] (telemetry_interface) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/telemetry_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/telemetry_interface/msg/detail/controller_status__type_support.cpp.o\x1b[0m\n'}
+[5.219527] (telemetry_interface) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/telemetry_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/telemetry_interface/msg/detail/dds_fastrtps/control_message__type_support.cpp.o\x1b[0m\n'}
+[5.223554] (telemetry_interface) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/telemetry_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/telemetry_interface/msg/detail/o_drive_status__type_support.cpp.o\x1b[0m\n'}
+[5.230212] (telemetry_interface) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/telemetry_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/telemetry_interface/msg/detail/dds_fastrtps/controller_status__type_support.cpp.o\x1b[0m\n'}
+[5.235748] (-) TimerEvent: {}
+[5.252549] (telemetry_interface) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/telemetry_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/telemetry_interface/msg/detail/dds_fastrtps/o_drive_status__type_support.cpp.o\x1b[0m\n'}
+[5.268580] (telemetry_interface) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/telemetry_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/telemetry_interface/msg/control_message__type_support.cpp.o\x1b[0m\n'}
+[5.282643] (telemetry_interface) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/telemetry_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/telemetry_interface/msg/detail/telemetry_data__type_support.cpp.o\x1b[0m\n'}
+[5.290693] (telemetry_interface) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/telemetry_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/telemetry_interface/msg/o_drive_status__type_support.cpp.o\x1b[0m\n'}
+[5.295163] (telemetry_interface) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/telemetry_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/telemetry_interface/msg/detail/control_message__type_support.cpp.o\x1b[0m\n'}
+[5.301681] (telemetry_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target telemetry_interface__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[5.313917] (telemetry_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target telemetry_interface__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[5.335952] (-) TimerEvent: {}
+[5.437390] (-) TimerEvent: {}
+[5.461292] (telemetry_interface) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding C object CMakeFiles/telemetry_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/telemetry_interface/msg/detail/controller_status__type_support.c.o\x1b[0m\n'}
+[5.537584] (-) TimerEvent: {}
+[5.567706] (telemetry_interface) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/telemetry_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/telemetry_interface/msg/telemetry_data__type_support.cpp.o\x1b[0m\n'}
+[5.569829] (telemetry_interface) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding C object CMakeFiles/telemetry_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/telemetry_interface/msg/detail/control_message__type_support.c.o\x1b[0m\n'}
+[5.595141] (telemetry_interface) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/telemetry_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/telemetry_interface/msg/detail/dds_fastrtps/telemetry_data__type_support.cpp.o\x1b[0m\n'}
+[5.639739] (-) TimerEvent: {}
+[5.706367] (telemetry_interface) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding C object CMakeFiles/telemetry_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/telemetry_interface/msg/detail/o_drive_status__type_support.c.o\x1b[0m\n'}
+[5.716185] (telemetry_interface) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding C object CMakeFiles/telemetry_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/telemetry_interface/msg/detail/telemetry_data__type_support.c.o\x1b[0m\n'}
+[5.732563] (telemetry_interface) StdoutLine: {'line': b'[ 62%] \x1b[32m\x1b[1mLinking CXX shared library libtelemetry_interface__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[5.740332] (-) TimerEvent: {}
+[5.780565] (telemetry_interface) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/telemetry_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/telemetry_interface/msg/detail/control_message__type_support_c.cpp.o\x1b[0m\n'}
+[5.794884] (telemetry_interface) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/telemetry_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/telemetry_interface/msg/detail/o_drive_status__type_support_c.cpp.o\x1b[0m\n'}
+[5.840914] (-) TimerEvent: {}
+[5.854258] (telemetry_interface) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/telemetry_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/telemetry_interface/msg/detail/controller_status__type_support_c.cpp.o\x1b[0m\n'}
+[5.922135] (telemetry_interface) StdoutLine: {'line': b'[ 69%] \x1b[32m\x1b[1mLinking CXX shared library libtelemetry_interface__rosidl_typesupport_c.so\x1b[0m\n'}
+[5.941146] (-) TimerEvent: {}
+[5.979418] (telemetry_interface) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/telemetry_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/telemetry_interface/msg/detail/telemetry_data__type_support_c.cpp.o\x1b[0m\n'}
+[6.042740] (-) TimerEvent: {}
+[6.137069] (telemetry_interface) StdoutLine: {'line': b'[ 73%] \x1b[32m\x1b[1mLinking C shared library libtelemetry_interface__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[6.155976] (-) TimerEvent: {}
+[6.260202] (-) TimerEvent: {}
+[6.364675] (-) TimerEvent: {}
+[6.368244] (telemetry_interface) StdoutLine: {'line': b'[ 73%] Built target telemetry_interface__rosidl_typesupport_cpp\n'}
+[6.466482] (telemetry_interface) StdoutLine: {'line': b'[ 73%] Built target telemetry_interface__rosidl_typesupport_c\n'}
+[6.468497] (-) TimerEvent: {}
+[6.549416] (telemetry_interface) StdoutLine: {'line': b'[ 73%] Built target telemetry_interface__rosidl_typesupport_introspection_c\n'}
+[6.568693] (-) TimerEvent: {}
+[6.670015] (-) TimerEvent: {}
+[6.674252] (telemetry_interface) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX shared library libtelemetry_interface__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[6.770648] (-) TimerEvent: {}
+[6.832242] (telemetry_interface) StdoutLine: {'line': b'[ 76%] \x1b[32m\x1b[1mLinking CXX shared library libtelemetry_interface__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[6.870817] (-) TimerEvent: {}
+[6.896176] (telemetry_interface) StdoutLine: {'line': b'[ 76%] Built target telemetry_interface__rosidl_typesupport_introspection_cpp\n'}
+[6.970990] (-) TimerEvent: {}
+[7.014257] (telemetry_interface) StdoutLine: {'line': b'[ 76%] Built target telemetry_interface__rosidl_typesupport_fastrtps_cpp\n'}
+[7.071408] (-) TimerEvent: {}
+[7.151171] (telemetry_interface) StdoutLine: {'line': b'[ 78%] \x1b[32m\x1b[1mLinking CXX shared library libtelemetry_interface__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[7.171558] (-) TimerEvent: {}
+[7.273029] (-) TimerEvent: {}
+[7.300455] (telemetry_interface) StdoutLine: {'line': b'[ 78%] Built target telemetry_interface__rosidl_typesupport_fastrtps_c\n'}
+[7.351944] (telemetry_interface) StdoutLine: {'line': b'[ 78%] Built target telemetry_interface\n'}
+[7.373189] (-) TimerEvent: {}
+[7.406985] (telemetry_interface) StdoutLine: {'line': b'[ 80%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[7.473374] (-) TimerEvent: {}
+[7.574139] (-) TimerEvent: {}
+[7.676175] (-) TimerEvent: {}
+[7.777532] (-) TimerEvent: {}
+[7.879161] (-) TimerEvent: {}
+[7.980524] (-) TimerEvent: {}
+[8.082092] (-) TimerEvent: {}
+[8.184221] (-) TimerEvent: {}
+[8.285757] (-) TimerEvent: {}
+[8.337299] (telemetry_interface) StdoutLine: {'line': b'[ 80%] Built target telemetry_interface__py\n'}
+[8.370208] (telemetry_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target telemetry_interface__rosidl_generator_py\x1b[0m\n'}
+[8.385936] (-) TimerEvent: {}
+[8.489027] (-) TimerEvent: {}
+[8.591895] (-) TimerEvent: {}
+[8.646443] (telemetry_interface) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/telemetry_interface__rosidl_generator_py.dir/rosidl_generator_py/telemetry_interface/msg/_control_message_s.c.o\x1b[0m\n'}
+[8.653705] (telemetry_interface) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/telemetry_interface__rosidl_generator_py.dir/rosidl_generator_py/telemetry_interface/msg/_o_drive_status_s.c.o\x1b[0m\n'}
+[8.654931] (telemetry_interface) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/telemetry_interface__rosidl_generator_py.dir/rosidl_generator_py/telemetry_interface/msg/_telemetry_data_s.c.o\x1b[0m\n'}
+[8.656748] (telemetry_interface) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/telemetry_interface__rosidl_generator_py.dir/rosidl_generator_py/telemetry_interface/msg/_controller_status_s.c.o\x1b[0m\n'}
+[8.692191] (-) TimerEvent: {}
+[8.793133] (-) TimerEvent: {}
+[8.894670] (-) TimerEvent: {}
+[8.928924] (telemetry_interface) StdoutLine: {'line': b'[ 89%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/telemetry_interface/libtelemetry_interface__rosidl_generator_py.so\x1b[0m\n'}
+[8.994844] (-) TimerEvent: {}
+[9.038563] (telemetry_interface) StdoutLine: {'line': b'[ 89%] Built target telemetry_interface__rosidl_generator_py\n'}
+[9.073144] (telemetry_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target telemetry_interface__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[9.081694] (telemetry_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target telemetry_interface__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[9.087623] (telemetry_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target telemetry_interface__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[9.094969] (-) TimerEvent: {}
+[9.195623] (-) TimerEvent: {}
+[9.263607] (telemetry_interface) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/telemetry_interface__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/telemetry_interface/_telemetry_interface_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[9.266838] (telemetry_interface) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/telemetry_interface__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/telemetry_interface/_telemetry_interface_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[9.268638] (telemetry_interface) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/telemetry_interface__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/telemetry_interface/_telemetry_interface_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[9.296225] (-) TimerEvent: {}
+[9.397018] (-) TimerEvent: {}
+[9.498564] (-) TimerEvent: {}
+[9.548275] (telemetry_interface) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/telemetry_interface/telemetry_interface_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[9.590783] (telemetry_interface) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/telemetry_interface/telemetry_interface_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[9.598641] (-) TimerEvent: {}
+[9.612439] (telemetry_interface) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/telemetry_interface/telemetry_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[9.677158] (telemetry_interface) StdoutLine: {'line': b'[100%] Built target telemetry_interface__rosidl_typesupport_c__pyext\n'}
+[9.698819] (-) TimerEvent: {}
+[9.716696] (telemetry_interface) StdoutLine: {'line': b'[100%] Built target telemetry_interface__rosidl_typesupport_introspection_c__pyext\n'}
+[9.738290] (telemetry_interface) StdoutLine: {'line': b'[100%] Built target telemetry_interface__rosidl_typesupport_fastrtps_c__pyext\n'}
+[9.780351] (telemetry_interface) CommandEnded: {'returncode': 0}
+[9.784892] (telemetry_interface) JobProgress: {'identifier': 'telemetry_interface', 'progress': 'install'}
+[9.798978] (-) TimerEvent: {}
+[9.806612] (telemetry_interface) Command: {'cmd': ['/usr/bin/cmake', '--install', '/workspaces/2026-rover-code/src/build/telemetry_interface'], 'cwd': '/workspaces/2026-rover-code/src/build/telemetry_interface', 'env': OrderedDict([('HOSTNAME', 'a938be853f6d'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/2242ebbb54efeeb0129e08e919e7e8d43033cd83/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/workspaces/2026-rover-code/src/install/telemetry_interface/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/2242ebbb54efeeb0129e08e919e7e8d43033cd83/bin/helpers/browser.sh'), ('HOME', '/home/devuser'), ('OLDPWD', '/workspaces/2026-rover-code'), ('TERM_PROGRAM_VERSION', '1.139.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-06911207-6555-4a4e-8220-9ce54f5cbc3a.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/2242ebbb54efeeb0129e08e919e7e8d43033cd83/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/2242ebbb54efeeb0129e08e919e7e8d43033cd83/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/workspaces/2026-rover-code/src/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-56696dfd-3b9c-4a7a-8c9b-e468dbdb0d43.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/home/devuser/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/devuser/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-x64/2242ebbb54efeeb0129e08e919e7e8d43033cd83/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-56696dfd-3b9c-4a7a-8c9b-e468dbdb0d43.sock","/home/devuser/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-a9ce9d0256.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-56696dfd-3b9c-4a7a-8c9b-e468dbdb0d43.sock'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/workspaces/2026-rover-code/src/install/telemetry_pkg:/workspaces/2026-rover-code/src/install/telemetry_interface:/opt/ros/humble'), ('SHELL', '/bin/sh'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/workspaces/2026-rover-code/src/build/telemetry_interface'), ('LC_ALL', 'C.UTF-8'), ('COPILOT_DEBUG_NONCE', 'db11eb875aea3baacef2c682a2a702e1'), ('PYTHONPATH', '/workspaces/2026-rover-code/src/install/telemetry_pkg/lib/python3.10/site-packages:/workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspaces/2026-rover-code/src/install/telemetry_interface:/workspaces/2026-rover-code/src/install/telemetry_pkg:/opt/ros/humble')]), 'shell': False}
+[9.829155] (telemetry_interface) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[9.830213] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/share/ament_index/resource_index/rosidl_interfaces/telemetry_interface\n'}
+[9.833428] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface\n'}
+[9.834706] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg\n'}
+[9.835797] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/rosidl_generator_c__visibility_control.h\n'}
+[9.836694] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/telemetry.h\n'}
+[9.837703] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/telemetry_data.h\n'}
+[9.841610] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/control_message.h\n'}
+[9.844995] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail\n'}
+[9.846351] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__type_support.h\n'}
+[9.847251] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__struct.h\n'}
+[9.850536] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__type_support.h\n'}
+[9.854560] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__struct.h\n'}
+[9.855695] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__functions.c\n'}
+[9.859160] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__functions.h\n'}
+[9.863615] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__type_support.h\n'}
+[9.869833] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__functions.h\n'}
+[9.874755] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__functions.c\n'}
+[9.879568] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__functions.c\n'}
+[9.884487] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__struct.h\n'}
+[9.888670] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__functions.c\n'}
+[9.892758] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__functions.c\n'}
+[9.893603] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__struct.h\n'}
+[9.897499] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__struct.h\n'}
+[9.899136] (-) TimerEvent: {}
+[9.902344] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__type_support.h\n'}
+[9.906475] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__functions.h\n'}
+[9.907767] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__functions.h\n'}
+[9.912144] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__type_support.h\n'}
+[9.916166] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__functions.h\n'}
+[9.920839] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/controller_status.h\n'}
+[9.924995] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/o_drive_status.h\n'}
+[9.929065] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/environment/library_path.sh\n'}
+[9.930354] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/environment/library_path.dsv\n'}
+[9.934537] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_generator_c.so\n'}
+[9.942260] (telemetry_interface) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_generator_c.so" to ""\n'}
+[9.943244] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface\n'}
+[9.944520] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg\n'}
+[9.945461] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail\n'}
+[9.946771] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__rosidl_typesupport_fastrtps_c.h\n'}
+[9.951410] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__rosidl_typesupport_fastrtps_c.h\n'}
+[9.955178] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__rosidl_typesupport_fastrtps_c.h\n'}
+[9.958444] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__rosidl_typesupport_fastrtps_c.h\n'}
+[9.961911] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__rosidl_typesupport_fastrtps_c.h\n'}
+[9.962979] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[9.964493] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_typesupport_fastrtps_c.so\n'}
+[9.971165] (telemetry_interface) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[9.972082] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface\n'}
+[9.972953] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg\n'}
+[9.974002] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[9.974938] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail\n'}
+[9.976681] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__type_support.c\n'}
+[9.980750] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__type_support.c\n'}
+[9.981716] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__rosidl_typesupport_introspection_c.h\n'}
+[9.986301] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__rosidl_typesupport_introspection_c.h\n'}
+[9.990158] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__type_support.c\n'}
+[9.994939] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__rosidl_typesupport_introspection_c.h\n'}
+[9.998460] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__type_support.c\n'}
+[9.999405] (-) TimerEvent: {}
+[10.002841] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__type_support.c\n'}
+[10.007612] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__rosidl_typesupport_introspection_c.h\n'}
+[10.008708] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__rosidl_typesupport_introspection_c.h\n'}
+[10.014542] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_typesupport_introspection_c.so\n'}
+[10.022005] (telemetry_interface) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_typesupport_introspection_c.so" to ""\n'}
+[10.023669] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_typesupport_c.so\n'}
+[10.029537] (telemetry_interface) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_typesupport_c.so" to ""\n'}
+[10.030377] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface\n'}
+[10.031166] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg\n'}
+[10.032225] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/control_message.hpp\n'}
+[10.035855] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[10.036708] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/telemetry.hpp\n'}
+[10.037500] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/controller_status.hpp\n'}
+[10.041237] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/o_drive_status.hpp\n'}
+[10.045283] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/telemetry_data.hpp\n'}
+[10.049409] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail\n'}
+[10.050848] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__type_support.hpp\n'}
+[10.055129] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__builder.hpp\n'}
+[10.059471] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__struct.hpp\n'}
+[10.064149] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__type_support.hpp\n'}
+[10.067672] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__builder.hpp\n'}
+[10.071956] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__type_support.hpp\n'}
+[10.075997] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__traits.hpp\n'}
+[10.076964] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__type_support.hpp\n'}
+[10.077716] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__builder.hpp\n'}
+[10.082121] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__traits.hpp\n'}
+[10.085898] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__type_support.hpp\n'}
+[10.091020] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__struct.hpp\n'}
+[10.095728] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__struct.hpp\n'}
+[10.100201] (-) TimerEvent: {}
+[10.101276] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__traits.hpp\n'}
+[10.109416] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__traits.hpp\n'}
+[10.116305] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__struct.hpp\n'}
+[10.121032] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__builder.hpp\n'}
+[10.122405] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__struct.hpp\n'}
+[10.123404] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__traits.hpp\n'}
+[10.127353] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__builder.hpp\n'}
+[10.131662] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface\n'}
+[10.132958] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg\n'}
+[10.134234] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[10.135217] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail\n'}
+[10.136471] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.137605] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.142187] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.146647] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.151413] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/dds_fastrtps\n'}
+[10.153235] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.158386] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_typesupport_fastrtps_cpp.so\n'}
+[10.168781] (telemetry_interface) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[10.169648] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface\n'}
+[10.171711] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg\n'}
+[10.174931] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail\n'}
+[10.176466] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__type_support.cpp\n'}
+[10.178252] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.179811] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.185567] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__type_support.cpp\n'}
+[10.192164] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.195412] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__type_support.cpp\n'}
+[10.200698] (-) TimerEvent: {}
+[10.208529] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__type_support.cpp\n'}
+[10.214615] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.215868] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__type_support.cpp\n'}
+[10.221984] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.229367] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_typesupport_introspection_cpp.so\n'}
+[10.244079] (telemetry_interface) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[10.245844] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_typesupport_cpp.so\n'}
+[10.252437] (telemetry_interface) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_typesupport_cpp.so" to ""\n'}
+[10.253635] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/environment/pythonpath.sh\n'}
+[10.254712] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/environment/pythonpath.dsv\n'}
+[10.258805] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface-0.0.0-py3.10.egg-info\n'}
+[10.260197] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[10.265918] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[10.269399] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[10.276643] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[10.284633] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface\n'}
+[10.286394] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/_telemetry_interface_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[10.296139] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/telemetry_interface_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[10.301216] (-) TimerEvent: {}
+[10.301973] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/telemetry_interface_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[10.309815] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/_telemetry_interface_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[10.319145] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/__init__.py\n'}
+[10.325060] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/_telemetry_interface_s.ep.rosidl_typesupport_c.c\n'}
+[10.333846] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/libtelemetry_interface__rosidl_generator_py.so\n'}
+[10.347677] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/telemetry_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[10.351782] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg\n'}
+[10.354840] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg/_telemetry_data_s.c\n'}
+[10.364879] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg/_o_drive_status_s.c\n'}
+[10.370345] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg/_control_message_s.c\n'}
+[10.377154] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg/_telemetry_s.c\n'}
+[10.378687] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg/__init__.py\n'}
+[10.384767] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg/_telemetry_data.py\n'}
+[10.390133] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg/_telemetry.py\n'}
+[10.392620] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg/_controller_status.py\n'}
+[10.401369] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg/_control_message.py\n'}
+[10.402495] (-) TimerEvent: {}
+[10.407206] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg/_controller_status_s.c\n'}
+[10.415159] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg/_o_drive_status.py\n'}
+[10.498693] (telemetry_interface) StdoutLine: {'line': b"Listing '/workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface'...\n"}
+[10.502277] (telemetry_interface) StdoutLine: {'line': b"Compiling '/workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/__init__.py'...\n"}
+[10.505243] (-) TimerEvent: {}
+[10.505893] (telemetry_interface) StdoutLine: {'line': b"Listing '/workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg'...\n"}
+[10.506872] (telemetry_interface) StdoutLine: {'line': b"Compiling '/workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg/__init__.py'...\n"}
+[10.507964] (telemetry_interface) StdoutLine: {'line': b"Compiling '/workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg/_control_message.py'...\n"}
+[10.509217] (telemetry_interface) StdoutLine: {'line': b"Compiling '/workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg/_controller_status.py'...\n"}
+[10.509815] (telemetry_interface) StdoutLine: {'line': b"Compiling '/workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg/_o_drive_status.py'...\n"}
+[10.510841] (telemetry_interface) StdoutLine: {'line': b"Compiling '/workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg/_telemetry_data.py'...\n"}
+[10.511709] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/telemetry_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[10.516808] (telemetry_interface) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/telemetry_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[10.518832] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/telemetry_interface_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[10.527470] (telemetry_interface) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/telemetry_interface_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[10.529494] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/telemetry_interface_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[10.538260] (telemetry_interface) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/telemetry_interface_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[10.540167] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_generator_py.so\n'}
+[10.547868] (telemetry_interface) StdoutLine: {'line': b'-- Set runtime path of "/workspaces/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_generator_py.so" to ""\n'}
+[10.548772] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/ament_index/resource_index/rust_packages/telemetry_interface\n'}
+[10.549818] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/rust\n'}
+[10.550756] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/rust/Cargo.toml\n'}
+[10.553743] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/rust/src\n'}
+[10.554970] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/rust/src/lib.rs\n'}
+[10.557801] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/rust/src/msg\n'}
+[10.559163] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/rust/src/msg/rmw.rs\n'}
+[10.564064] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/rust/src/msg.rs\n'}
+[10.567075] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/rust/build.rs\n'}
+[10.570835] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/msg/ControllerStatus.idl\n'}
+[10.572273] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/msg/ControlMessage.idl\n'}
+[10.572864] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/msg/ODriveStatus.idl\n'}
+[10.573492] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/msg/TelemetryData.idl\n'}
+[10.576563] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/msg/ControllerStatus.msg\n'}
+[10.577486] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/msg/ControlMessage.msg\n'}
+[10.578391] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/msg/ODriveStatus.msg\n'}
+[10.579506] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/msg/TelemetryData.msg\n'}
+[10.583230] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/ament_index/resource_index/package_run_dependencies/telemetry_interface\n'}
+[10.584201] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/share/ament_index/resource_index/parent_prefix_path/telemetry_interface\n'}
+[10.587651] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/environment/ament_prefix_path.sh\n'}
+[10.588515] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/environment/ament_prefix_path.dsv\n'}
+[10.592269] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/environment/path.sh\n'}
+[10.594279] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/environment/path.dsv\n'}
+[10.597107] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/local_setup.bash\n'}
+[10.597861] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/local_setup.sh\n'}
+[10.599174] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/local_setup.zsh\n'}
+[10.599967] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/local_setup.dsv\n'}
+[10.602766] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/package.dsv\n'}
+[10.605510] (-) TimerEvent: {}
+[10.607123] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/ament_index/resource_index/packages/telemetry_interface\n'}
+[10.607885] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/export_telemetry_interface__rosidl_generator_cExport.cmake\n'}
+[10.608644] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/export_telemetry_interface__rosidl_generator_cExport-noconfig.cmake\n'}
+[10.609511] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/export_telemetry_interface__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[10.611189] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/export_telemetry_interface__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[10.612800] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interface__rosidl_typesupport_introspection_cExport.cmake\n'}
+[10.613712] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interface__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[10.614596] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interface__rosidl_typesupport_cExport.cmake\n'}
+[10.615603] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interface__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[10.617825] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/export_telemetry_interface__rosidl_generator_cppExport.cmake\n'}
+[10.619624] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/export_telemetry_interface__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[10.620381] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/export_telemetry_interface__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[10.621887] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interface__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[10.623212] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interface__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[10.624543] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interface__rosidl_typesupport_cppExport.cmake\n'}
+[10.626870] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interface__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[10.628901] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/export_telemetry_interface__rosidl_generator_pyExport.cmake\n'}
+[10.629970] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/export_telemetry_interface__rosidl_generator_pyExport-noconfig.cmake\n'}
+[10.630761] (telemetry_interface) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/rosidl_cmake-extras.cmake\n'}
+[10.635679] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[10.637560] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[10.638828] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[10.640158] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[10.641291] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[10.641925] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[10.642824] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/rosidl_cmake_aggregate_target-extras.cmake\n'}
+[10.643635] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interfaceConfig.cmake\n'}
+[10.644639] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interfaceConfig-version.cmake\n'}
+[10.645646] (telemetry_interface) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/package.xml\n'}
+[10.650077] (telemetry_interface) CommandEnded: {'returncode': 0}
+[10.705797] (-) TimerEvent: {}
+[10.728001] (telemetry_interface) JobEnded: {'identifier': 'telemetry_interface', 'rc': 0}
+[10.731426] (-) EventReactorShutdown: {}

@@ -20,56 +20,110 @@ import numpy as np
 
 class ArUcoNode(Node):
     def __init__(self):
+        super().__init__('image_processor')
+
+        self.fx = None
+        self.fy = None
+        self.cx = None
+        self.cy = None
+
         self.depth_image = None
         self.corners = None
         self.ids = None
-        super().__init__('image_processor')
+
         self.bridge = CvBridge()
-        self.qos_sub = QoSProfile(
-            history=HistoryPolicy.KEEP_ALL
+
+        self.aruco_dict = cv2.aruco.getPredefinedDictionary(
+        cv2.aruco.DICT_4X4_50
         )
+
+        self.aruco_parameters = (
+        cv2.aruco.DetectorParameters_create()
+        )
+
         self.subscription_image = self.create_subscription(
-            Image,
-            'zed/zed_node/left/color/rect/image',
-            self.image_callback,
-            qos_profile_system_default)
+        Image,
+        '/zed/zed_node/left/color/rect/image',
+        self.image_callback,
+        qos_profile_sensor_data
+        )
+
         self.subscription_depth = self.create_subscription(
-            Image,
-            'zed/zed_node/depth/depth_registered',
-            self.depth_callback,
-            qos_profile_system_default)
+        Image,
+        '/zed/zed_node/depth/depth_registered',
+        self.depth_callback,
+        qos_profile_sensor_data
+        )
+
         self.subscription_camera_info = self.create_subscription(
-            CameraInfo,
-            'zed/zed_node/left/color/rect/camera_info',
-            self.camera_info_callback,
-            qos_profile_system_default)
+        CameraInfo,
+        '/zed/zed_node/left/color/rect/camera_info',
+        self.camera_info_callback,
+        qos_profile_sensor_data
+        )
+
         self.publisher_ = self.create_publisher(Polygon, '/aruco_locations', qos_profile_system_default)
 
     def image_callback(self, msg):
-        if msg is not None:
-            image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
-            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-            aruco_dict = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_50)
-            parameters = cv2.aruco.DetectorParameters()
-            detector = cv2.aruco.ArucoDetector(aruco_dict, parameters)
-            self.corners, self.ids, self.rejected = detector.detectMarkers(gray)
+        if msg is None:
+            self.get_logger().info(
+                f"Nothing received"
+            )
+            return
+        self.get_logger().info("Received image")
 
-    # turns ros data to OpenCV image format and then detects ArUco markers
+        image = self.bridge.imgmsg_to_cv2(
+        msg,
+        desired_encoding='bgr8'
+        )
+
+        gray = cv2.cvtColor(
+        image,
+        cv2.COLOR_BGR2GRAY
+        )
+
+        aruco_dict = cv2.aruco.getPredefinedDictionary(
+        cv2.aruco.DICT_4X4_50
+        )
+
+        parameters = cv2.aruco.DetectorParameters_create()
+
+        self.corners, self.ids, self.rejected = cv2.aruco.detectMarkers(
+        gray,
+        aruco_dict,
+        parameters=parameters
+        )
+
+        if self.ids is None:
+            self.get_logger().info(
+                f"No markers detected. Rejected candidates: {len(self.rejected)}"
+            )
+        else:
+            self.get_logger().info(
+                f"Detected IDs: {self.ids.flatten()}"
+            )
     
 
     def depth_callback(self, msg):
-        self.depth_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='32FC1')
-        self.coords = np.zeros((len(self.ids), 3))
+
+        self.depth_image = self.bridge.imgmsg_to_cv2(
+        msg,
+        desired_encoding='32FC1'
+        )
+
         if self.ids is None or self.corners is None:
-             return   
+            return
+
+        self.coords = np.zeros((len(self.ids), 3))
+
         for i in range(len(self.ids)):
-            top_left = self.corners[i][0]
-            # gets depth value at the marker's location
-            u = int(round(top_left[0]))
-            v = int(round(top_left[1]))
-            depth_value = self.depth_image[v, u]
-            self.coords[i] = [u, v, depth_value]
-        self.Aruco_publisher()
+                top_left = self.corners[i][0][0]
+                # gets depth value at the marker's location
+                u = int(round(top_left[0]))
+                v = int(round(top_left[1]))
+                depth_value = self.depth_image[v, u]
+                self.coords[i] = [u, v, depth_value]
+        self.ArUco_publisher()
             
     
     def camera_info_callback(self, msg):
@@ -82,6 +136,13 @@ class ArUcoNode(Node):
 
     def ArUco_publisher(self):
         polygon = Polygon()
+        if (
+            self.fx is None or
+            self.fy is None or
+            self.cx is None or
+            self.cy is None
+        ):
+            return
         for i in range(len(self.coords)):
             point = Point32()
             point.x = float(self.coords[i][2])

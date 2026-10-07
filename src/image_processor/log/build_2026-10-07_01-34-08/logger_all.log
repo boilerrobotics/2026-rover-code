@@ -1,0 +1,88 @@
+[0.198s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.199s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=15, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7ffffdf54e20>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7ffffdf54850>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7ffffdf54850>>, mixin_verb=('build',))
+[0.363s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.363s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.363s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.363s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.363s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.363s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.364s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/workspaces/2026-rover-code/src/image_processor'
+[0.364s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.366s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.366s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.366s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.366s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.387s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_python' and name 'image_processor'
+[0.387s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.387s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.387s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.388s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.388s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'image_processor' build argument 'cmake_args' from command line to 'None'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'image_processor' build argument 'cmake_target' from command line to 'None'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'image_processor' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'image_processor' build argument 'cmake_clean_cache' from command line to 'False'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'image_processor' build argument 'cmake_clean_first' from command line to 'False'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'image_processor' build argument 'cmake_force_configure' from command line to 'False'
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'image_processor' build argument 'ament_cmake_args' from command line to 'None'
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'image_processor' build argument 'catkin_cmake_args' from command line to 'None'
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'image_processor' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.414s] DEBUG:colcon.colcon_core.verb:Building package 'image_processor' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/2026-rover-code/src/image_processor/build/image_processor', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/2026-rover-code/src/image_processor/install/image_processor', 'merge_install': False, 'path': '/workspaces/2026-rover-code/src/image_processor', 'symlink_install': False, 'test_result_base': None}
+[0.414s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.418s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.419s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/workspaces/2026-rover-code/src/image_processor' with build type 'ament_python'
+[0.421s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_processor', 'ament_prefix_path')
+[0.422s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.423s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/2026-rover-code/src/image_processor/install/image_processor/share/image_processor/hook/ament_prefix_path.ps1'
+[0.425s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/2026-rover-code/src/image_processor/install/image_processor/share/image_processor/hook/ament_prefix_path.dsv'
+[0.426s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/2026-rover-code/src/image_processor/install/image_processor/share/image_processor/hook/ament_prefix_path.sh'
+[0.427s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.427s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.020s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/workspaces/2026-rover-code/src/image_processor'
+[1.022s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.022s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.642s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: register, easy_install, build_ext, test, install_headers, saveopts, install_data, build, setopt, bdist_rpm, install_scripts, build_py, symlink_data, check, develop, clean, install_egg_info, rotate, bdist_wheel, alias, sdist, egg_info, install, bdist_dumb, build_scripts, upload, bdist, build_clib, dist_info, install_lib, upload_docs, bdist_egg
+[1.661s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/2026-rover-code/src/image_processor': PYTHONPATH=/workspaces/2026-rover-code/src/image_processor/build/image_processor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/2026-rover-code/src/image_processor/install/image_processor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/image_processor build --build-base /workspaces/2026-rover-code/src/image_processor/build/image_processor/build install --record /workspaces/2026-rover-code/src/image_processor/build/image_processor/install.log --install-scripts $base/lib/image_processor --single-version-externally-managed install_data
+[2.127s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/2026-rover-code/src/image_processor' returned '0': PYTHONPATH=/workspaces/2026-rover-code/src/image_processor/build/image_processor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/2026-rover-code/src/image_processor/install/image_processor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/image_processor build --build-base /workspaces/2026-rover-code/src/image_processor/build/image_processor/build install --record /workspaces/2026-rover-code/src/image_processor/build/image_processor/install.log --install-scripts $base/lib/image_processor --single-version-externally-managed install_data
+[2.134s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/image_processor/install/image_processor' for CMake module files
+[2.140s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/image_processor/install/image_processor' for CMake config files
+[2.145s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/image_processor/install/image_processor/lib'
+[2.146s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/image_processor/install/image_processor/bin'
+[2.150s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/image_processor/install/image_processor/lib/pkgconfig/image_processor.pc'
+[2.151s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/image_processor/install/image_processor/lib/python3.10/site-packages'
+[2.153s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_processor', 'pythonpath')
+[2.155s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/2026-rover-code/src/image_processor/install/image_processor/share/image_processor/hook/pythonpath.ps1'
+[2.157s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/2026-rover-code/src/image_processor/install/image_processor/share/image_processor/hook/pythonpath.dsv'
+[2.158s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/2026-rover-code/src/image_processor/install/image_processor/share/image_processor/hook/pythonpath.sh'
+[2.160s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/image_processor/install/image_processor/bin'
+[2.160s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(image_processor)
+[2.161s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/2026-rover-code/src/image_processor/install/image_processor/share/image_processor/package.ps1'
+[2.164s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/2026-rover-code/src/image_processor/install/image_processor/share/image_processor/package.dsv'
+[2.170s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/2026-rover-code/src/image_processor/install/image_processor/share/image_processor/package.sh'
+[2.175s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/2026-rover-code/src/image_processor/install/image_processor/share/image_processor/package.bash'
+[2.176s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/2026-rover-code/src/image_processor/install/image_processor/share/image_processor/package.zsh'
+[2.178s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/2026-rover-code/src/image_processor/install/image_processor/share/colcon-core/packages/image_processor)
+[2.181s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.182s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.182s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.183s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.205s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[2.209s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.212s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.212s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.281s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[2.282s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.285s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/2026-rover-code/src/image_processor/install/local_setup.ps1'
+[2.301s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspaces/2026-rover-code/src/image_processor/install/_local_setup_util_ps1.py'
+[2.310s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/2026-rover-code/src/image_processor/install/setup.ps1'
+[2.329s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/2026-rover-code/src/image_processor/install/local_setup.sh'
+[2.333s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspaces/2026-rover-code/src/image_processor/install/_local_setup_util_sh.py'
+[2.340s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/2026-rover-code/src/image_processor/install/setup.sh'
+[2.383s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/2026-rover-code/src/image_processor/install/local_setup.bash'
+[2.385s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/2026-rover-code/src/image_processor/install/setup.bash'
+[2.389s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/2026-rover-code/src/image_processor/install/local_setup.zsh'
+[2.392s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/2026-rover-code/src/image_processor/install/setup.zsh'

@@ -1,0 +1,183 @@
+[0.263s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.263s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7fa3bfdd4af0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fa3bfdd4520>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fa3bfdd4520>>, mixin_verb=('build',))
+[0.587s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.588s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.588s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.589s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.589s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.589s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.589s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/workspaces/2026-rover-code/src'
+[0.590s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.591s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.592s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.592s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.593s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.593s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.593s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.594s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.594s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.632s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.632s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.633s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.633s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.633s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.636s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.639s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.641s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.641s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.643s] Level 1:colcon.colcon_core.package_identification:_identify(telemetry_interface) by extensions ['ignore', 'ignore_ament_install']
+[0.643s] Level 1:colcon.colcon_core.package_identification:_identify(telemetry_interface) by extension 'ignore'
+[0.644s] Level 1:colcon.colcon_core.package_identification:_identify(telemetry_interface) by extension 'ignore_ament_install'
+[0.647s] Level 1:colcon.colcon_core.package_identification:_identify(telemetry_interface) by extensions ['colcon_pkg']
+[0.647s] Level 1:colcon.colcon_core.package_identification:_identify(telemetry_interface) by extension 'colcon_pkg'
+[0.648s] Level 1:colcon.colcon_core.package_identification:_identify(telemetry_interface) by extensions ['colcon_meta']
+[0.648s] Level 1:colcon.colcon_core.package_identification:_identify(telemetry_interface) by extension 'colcon_meta'
+[0.649s] Level 1:colcon.colcon_core.package_identification:_identify(telemetry_interface) by extensions ['ros']
+[0.649s] Level 1:colcon.colcon_core.package_identification:_identify(telemetry_interface) by extension 'ros'
+[0.658s] DEBUG:colcon.colcon_core.package_identification:Package 'telemetry_interface' with type 'ros.ament_cmake' and name 'telemetry_interface'
+[0.660s] Level 1:colcon.colcon_core.package_identification:_identify(telemetry_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.661s] Level 1:colcon.colcon_core.package_identification:_identify(telemetry_pkg) by extension 'ignore'
+[0.662s] Level 1:colcon.colcon_core.package_identification:_identify(telemetry_pkg) by extension 'ignore_ament_install'
+[0.663s] Level 1:colcon.colcon_core.package_identification:_identify(telemetry_pkg) by extensions ['colcon_pkg']
+[0.663s] Level 1:colcon.colcon_core.package_identification:_identify(telemetry_pkg) by extension 'colcon_pkg'
+[0.664s] Level 1:colcon.colcon_core.package_identification:_identify(telemetry_pkg) by extensions ['colcon_meta']
+[0.664s] Level 1:colcon.colcon_core.package_identification:_identify(telemetry_pkg) by extension 'colcon_meta'
+[0.664s] Level 1:colcon.colcon_core.package_identification:_identify(telemetry_pkg) by extensions ['ros']
+[0.665s] Level 1:colcon.colcon_core.package_identification:_identify(telemetry_pkg) by extension 'ros'
+[0.668s] DEBUG:colcon.colcon_core.package_identification:Package 'telemetry_pkg' with type 'ros.ament_python' and name 'telemetry_pkg'
+[0.668s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.669s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.669s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.670s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.670s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.731s] Level 5:colcon.colcon_core.verb:set package 'telemetry_interface' build argument 'cmake_args' from command line to 'None'
+[0.731s] Level 5:colcon.colcon_core.verb:set package 'telemetry_interface' build argument 'cmake_target' from command line to 'None'
+[0.731s] Level 5:colcon.colcon_core.verb:set package 'telemetry_interface' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.731s] Level 5:colcon.colcon_core.verb:set package 'telemetry_interface' build argument 'cmake_clean_cache' from command line to 'False'
+[0.732s] Level 5:colcon.colcon_core.verb:set package 'telemetry_interface' build argument 'cmake_clean_first' from command line to 'False'
+[0.732s] Level 5:colcon.colcon_core.verb:set package 'telemetry_interface' build argument 'cmake_force_configure' from command line to 'False'
+[0.732s] Level 5:colcon.colcon_core.verb:set package 'telemetry_interface' build argument 'ament_cmake_args' from command line to 'None'
+[0.732s] Level 5:colcon.colcon_core.verb:set package 'telemetry_interface' build argument 'catkin_cmake_args' from command line to 'None'
+[0.733s] Level 5:colcon.colcon_core.verb:set package 'telemetry_interface' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.733s] DEBUG:colcon.colcon_core.verb:Building package 'telemetry_interface' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/2026-rover-code/src/build/telemetry_interface', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/2026-rover-code/src/install/telemetry_interface', 'merge_install': False, 'path': '/workspaces/2026-rover-code/src/telemetry_interface', 'symlink_install': False, 'test_result_base': None}
+[0.734s] Level 5:colcon.colcon_core.verb:set package 'telemetry_pkg' build argument 'cmake_args' from command line to 'None'
+[0.735s] Level 5:colcon.colcon_core.verb:set package 'telemetry_pkg' build argument 'cmake_target' from command line to 'None'
+[0.735s] Level 5:colcon.colcon_core.verb:set package 'telemetry_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.735s] Level 5:colcon.colcon_core.verb:set package 'telemetry_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.736s] Level 5:colcon.colcon_core.verb:set package 'telemetry_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.736s] Level 5:colcon.colcon_core.verb:set package 'telemetry_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.737s] Level 5:colcon.colcon_core.verb:set package 'telemetry_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.737s] Level 5:colcon.colcon_core.verb:set package 'telemetry_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.737s] Level 5:colcon.colcon_core.verb:set package 'telemetry_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.738s] DEBUG:colcon.colcon_core.verb:Building package 'telemetry_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/2026-rover-code/src/build/telemetry_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/2026-rover-code/src/install/telemetry_pkg', 'merge_install': False, 'path': '/workspaces/2026-rover-code/src/telemetry_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.739s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.743s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.745s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspaces/2026-rover-code/src/telemetry_interface' with build type 'ament_cmake'
+[0.748s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspaces/2026-rover-code/src/telemetry_interface'
+[0.756s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.757s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.758s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.784s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/workspaces/2026-rover-code/src/telemetry_pkg' with build type 'ament_python'
+[0.785s] Level 1:colcon.colcon_core.shell:create_environment_hook('telemetry_pkg', 'ament_prefix_path')
+[0.786s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/2026-rover-code/src/install/telemetry_pkg/share/telemetry_pkg/hook/ament_prefix_path.ps1'
+[0.789s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/2026-rover-code/src/install/telemetry_pkg/share/telemetry_pkg/hook/ament_prefix_path.dsv'
+[0.792s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/2026-rover-code/src/install/telemetry_pkg/share/telemetry_pkg/hook/ament_prefix_path.sh'
+[0.796s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.796s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.838s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/2026-rover-code/src/build/telemetry_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/2026-rover-code/src/install/telemetry_pkg:/opt/ros/humble /usr/bin/cmake --build /workspaces/2026-rover-code/src/build/telemetry_interface -- -j16 -l16
+[1.610s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/workspaces/2026-rover-code/src/telemetry_pkg'
+[1.612s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.612s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.045s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/2026-rover-code/src/build/telemetry_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/2026-rover-code/src/install/telemetry_pkg:/opt/ros/humble /usr/bin/cmake --build /workspaces/2026-rover-code/src/build/telemetry_interface -- -j16 -l16
+[2.095s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/2026-rover-code/src/build/telemetry_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/2026-rover-code/src/install/telemetry_pkg:/opt/ros/humble /usr/bin/cmake --install /workspaces/2026-rover-code/src/build/telemetry_interface
+[2.440s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: install_lib, install_headers, setopt, rotate, saveopts, build_ext, bdist_dumb, alias, develop, bdist_egg, egg_info, build_clib, install_scripts, install, install_egg_info, sdist, build, clean, build_scripts, upload_docs, bdist_wheel, check, symlink_data, easy_install, register, bdist_rpm, bdist, build_py, install_data, upload, dist_info, test
+[2.456s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/2026-rover-code/src/telemetry_pkg': PYTHONPATH=/workspaces/2026-rover-code/src/build/telemetry_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/2026-rover-code/src/install/telemetry_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/telemetry_pkg build --build-base /workspaces/2026-rover-code/src/build/telemetry_pkg/build install --record /workspaces/2026-rover-code/src/build/telemetry_pkg/install.log --install-scripts $base/lib/telemetry_pkg --single-version-externally-managed install_data
+[2.611s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(telemetry_interface)
+[2.616s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/2026-rover-code/src/build/telemetry_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/2026-rover-code/src/install/telemetry_pkg:/opt/ros/humble /usr/bin/cmake --install /workspaces/2026-rover-code/src/build/telemetry_interface
+[2.618s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/install/telemetry_interface' for CMake module files
+[2.624s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/install/telemetry_interface' for CMake config files
+[2.630s] Level 1:colcon.colcon_core.shell:create_environment_hook('telemetry_interface', 'cmake_prefix_path')
+[2.631s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/hook/cmake_prefix_path.ps1'
+[2.635s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/hook/cmake_prefix_path.dsv'
+[2.637s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/hook/cmake_prefix_path.sh'
+[2.641s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/install/telemetry_interface/lib'
+[2.643s] Level 1:colcon.colcon_core.shell:create_environment_hook('telemetry_interface', 'ld_library_path_lib')
+[2.644s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/hook/ld_library_path_lib.ps1'
+[2.647s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/hook/ld_library_path_lib.dsv'
+[2.649s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/hook/ld_library_path_lib.sh'
+[2.651s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/install/telemetry_interface/bin'
+[2.651s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/install/telemetry_interface/lib/pkgconfig/telemetry_interface.pc'
+[2.652s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/install/telemetry_interface/lib/python3.10/site-packages'
+[2.653s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/install/telemetry_interface/bin'
+[2.655s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/package.ps1'
+[2.660s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/package.dsv'
+[2.666s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/package.sh'
+[2.670s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/package.bash'
+[2.674s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/package.zsh'
+[2.677s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/2026-rover-code/src/install/telemetry_interface/share/colcon-core/packages/telemetry_interface)
+[2.684s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(telemetry_interface)
+[2.685s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/install/telemetry_interface' for CMake module files
+[2.692s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/install/telemetry_interface' for CMake config files
+[2.697s] Level 1:colcon.colcon_core.shell:create_environment_hook('telemetry_interface', 'cmake_prefix_path')
+[2.698s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/hook/cmake_prefix_path.ps1'
+[2.701s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/hook/cmake_prefix_path.dsv'
+[2.703s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/hook/cmake_prefix_path.sh'
+[2.706s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/install/telemetry_interface/lib'
+[2.708s] Level 1:colcon.colcon_core.shell:create_environment_hook('telemetry_interface', 'ld_library_path_lib')
+[2.709s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/hook/ld_library_path_lib.ps1'
+[2.711s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/hook/ld_library_path_lib.dsv'
+[2.712s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/hook/ld_library_path_lib.sh'
+[2.714s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/install/telemetry_interface/bin'
+[2.714s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/install/telemetry_interface/lib/pkgconfig/telemetry_interface.pc'
+[2.715s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/install/telemetry_interface/lib/python3.10/site-packages'
+[2.716s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/install/telemetry_interface/bin'
+[2.716s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/package.ps1'
+[2.719s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/package.dsv'
+[2.720s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/package.sh'
+[2.725s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/package.bash'
+[2.728s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/package.zsh'
+[2.730s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/2026-rover-code/src/install/telemetry_interface/share/colcon-core/packages/telemetry_interface)
+[3.072s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/install/telemetry_pkg' for CMake module files
+[3.073s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/2026-rover-code/src/telemetry_pkg' returned '0': PYTHONPATH=/workspaces/2026-rover-code/src/build/telemetry_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/2026-rover-code/src/install/telemetry_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/telemetry_pkg build --build-base /workspaces/2026-rover-code/src/build/telemetry_pkg/build install --record /workspaces/2026-rover-code/src/build/telemetry_pkg/install.log --install-scripts $base/lib/telemetry_pkg --single-version-externally-managed install_data
+[3.079s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/install/telemetry_pkg' for CMake config files
+[3.090s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/install/telemetry_pkg/lib'
+[3.091s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/install/telemetry_pkg/bin'
+[3.092s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/install/telemetry_pkg/lib/pkgconfig/telemetry_pkg.pc'
+[3.093s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/install/telemetry_pkg/lib/python3.10/site-packages'
+[3.093s] Level 1:colcon.colcon_core.shell:create_environment_hook('telemetry_pkg', 'pythonpath')
+[3.094s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/2026-rover-code/src/install/telemetry_pkg/share/telemetry_pkg/hook/pythonpath.ps1'
+[3.097s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/2026-rover-code/src/install/telemetry_pkg/share/telemetry_pkg/hook/pythonpath.dsv'
+[3.099s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/2026-rover-code/src/install/telemetry_pkg/share/telemetry_pkg/hook/pythonpath.sh'
+[3.102s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/src/install/telemetry_pkg/bin'
+[3.102s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(telemetry_pkg)
+[3.103s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/2026-rover-code/src/install/telemetry_pkg/share/telemetry_pkg/package.ps1'
+[3.106s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/2026-rover-code/src/install/telemetry_pkg/share/telemetry_pkg/package.dsv'
+[3.108s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/2026-rover-code/src/install/telemetry_pkg/share/telemetry_pkg/package.sh'
+[3.110s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/2026-rover-code/src/install/telemetry_pkg/share/telemetry_pkg/package.bash'
+[3.111s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/2026-rover-code/src/install/telemetry_pkg/share/telemetry_pkg/package.zsh'
+[3.113s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/2026-rover-code/src/install/telemetry_pkg/share/colcon-core/packages/telemetry_pkg)
+[3.114s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[3.115s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[3.115s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[3.116s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.168s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[3.169s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.169s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.169s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[3.188s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[3.189s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[3.190s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/2026-rover-code/src/install/local_setup.ps1'
+[3.193s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspaces/2026-rover-code/src/install/_local_setup_util_ps1.py'
+[3.196s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/2026-rover-code/src/install/setup.ps1'
+[3.202s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/2026-rover-code/src/install/local_setup.sh'
+[3.204s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspaces/2026-rover-code/src/install/_local_setup_util_sh.py'
+[3.206s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/2026-rover-code/src/install/setup.sh'
+[3.211s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/2026-rover-code/src/install/local_setup.bash'
+[3.213s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/2026-rover-code/src/install/setup.bash'
+[3.218s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/2026-rover-code/src/install/local_setup.zsh'
+[3.219s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/2026-rover-code/src/install/setup.zsh'

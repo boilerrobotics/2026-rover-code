@@ -26,9 +26,6 @@ endif()
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/ControllerStatus.msg"
-  "msg/ControlMessage.msg"
-  "msg/ODriveStatus.msg"
   "msg/TelemetryData.msg"
   
 )

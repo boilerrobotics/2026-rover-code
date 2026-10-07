@@ -1,0 +1,19 @@
+[0.070s] Invoking command in '/workspaces/2026-rover-code/src/build/telemetry_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /workspaces/2026-rover-code/src/build/telemetry_interface -- -j16 -l16
+[0.162s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.465s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.632s] -- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.637s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.641s] -- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.691s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.741s] [31mCMake Error at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:93 (message):
+[0.744s]   rosidl_generate_interfaces() the passed file 'msg/ControllerStatus.msg'
+[0.745s]   doesn't exist relative to the CMAKE_CURRENT_SOURCE_DIR
+[0.748s]   '/workspaces/2026-rover-code/src/telemetry_interface'
+[0.751s] Call Stack (most recent call first):
+[0.755s]   CMakeLists.txt:28 (rosidl_generate_interfaces)
+[0.756s] 
+[0.759s] [0m
+[0.761s] -- Configuring incomplete, errors occurred!
+[0.763s] See also "/workspaces/2026-rover-code/src/build/telemetry_interface/CMakeFiles/CMakeOutput.log".
+[0.767s] gmake: *** [Makefile:1409: cmake_check_build_system] Error 1
+[0.773s] Invoked command in '/workspaces/2026-rover-code/src/build/telemetry_interface' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /workspaces/2026-rover-code/src/build/telemetry_interface -- -j16 -l16

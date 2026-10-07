@@ -1,0 +1,355 @@
+[0.186s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.187s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7ff9c2224310>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7ff9c21fbd00>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7ff9c21fbd00>>, mixin_verb=('build',))
+[0.424s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.425s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.425s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.426s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.426s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.426s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.426s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/workspaces/2026-rover-code'
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.452s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extensions ['ignore', 'ignore_ament_install']
+[0.452s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extension 'ignore'
+[0.453s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extension 'ignore_ament_install'
+[0.453s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extensions ['colcon_pkg']
+[0.454s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extension 'colcon_pkg'
+[0.454s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extensions ['colcon_meta']
+[0.454s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extension 'colcon_meta'
+[0.455s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extensions ['ros']
+[0.455s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extension 'ros'
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extensions ['cmake', 'python']
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extension 'cmake'
+[0.456s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extension 'python'
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extensions ['python_setup_py']
+[0.457s] Level 1:colcon.colcon_core.package_identification:_identify(bags) by extension 'python_setup_py'
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(bags/camera_bag) by extensions ['ignore', 'ignore_ament_install']
+[0.458s] Level 1:colcon.colcon_core.package_identification:_identify(bags/camera_bag) by extension 'ignore'
+[0.459s] Level 1:colcon.colcon_core.package_identification:_identify(bags/camera_bag) by extension 'ignore_ament_install'
+[0.459s] Level 1:colcon.colcon_core.package_identification:_identify(bags/camera_bag) by extensions ['colcon_pkg']
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(bags/camera_bag) by extension 'colcon_pkg'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(bags/camera_bag) by extensions ['colcon_meta']
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(bags/camera_bag) by extension 'colcon_meta'
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(bags/camera_bag) by extensions ['ros']
+[0.461s] Level 1:colcon.colcon_core.package_identification:_identify(bags/camera_bag) by extension 'ros'
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(bags/camera_bag) by extensions ['cmake', 'python']
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(bags/camera_bag) by extension 'cmake'
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(bags/camera_bag) by extension 'python'
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(bags/camera_bag) by extensions ['python_setup_py']
+[0.463s] Level 1:colcon.colcon_core.package_identification:_identify(bags/camera_bag) by extension 'python_setup_py'
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(bags/joystick_motor_bag) by extensions ['ignore', 'ignore_ament_install']
+[0.465s] Level 1:colcon.colcon_core.package_identification:_identify(bags/joystick_motor_bag) by extension 'ignore'
+[0.465s] Level 1:colcon.colcon_core.package_identification:_identify(bags/joystick_motor_bag) by extension 'ignore_ament_install'
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(bags/joystick_motor_bag) by extensions ['colcon_pkg']
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(bags/joystick_motor_bag) by extension 'colcon_pkg'
+[0.466s] Level 1:colcon.colcon_core.package_identification:_identify(bags/joystick_motor_bag) by extensions ['colcon_meta']
+[0.467s] Level 1:colcon.colcon_core.package_identification:_identify(bags/joystick_motor_bag) by extension 'colcon_meta'
+[0.467s] Level 1:colcon.colcon_core.package_identification:_identify(bags/joystick_motor_bag) by extensions ['ros']
+[0.467s] Level 1:colcon.colcon_core.package_identification:_identify(bags/joystick_motor_bag) by extension 'ros'
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(bags/joystick_motor_bag) by extensions ['cmake', 'python']
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(bags/joystick_motor_bag) by extension 'cmake'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(bags/joystick_motor_bag) by extension 'python'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(bags/joystick_motor_bag) by extensions ['python_setup_py']
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(bags/joystick_motor_bag) by extension 'python_setup_py'
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(md_images) by extensions ['ignore', 'ignore_ament_install']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(md_images) by extension 'ignore'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(md_images) by extension 'ignore_ament_install'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(md_images) by extensions ['colcon_pkg']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(md_images) by extension 'colcon_pkg'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(md_images) by extensions ['colcon_meta']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(md_images) by extension 'colcon_meta'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(md_images) by extensions ['ros']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(md_images) by extension 'ros'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(md_images) by extensions ['cmake', 'python']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(md_images) by extension 'cmake'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(md_images) by extension 'python'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(md_images) by extensions ['python_setup_py']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(md_images) by extension 'python_setup_py'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive) by extensions ['ignore', 'ignore_ament_install']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive) by extension 'ignore'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive) by extension 'ignore_ament_install'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive) by extensions ['colcon_pkg']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive) by extension 'colcon_pkg'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive) by extensions ['colcon_meta']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive) by extension 'colcon_meta'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive) by extensions ['ros']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive) by extension 'ros'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive) by extensions ['cmake', 'python']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive) by extension 'cmake'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive) by extension 'python'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive) by extensions ['python_setup_py']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive) by extension 'python_setup_py'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base) by extensions ['ignore', 'ignore_ament_install']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base) by extension 'ignore'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base) by extension 'ignore_ament_install'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base) by extensions ['colcon_pkg']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base) by extension 'colcon_pkg'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base) by extensions ['colcon_meta']
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base) by extension 'colcon_meta'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base) by extensions ['ros']
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base) by extension 'ros'
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base) by extensions ['cmake', 'python']
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base) by extension 'cmake'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base) by extension 'python'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base) by extensions ['python_setup_py']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base) by extension 'python_setup_py'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/include) by extensions ['ignore', 'ignore_ament_install']
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/include) by extension 'ignore'
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/include) by extension 'ignore_ament_install'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/include) by extensions ['colcon_pkg']
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/include) by extension 'colcon_pkg'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/include) by extensions ['colcon_meta']
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/include) by extension 'colcon_meta'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/include) by extensions ['ros']
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/include) by extension 'ros'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/include) by extensions ['cmake', 'python']
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/include) by extension 'cmake'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/include) by extension 'python'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/include) by extensions ['python_setup_py']
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/include) by extension 'python_setup_py'
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/src) by extensions ['ignore', 'ignore_ament_install']
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/src) by extension 'ignore'
+[0.502s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/src) by extension 'ignore_ament_install'
+[0.502s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/src) by extensions ['colcon_pkg']
+[0.503s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/src) by extension 'colcon_pkg'
+[0.503s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/src) by extensions ['colcon_meta']
+[0.503s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/src) by extension 'colcon_meta'
+[0.503s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/src) by extensions ['ros']
+[0.504s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/src) by extension 'ros'
+[0.505s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/src) by extensions ['cmake', 'python']
+[0.505s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/src) by extension 'cmake'
+[0.505s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/src) by extension 'python'
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/src) by extensions ['python_setup_py']
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_base/src) by extension 'python_setup_py'
+[0.508s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_botwheel_explorer) by extensions ['ignore', 'ignore_ament_install']
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_botwheel_explorer) by extension 'ignore'
+[0.511s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_botwheel_explorer) by extension 'ignore_ament_install'
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_botwheel_explorer) by extensions ['colcon_pkg']
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_botwheel_explorer) by extension 'colcon_pkg'
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_botwheel_explorer) by extensions ['colcon_meta']
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_botwheel_explorer) by extension 'colcon_meta'
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_botwheel_explorer) by extensions ['ros']
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_botwheel_explorer) by extension 'ros'
+[0.521s] DEBUG:colcon.colcon_core.package_identification:Package 'ros_odrive/odrive_botwheel_explorer' with type 'ros.ament_cmake' and name 'odrive_botwheel_explorer'
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_node) by extensions ['ignore', 'ignore_ament_install']
+[0.524s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_node) by extension 'ignore'
+[0.524s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_node) by extension 'ignore_ament_install'
+[0.525s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_node) by extensions ['colcon_pkg']
+[0.525s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_node) by extension 'colcon_pkg'
+[0.525s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_node) by extensions ['colcon_meta']
+[0.526s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_node) by extension 'colcon_meta'
+[0.526s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_node) by extensions ['ros']
+[0.526s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_node) by extension 'ros'
+[0.529s] DEBUG:colcon.colcon_core.package_identification:Package 'ros_odrive/odrive_node' with type 'ros.ament_cmake' and name 'odrive_can'
+[0.530s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_ros2_control) by extensions ['ignore', 'ignore_ament_install']
+[0.530s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_ros2_control) by extension 'ignore'
+[0.531s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_ros2_control) by extension 'ignore_ament_install'
+[0.532s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_ros2_control) by extensions ['colcon_pkg']
+[0.532s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_ros2_control) by extension 'colcon_pkg'
+[0.532s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_ros2_control) by extensions ['colcon_meta']
+[0.533s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_ros2_control) by extension 'colcon_meta'
+[0.533s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_ros2_control) by extensions ['ros']
+[0.533s] Level 1:colcon.colcon_core.package_identification:_identify(ros_odrive/odrive_ros2_control) by extension 'ros'
+[0.536s] DEBUG:colcon.colcon_core.package_identification:Package 'ros_odrive/odrive_ros2_control' with type 'ros.ament_cmake' and name 'odrive_ros2_control'
+[0.537s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.537s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.538s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.540s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.540s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.541s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.541s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.541s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.542s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.544s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.544s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.546s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.546s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.547s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extensions ['ignore', 'ignore_ament_install']
+[0.548s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extension 'ignore'
+[0.548s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) ignored
+[0.550s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extensions ['ignore', 'ignore_ament_install']
+[0.551s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extension 'ignore'
+[0.551s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) ignored
+[0.553s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[0.554s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[0.554s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[0.555s] Level 1:colcon.colcon_core.package_identification:_identify(src/telemetry_interface) by extensions ['ignore', 'ignore_ament_install']
+[0.555s] Level 1:colcon.colcon_core.package_identification:_identify(src/telemetry_interface) by extension 'ignore'
+[0.556s] Level 1:colcon.colcon_core.package_identification:_identify(src/telemetry_interface) by extension 'ignore_ament_install'
+[0.556s] Level 1:colcon.colcon_core.package_identification:_identify(src/telemetry_interface) by extensions ['colcon_pkg']
+[0.557s] Level 1:colcon.colcon_core.package_identification:_identify(src/telemetry_interface) by extension 'colcon_pkg'
+[0.557s] Level 1:colcon.colcon_core.package_identification:_identify(src/telemetry_interface) by extensions ['colcon_meta']
+[0.558s] Level 1:colcon.colcon_core.package_identification:_identify(src/telemetry_interface) by extension 'colcon_meta'
+[0.558s] Level 1:colcon.colcon_core.package_identification:_identify(src/telemetry_interface) by extensions ['ros']
+[0.559s] Level 1:colcon.colcon_core.package_identification:_identify(src/telemetry_interface) by extension 'ros'
+[0.562s] DEBUG:colcon.colcon_core.package_identification:Package 'src/telemetry_interface' with type 'ros.ament_cmake' and name 'telemetry_interface'
+[0.564s] Level 1:colcon.colcon_core.package_identification:_identify(src/telemetry_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.564s] Level 1:colcon.colcon_core.package_identification:_identify(src/telemetry_pkg) by extension 'ignore'
+[0.565s] Level 1:colcon.colcon_core.package_identification:_identify(src/telemetry_pkg) by extension 'ignore_ament_install'
+[0.566s] Level 1:colcon.colcon_core.package_identification:_identify(src/telemetry_pkg) by extensions ['colcon_pkg']
+[0.566s] Level 1:colcon.colcon_core.package_identification:_identify(src/telemetry_pkg) by extension 'colcon_pkg'
+[0.567s] Level 1:colcon.colcon_core.package_identification:_identify(src/telemetry_pkg) by extensions ['colcon_meta']
+[0.567s] Level 1:colcon.colcon_core.package_identification:_identify(src/telemetry_pkg) by extension 'colcon_meta'
+[0.567s] Level 1:colcon.colcon_core.package_identification:_identify(src/telemetry_pkg) by extensions ['ros']
+[0.567s] Level 1:colcon.colcon_core.package_identification:_identify(src/telemetry_pkg) by extension 'ros'
+[0.570s] DEBUG:colcon.colcon_core.package_identification:Package 'src/telemetry_pkg' with type 'ros.ament_python' and name 'telemetry_pkg'
+[0.570s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.570s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.571s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.571s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.571s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.624s] Level 5:colcon.colcon_core.verb:set package 'odrive_can' build argument 'cmake_args' from command line to 'None'
+[0.624s] Level 5:colcon.colcon_core.verb:set package 'odrive_can' build argument 'cmake_target' from command line to 'None'
+[0.625s] Level 5:colcon.colcon_core.verb:set package 'odrive_can' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.625s] Level 5:colcon.colcon_core.verb:set package 'odrive_can' build argument 'cmake_clean_cache' from command line to 'False'
+[0.625s] Level 5:colcon.colcon_core.verb:set package 'odrive_can' build argument 'cmake_clean_first' from command line to 'False'
+[0.626s] Level 5:colcon.colcon_core.verb:set package 'odrive_can' build argument 'cmake_force_configure' from command line to 'False'
+[0.626s] Level 5:colcon.colcon_core.verb:set package 'odrive_can' build argument 'ament_cmake_args' from command line to 'None'
+[0.626s] Level 5:colcon.colcon_core.verb:set package 'odrive_can' build argument 'catkin_cmake_args' from command line to 'None'
+[0.627s] Level 5:colcon.colcon_core.verb:set package 'odrive_can' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.627s] DEBUG:colcon.colcon_core.verb:Building package 'odrive_can' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/2026-rover-code/build/odrive_can', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/2026-rover-code/install/odrive_can', 'merge_install': False, 'path': '/workspaces/2026-rover-code/ros_odrive/odrive_node', 'symlink_install': False, 'test_result_base': None}
+[0.628s] Level 5:colcon.colcon_core.verb:set package 'odrive_ros2_control' build argument 'cmake_args' from command line to 'None'
+[0.629s] Level 5:colcon.colcon_core.verb:set package 'odrive_ros2_control' build argument 'cmake_target' from command line to 'None'
+[0.629s] Level 5:colcon.colcon_core.verb:set package 'odrive_ros2_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.630s] Level 5:colcon.colcon_core.verb:set package 'odrive_ros2_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.630s] Level 5:colcon.colcon_core.verb:set package 'odrive_ros2_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.630s] Level 5:colcon.colcon_core.verb:set package 'odrive_ros2_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.631s] Level 5:colcon.colcon_core.verb:set package 'odrive_ros2_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.631s] Level 5:colcon.colcon_core.verb:set package 'odrive_ros2_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.631s] Level 5:colcon.colcon_core.verb:set package 'odrive_ros2_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.632s] DEBUG:colcon.colcon_core.verb:Building package 'odrive_ros2_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/2026-rover-code/build/odrive_ros2_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/2026-rover-code/install/odrive_ros2_control', 'merge_install': False, 'path': '/workspaces/2026-rover-code/ros_odrive/odrive_ros2_control', 'symlink_install': False, 'test_result_base': None}
+[0.634s] Level 5:colcon.colcon_core.verb:set package 'telemetry_interface' build argument 'cmake_args' from command line to 'None'
+[0.634s] Level 5:colcon.colcon_core.verb:set package 'telemetry_interface' build argument 'cmake_target' from command line to 'None'
+[0.635s] Level 5:colcon.colcon_core.verb:set package 'telemetry_interface' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.635s] Level 5:colcon.colcon_core.verb:set package 'telemetry_interface' build argument 'cmake_clean_cache' from command line to 'False'
+[0.635s] Level 5:colcon.colcon_core.verb:set package 'telemetry_interface' build argument 'cmake_clean_first' from command line to 'False'
+[0.636s] Level 5:colcon.colcon_core.verb:set package 'telemetry_interface' build argument 'cmake_force_configure' from command line to 'False'
+[0.636s] Level 5:colcon.colcon_core.verb:set package 'telemetry_interface' build argument 'ament_cmake_args' from command line to 'None'
+[0.636s] Level 5:colcon.colcon_core.verb:set package 'telemetry_interface' build argument 'catkin_cmake_args' from command line to 'None'
+[0.637s] Level 5:colcon.colcon_core.verb:set package 'telemetry_interface' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.637s] DEBUG:colcon.colcon_core.verb:Building package 'telemetry_interface' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/2026-rover-code/build/telemetry_interface', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/2026-rover-code/install/telemetry_interface', 'merge_install': False, 'path': '/workspaces/2026-rover-code/src/telemetry_interface', 'symlink_install': False, 'test_result_base': None}
+[0.639s] Level 5:colcon.colcon_core.verb:set package 'telemetry_pkg' build argument 'cmake_args' from command line to 'None'
+[0.639s] Level 5:colcon.colcon_core.verb:set package 'telemetry_pkg' build argument 'cmake_target' from command line to 'None'
+[0.639s] Level 5:colcon.colcon_core.verb:set package 'telemetry_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.640s] Level 5:colcon.colcon_core.verb:set package 'telemetry_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.640s] Level 5:colcon.colcon_core.verb:set package 'telemetry_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.640s] Level 5:colcon.colcon_core.verb:set package 'telemetry_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.640s] Level 5:colcon.colcon_core.verb:set package 'telemetry_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.641s] Level 5:colcon.colcon_core.verb:set package 'telemetry_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.641s] Level 5:colcon.colcon_core.verb:set package 'telemetry_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.641s] DEBUG:colcon.colcon_core.verb:Building package 'telemetry_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/2026-rover-code/build/telemetry_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/2026-rover-code/install/telemetry_pkg', 'merge_install': False, 'path': '/workspaces/2026-rover-code/src/telemetry_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.643s] Level 5:colcon.colcon_core.verb:set package 'odrive_botwheel_explorer' build argument 'cmake_args' from command line to 'None'
+[0.643s] Level 5:colcon.colcon_core.verb:set package 'odrive_botwheel_explorer' build argument 'cmake_target' from command line to 'None'
+[0.643s] Level 5:colcon.colcon_core.verb:set package 'odrive_botwheel_explorer' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.644s] Level 5:colcon.colcon_core.verb:set package 'odrive_botwheel_explorer' build argument 'cmake_clean_cache' from command line to 'False'
+[0.644s] Level 5:colcon.colcon_core.verb:set package 'odrive_botwheel_explorer' build argument 'cmake_clean_first' from command line to 'False'
+[0.644s] Level 5:colcon.colcon_core.verb:set package 'odrive_botwheel_explorer' build argument 'cmake_force_configure' from command line to 'False'
+[0.645s] Level 5:colcon.colcon_core.verb:set package 'odrive_botwheel_explorer' build argument 'ament_cmake_args' from command line to 'None'
+[0.645s] Level 5:colcon.colcon_core.verb:set package 'odrive_botwheel_explorer' build argument 'catkin_cmake_args' from command line to 'None'
+[0.645s] Level 5:colcon.colcon_core.verb:set package 'odrive_botwheel_explorer' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.646s] DEBUG:colcon.colcon_core.verb:Building package 'odrive_botwheel_explorer' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/2026-rover-code/build/odrive_botwheel_explorer', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/2026-rover-code/install/odrive_botwheel_explorer', 'merge_install': False, 'path': '/workspaces/2026-rover-code/ros_odrive/odrive_botwheel_explorer', 'symlink_install': False, 'test_result_base': None}
+[0.646s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.650s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.652s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspaces/2026-rover-code/ros_odrive/odrive_ros2_control' with build type 'ament_cmake'
+[0.652s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspaces/2026-rover-code/ros_odrive/odrive_ros2_control'
+[0.660s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.660s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.661s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.675s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspaces/2026-rover-code/ros_odrive/odrive_node' with build type 'ament_cmake'
+[0.675s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspaces/2026-rover-code/ros_odrive/odrive_node'
+[0.676s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.677s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.692s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspaces/2026-rover-code/src/telemetry_interface' with build type 'ament_cmake'
+[0.693s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspaces/2026-rover-code/src/telemetry_interface'
+[0.694s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.694s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.710s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/workspaces/2026-rover-code/src/telemetry_pkg' with build type 'ament_python'
+[0.711s] Level 1:colcon.colcon_core.shell:create_environment_hook('telemetry_pkg', 'ament_prefix_path')
+[0.712s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/2026-rover-code/install/telemetry_pkg/share/telemetry_pkg/hook/ament_prefix_path.ps1'
+[0.718s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/2026-rover-code/install/telemetry_pkg/share/telemetry_pkg/hook/ament_prefix_path.dsv'
+[0.721s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/2026-rover-code/install/telemetry_pkg/share/telemetry_pkg/hook/ament_prefix_path.sh'
+[0.726s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.726s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.769s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/2026-rover-code/build/odrive_ros2_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/2026-rover-code/src/install/telemetry_pkg:/opt/ros/humble /usr/bin/cmake /workspaces/2026-rover-code/ros_odrive/odrive_ros2_control -DCMAKE_INSTALL_PREFIX=/workspaces/2026-rover-code/install/odrive_ros2_control
+[0.782s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/2026-rover-code/build/odrive_can': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/2026-rover-code/src/install/telemetry_pkg:/opt/ros/humble /usr/bin/cmake /workspaces/2026-rover-code/ros_odrive/odrive_node -DCMAKE_INSTALL_PREFIX=/workspaces/2026-rover-code/install/odrive_can
+[0.809s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/2026-rover-code/build/telemetry_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/2026-rover-code/src/install/telemetry_pkg:/opt/ros/humble /usr/bin/cmake /workspaces/2026-rover-code/src/telemetry_interface -DCMAKE_INSTALL_PREFIX=/workspaces/2026-rover-code/install/telemetry_interface
+[1.415s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/workspaces/2026-rover-code/src/telemetry_pkg'
+[1.416s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.416s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.183s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: alias, register, easy_install, upload, check, clean, install_scripts, test, bdist_dumb, egg_info, sdist, install_egg_info, bdist_rpm, bdist_wheel, build, develop, bdist, install, build_py, setopt, build_ext, bdist_egg, build_clib, install_data, dist_info, install_lib, symlink_data, saveopts, rotate, upload_docs, install_headers, build_scripts
+[2.201s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/2026-rover-code/src/telemetry_pkg': PYTHONPATH=/workspaces/2026-rover-code/build/telemetry_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/2026-rover-code/install/telemetry_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/telemetry_pkg build --build-base /workspaces/2026-rover-code/build/telemetry_pkg/build install --record /workspaces/2026-rover-code/build/telemetry_pkg/install.log --install-scripts $base/lib/telemetry_pkg --single-version-externally-managed install_data
+[2.758s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/2026-rover-code/src/telemetry_pkg' returned '0': PYTHONPATH=/workspaces/2026-rover-code/build/telemetry_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/2026-rover-code/install/telemetry_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/telemetry_pkg build --build-base /workspaces/2026-rover-code/build/telemetry_pkg/build install --record /workspaces/2026-rover-code/build/telemetry_pkg/install.log --install-scripts $base/lib/telemetry_pkg --single-version-externally-managed install_data
+[2.762s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/install/telemetry_pkg' for CMake module files
+[2.766s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/install/telemetry_pkg' for CMake config files
+[2.776s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/install/telemetry_pkg/lib'
+[2.778s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/install/telemetry_pkg/bin'
+[2.780s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/install/telemetry_pkg/lib/pkgconfig/telemetry_pkg.pc'
+[2.781s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/install/telemetry_pkg/lib/python3.10/site-packages'
+[2.781s] Level 1:colcon.colcon_core.shell:create_environment_hook('telemetry_pkg', 'pythonpath')
+[2.782s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/2026-rover-code/install/telemetry_pkg/share/telemetry_pkg/hook/pythonpath.ps1'
+[2.785s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/2026-rover-code/install/telemetry_pkg/share/telemetry_pkg/hook/pythonpath.dsv'
+[2.788s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/2026-rover-code/install/telemetry_pkg/share/telemetry_pkg/hook/pythonpath.sh'
+[2.791s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/install/telemetry_pkg/bin'
+[2.792s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(telemetry_pkg)
+[2.794s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/2026-rover-code/install/telemetry_pkg/share/telemetry_pkg/package.ps1'
+[2.831s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/2026-rover-code/install/telemetry_pkg/share/telemetry_pkg/package.dsv'
+[2.834s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/2026-rover-code/install/telemetry_pkg/share/telemetry_pkg/package.sh'
+[2.837s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/2026-rover-code/install/telemetry_pkg/share/telemetry_pkg/package.bash'
+[2.840s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/2026-rover-code/install/telemetry_pkg/share/telemetry_pkg/package.zsh'
+[2.843s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/2026-rover-code/install/telemetry_pkg/share/colcon-core/packages/telemetry_pkg)
+[4.720s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/2026-rover-code/build/odrive_ros2_control' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/2026-rover-code/src/install/telemetry_pkg:/opt/ros/humble /usr/bin/cmake /workspaces/2026-rover-code/ros_odrive/odrive_ros2_control -DCMAKE_INSTALL_PREFIX=/workspaces/2026-rover-code/install/odrive_ros2_control
+[4.751s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(odrive_ros2_control)
+[4.752s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/install/odrive_ros2_control' for CMake module files
+[4.755s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/install/odrive_ros2_control' for CMake config files
+[4.756s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/install/odrive_ros2_control/bin'
+[4.756s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/install/odrive_ros2_control/lib/pkgconfig/odrive_ros2_control.pc'
+[4.757s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/install/odrive_ros2_control/lib/python3.10/site-packages'
+[4.757s] Level 1:colcon.colcon_core.environment:checking '/workspaces/2026-rover-code/install/odrive_ros2_control/bin'
+[4.758s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/2026-rover-code/install/odrive_ros2_control/share/odrive_ros2_control/package.ps1'
+[4.761s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/2026-rover-code/install/odrive_ros2_control/share/odrive_ros2_control/package.dsv'
+[4.763s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/2026-rover-code/install/odrive_ros2_control/share/odrive_ros2_control/package.sh'
+[4.766s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/2026-rover-code/install/odrive_ros2_control/share/odrive_ros2_control/package.bash'
+[4.768s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/2026-rover-code/install/odrive_ros2_control/share/odrive_ros2_control/package.zsh'
+[4.769s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/2026-rover-code/install/odrive_ros2_control/share/colcon-core/packages/odrive_ros2_control)
+[7.302s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[7.303s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[7.303s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '1'
+[7.304s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[7.317s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[7.318s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[7.318s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[7.319s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[7.341s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[7.341s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[7.343s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/2026-rover-code/install/local_setup.ps1'
+[7.350s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspaces/2026-rover-code/install/_local_setup_util_ps1.py'
+[7.355s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/2026-rover-code/install/setup.ps1'
+[7.360s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/2026-rover-code/install/local_setup.sh'
+[7.363s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspaces/2026-rover-code/install/_local_setup_util_sh.py'
+[7.365s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/2026-rover-code/install/setup.sh'
+[7.371s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/2026-rover-code/install/local_setup.bash'
+[7.375s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/2026-rover-code/install/setup.bash'
+[7.381s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/2026-rover-code/install/local_setup.zsh'
+[7.383s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/2026-rover-code/install/setup.zsh'

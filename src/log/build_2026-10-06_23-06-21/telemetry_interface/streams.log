@@ -1,0 +1,238 @@
+[0.073s] Invoking command in '/workspaces/2026-rover-code/src/build/telemetry_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/2026-rover-code/src/install/telemetry_pkg:/opt/ros/humble /usr/bin/cmake --build /workspaces/2026-rover-code/src/build/telemetry_interface -- -j16 -l16
+[0.303s] [35m[1mConsolidate compiler generated dependencies of target telemetry_interface__rosidl_generator_c[0m
+[0.361s] [  3%] Built target telemetry_interface__cpp
+[0.373s] [  6%] Built target telemetry_interface__rs
+[0.447s] [ 15%] Built target telemetry_interface__rosidl_generator_c
+[0.470s] [35m[1mConsolidate compiler generated dependencies of target telemetry_interface__rosidl_typesupport_cpp[0m
+[0.471s] [35m[1mConsolidate compiler generated dependencies of target telemetry_interface__rosidl_typesupport_introspection_cpp[0m
+[0.474s] [35m[1mConsolidate compiler generated dependencies of target telemetry_interface__rosidl_typesupport_fastrtps_cpp[0m
+[0.521s] [ 15%] Built target ament_cmake_python_copy_telemetry_interface
+[0.529s] [35m[1mConsolidate compiler generated dependencies of target telemetry_interface__rosidl_typesupport_fastrtps_c[0m
+[0.548s] [35m[1mConsolidate compiler generated dependencies of target telemetry_interface__rosidl_typesupport_c[0m
+[0.550s] [35m[1mConsolidate compiler generated dependencies of target telemetry_interface__rosidl_typesupport_introspection_c[0m
+[0.731s] [ 25%] Built target telemetry_interface__rosidl_typesupport_c
+[0.740s] [ 40%] Built target telemetry_interface__rosidl_typesupport_cpp
+[0.745s] [ 53%] Built target telemetry_interface__rosidl_typesupport_fastrtps_cpp
+[0.746s] [ 56%] Built target telemetry_interface__rosidl_typesupport_introspection_c
+[0.750s] [ 62%] Built target telemetry_interface__rosidl_typesupport_introspection_cpp
+[0.783s] [ 71%] Built target telemetry_interface__rosidl_typesupport_fastrtps_c
+[0.895s] [ 71%] Built target telemetry_interface
+[1.005s] [ 75%] Built target telemetry_interface__py
+[1.061s] [35m[1mConsolidate compiler generated dependencies of target telemetry_interface__rosidl_generator_py[0m
+[1.199s] running egg_info
+[1.201s] writing telemetry_interface.egg-info/PKG-INFO
+[1.203s] writing dependency_links to telemetry_interface.egg-info/dependency_links.txt
+[1.205s] writing top-level names to telemetry_interface.egg-info/top_level.txt
+[1.218s] reading manifest file 'telemetry_interface.egg-info/SOURCES.txt'
+[1.221s] writing manifest file 'telemetry_interface.egg-info/SOURCES.txt'
+[1.247s] [ 81%] Built target telemetry_interface__rosidl_generator_py
+[1.315s] [35m[1mConsolidate compiler generated dependencies of target telemetry_interface__rosidl_typesupport_introspection_c__pyext[0m
+[1.321s] [35m[1mConsolidate compiler generated dependencies of target telemetry_interface__rosidl_typesupport_fastrtps_c__pyext[0m
+[1.343s] [35m[1mConsolidate compiler generated dependencies of target telemetry_interface__rosidl_typesupport_c__pyext[0m
+[1.370s] [ 81%] Built target ament_cmake_python_build_telemetry_interface_egg
+[1.607s] [ 93%] Built target telemetry_interface__rosidl_typesupport_fastrtps_c__pyext
+[1.608s] [ 93%] Built target telemetry_interface__rosidl_typesupport_introspection_c__pyext
+[1.612s] [100%] Built target telemetry_interface__rosidl_typesupport_c__pyext
+[1.664s] Invoked command in '/workspaces/2026-rover-code/src/build/telemetry_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/2026-rover-code/src/install/telemetry_pkg:/opt/ros/humble /usr/bin/cmake --build /workspaces/2026-rover-code/src/build/telemetry_interface -- -j16 -l16
+[1.707s] Invoking command in '/workspaces/2026-rover-code/src/build/telemetry_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/2026-rover-code/src/install/telemetry_pkg:/opt/ros/humble /usr/bin/cmake --install /workspaces/2026-rover-code/src/build/telemetry_interface
+[1.744s] -- Install configuration: ""
+[1.745s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/ament_index/resource_index/rosidl_interfaces/telemetry_interface
+[1.746s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface
+[1.747s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg
+[1.748s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/rosidl_generator_c__visibility_control.h
+[1.750s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/telemetry.h
+[1.751s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/telemetry_data.h
+[1.751s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/control_message.h
+[1.752s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail
+[1.753s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__type_support.h
+[1.754s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__struct.h
+[1.755s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__type_support.h
+[1.755s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__struct.h
+[1.756s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__functions.c
+[1.757s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__functions.h
+[1.758s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__type_support.h
+[1.759s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__functions.h
+[1.759s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__functions.c
+[1.760s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__functions.c
+[1.761s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__struct.h
+[1.762s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__functions.c
+[1.763s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__functions.c
+[1.764s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__struct.h
+[1.765s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__struct.h
+[1.766s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__type_support.h
+[1.768s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__functions.h
+[1.770s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__functions.h
+[1.773s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__type_support.h
+[1.774s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__functions.h
+[1.778s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/controller_status.h
+[1.778s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/o_drive_status.h
+[1.779s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/environment/library_path.sh
+[1.780s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/environment/library_path.dsv
+[1.781s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_generator_c.so
+[1.782s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface
+[1.783s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg
+[1.784s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail
+[1.785s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__rosidl_typesupport_fastrtps_c.h
+[1.786s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__rosidl_typesupport_fastrtps_c.h
+[1.787s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__rosidl_typesupport_fastrtps_c.h
+[1.788s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__rosidl_typesupport_fastrtps_c.h
+[1.789s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__rosidl_typesupport_fastrtps_c.h
+[1.789s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.790s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_typesupport_fastrtps_c.so
+[1.791s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface
+[1.792s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg
+[1.794s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.795s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail
+[1.797s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__type_support.c
+[1.798s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__type_support.c
+[1.799s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__rosidl_typesupport_introspection_c.h
+[1.800s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__rosidl_typesupport_introspection_c.h
+[1.801s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__type_support.c
+[1.802s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__rosidl_typesupport_introspection_c.h
+[1.803s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__type_support.c
+[1.804s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__type_support.c
+[1.805s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__rosidl_typesupport_introspection_c.h
+[1.806s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__rosidl_typesupport_introspection_c.h
+[1.808s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_typesupport_introspection_c.so
+[1.810s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_typesupport_c.so
+[1.812s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface
+[1.814s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg
+[1.816s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/control_message.hpp
+[1.818s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/rosidl_generator_cpp__visibility_control.hpp
+[1.819s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/telemetry.hpp
+[1.819s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/controller_status.hpp
+[1.821s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/o_drive_status.hpp
+[1.822s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/telemetry_data.hpp
+[1.823s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail
+[1.824s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__type_support.hpp
+[1.826s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__builder.hpp
+[1.827s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__struct.hpp
+[1.828s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__type_support.hpp
+[1.829s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__builder.hpp
+[1.830s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__type_support.hpp
+[1.830s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__traits.hpp
+[1.832s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__type_support.hpp
+[1.833s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__builder.hpp
+[1.834s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__traits.hpp
+[1.835s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__type_support.hpp
+[1.837s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__struct.hpp
+[1.837s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__struct.hpp
+[1.839s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__traits.hpp
+[1.841s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__traits.hpp
+[1.842s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__struct.hpp
+[1.843s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__builder.hpp
+[1.845s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__struct.hpp
+[1.846s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__traits.hpp
+[1.848s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__builder.hpp
+[1.849s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface
+[1.850s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg
+[1.850s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.851s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail
+[1.852s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__rosidl_typesupport_fastrtps_cpp.hpp
+[1.853s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__rosidl_typesupport_fastrtps_cpp.hpp
+[1.854s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__rosidl_typesupport_fastrtps_cpp.hpp
+[1.855s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__rosidl_typesupport_fastrtps_cpp.hpp
+[1.857s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/dds_fastrtps
+[1.857s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__rosidl_typesupport_fastrtps_cpp.hpp
+[1.858s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_typesupport_fastrtps_cpp.so
+[1.860s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface
+[1.861s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg
+[1.861s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail
+[1.863s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__type_support.cpp
+[1.864s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__rosidl_typesupport_introspection_cpp.hpp
+[1.865s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__rosidl_typesupport_introspection_cpp.hpp
+[1.866s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__type_support.cpp
+[1.867s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/o_drive_status__rosidl_typesupport_introspection_cpp.hpp
+[1.868s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__type_support.cpp
+[1.869s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/control_message__type_support.cpp
+[1.870s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry__rosidl_typesupport_introspection_cpp.hpp
+[1.871s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__type_support.cpp
+[1.872s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/controller_status__rosidl_typesupport_introspection_cpp.hpp
+[1.873s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_typesupport_introspection_cpp.so
+[1.876s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_typesupport_cpp.so
+[1.877s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/environment/pythonpath.sh
+[1.879s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/environment/pythonpath.dsv
+[1.880s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface-0.0.0-py3.10.egg-info
+[1.881s] -- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface-0.0.0-py3.10.egg-info/top_level.txt
+[1.884s] -- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface-0.0.0-py3.10.egg-info/PKG-INFO
+[1.889s] -- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface-0.0.0-py3.10.egg-info/dependency_links.txt
+[1.892s] -- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface-0.0.0-py3.10.egg-info/SOURCES.txt
+[1.896s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface
+[1.898s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/_telemetry_interface_s.ep.rosidl_typesupport_fastrtps_c.c
+[1.899s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/telemetry_interface_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.900s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/telemetry_interface_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.900s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/_telemetry_interface_s.ep.rosidl_typesupport_introspection_c.c
+[1.901s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/__init__.py
+[1.902s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/_telemetry_interface_s.ep.rosidl_typesupport_c.c
+[1.903s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/libtelemetry_interface__rosidl_generator_py.so
+[1.904s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/telemetry_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.905s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg
+[1.906s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg/_telemetry_data_s.c
+[1.907s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg/_o_drive_status_s.c
+[1.908s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg/_control_message_s.c
+[1.910s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg/_telemetry_s.c
+[1.911s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg/__init__.py
+[1.912s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg/_telemetry_data.py
+[1.913s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg/_telemetry.py
+[1.915s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg/_controller_status.py
+[1.916s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg/_control_message.py
+[1.917s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg/_controller_status_s.c
+[1.918s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg/_o_drive_status.py
+[2.023s] Listing '/workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface'...
+[2.026s] Listing '/workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/msg'...
+[2.030s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/telemetry_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.034s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/telemetry_interface_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.037s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages/telemetry_interface/telemetry_interface_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.039s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_generator_py.so
+[2.042s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/ament_index/resource_index/rust_packages/telemetry_interface
+[2.043s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/rust
+[2.044s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/rust/Cargo.toml
+[2.045s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/rust/src
+[2.046s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/rust/src/lib.rs
+[2.047s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/rust/src/msg
+[2.050s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/rust/src/msg/rmw.rs
+[2.052s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/rust/src/msg.rs
+[2.054s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/rust/build.rs
+[2.056s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/msg/TelemetryData.idl
+[2.058s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/msg/TelemetryData.msg
+[2.059s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/ament_index/resource_index/package_run_dependencies/telemetry_interface
+[2.060s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/ament_index/resource_index/parent_prefix_path/telemetry_interface
+[2.061s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/environment/ament_prefix_path.sh
+[2.062s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/environment/ament_prefix_path.dsv
+[2.063s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/environment/path.sh
+[2.064s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/environment/path.dsv
+[2.065s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/local_setup.bash
+[2.067s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/local_setup.sh
+[2.069s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/local_setup.zsh
+[2.070s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/local_setup.dsv
+[2.071s] -- Installing: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/package.dsv
+[2.076s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/ament_index/resource_index/packages/telemetry_interface
+[2.078s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/export_telemetry_interface__rosidl_generator_cExport.cmake
+[2.079s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/export_telemetry_interface__rosidl_generator_cExport-noconfig.cmake
+[2.080s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/export_telemetry_interface__rosidl_typesupport_fastrtps_cExport.cmake
+[2.082s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/export_telemetry_interface__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[2.084s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interface__rosidl_typesupport_introspection_cExport.cmake
+[2.085s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interface__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[2.087s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interface__rosidl_typesupport_cExport.cmake
+[2.088s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interface__rosidl_typesupport_cExport-noconfig.cmake
+[2.090s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/export_telemetry_interface__rosidl_generator_cppExport.cmake
+[2.092s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/export_telemetry_interface__rosidl_typesupport_fastrtps_cppExport.cmake
+[2.093s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/export_telemetry_interface__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[2.094s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interface__rosidl_typesupport_introspection_cppExport.cmake
+[2.095s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interface__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[2.098s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interface__rosidl_typesupport_cppExport.cmake
+[2.099s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interface__rosidl_typesupport_cppExport-noconfig.cmake
+[2.101s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/export_telemetry_interface__rosidl_generator_pyExport.cmake
+[2.102s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/export_telemetry_interface__rosidl_generator_pyExport-noconfig.cmake
+[2.105s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/rosidl_cmake-extras.cmake
+[2.106s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.107s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/ament_cmake_export_libraries-extras.cmake
+[2.107s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/ament_cmake_export_targets-extras.cmake
+[2.109s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[2.109s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.110s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[2.111s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/rosidl_cmake_aggregate_target-extras.cmake
+[2.112s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interfaceConfig.cmake
+[2.113s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interfaceConfig-version.cmake
+[2.114s] -- Up-to-date: /workspaces/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/package.xml
+[2.125s] Invoked command in '/workspaces/2026-rover-code/src/build/telemetry_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/2026-rover-code/src/install/telemetry_pkg:/opt/ros/humble /usr/bin/cmake --install /workspaces/2026-rover-code/src/build/telemetry_interface

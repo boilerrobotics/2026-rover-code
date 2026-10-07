@@ -1,0 +1,1 @@
+Invoking command in '/workspaces/2026-rover-code/build/telemetry_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/2026-rover-code/src/install/telemetry_pkg:/opt/ros/humble /usr/bin/cmake /workspaces/2026-rover-code/src/telemetry_interface -DCMAKE_INSTALL_PREFIX=/workspaces/2026-rover-code/install/telemetry_interface

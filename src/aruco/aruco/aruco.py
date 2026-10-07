@@ -6,6 +6,7 @@ import cv2
 from message_filters import Subscriber, ApproximateTimeSynchronizer
 from geometry_msgs.msg import Polygon, Point32
 from sensor_msgs.msg import Image, CameraInfo
+from aruco_interfaces.msg import ArucoLocations
 
 import numpy as np
 from cv_bridge import CvBridge
@@ -15,7 +16,7 @@ class ArucoNode(Node):
         super().__init__('aruco_node')
 
         self.locations_pub = self.create_publisher(
-            Polygon,
+            ArucoLocations,
             "/aruco_locations",
             qos_profile_system_default
         )
@@ -75,6 +76,13 @@ class ArucoNode(Node):
         point.y = (self.cx - u) * depth / self.fx
         point.z = (self.cy - v) * depth / self.fy
         return point
+
+    def to_point(self, arr):
+        point = Point32()
+        point.x = float(arr[0])
+        point.y = float(arr[1])
+        point.z = 0.0
+        return point
         
     def depth_callback(self, depth: Image, image: Image):
         cv2_image = self.bridge.imgmsg_to_cv2(image, "bgr8")
@@ -89,7 +97,7 @@ class ArucoNode(Node):
 
         if ids is not None:
 
-            aruco_markers = Polygon()
+            aruco_markers = ArucoLocations()
 
             for box in boxes:
                 corners = box[0]
@@ -102,10 +110,16 @@ class ArucoNode(Node):
                     # self.get_logger().info("ArUco marker found, but no depth provided")
                     continue
 
-                marker = self.parse_point(cx, cy, cd)
-                aruco_markers.points.append(marker)
+                bounding_box = Polygon()
+                for corner in corners:
+                    bounding_box.points.append(self.to_point(corner))
 
-            if len(aruco_markers.points) > 0:
+                marker = self.parse_point(cx, cy, cd)
+                aruco_markers.markers.append(marker)
+                aruco_markers.bounding_boxes.append(bounding_box)
+                aruco_markers.centers.append(self.to_point([cx, cy]))
+
+            if len(aruco_markers.markers) > 0:
                 # DEBUGGING: Writes images to file system
                 # annotated_image = cv2.aruco.drawDetectedMarkers(cv2_image, boxes, ids)
                 # file_path = f'{image.header.stamp.sec}_{image.header.stamp.nanosec}.jpg'

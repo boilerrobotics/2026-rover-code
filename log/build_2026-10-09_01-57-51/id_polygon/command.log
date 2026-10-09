@@ -1,0 +1,1 @@
+Invoking command in '/workspaces/2026-rover-code/build/id_polygon': CMAKE_PREFIX_PATH=/workspaces/2026-rover-code/install/image_processor:/opt/ros/humble /usr/bin/cmake --build /workspaces/2026-rover-code/build/id_polygon -- -j15 -l15

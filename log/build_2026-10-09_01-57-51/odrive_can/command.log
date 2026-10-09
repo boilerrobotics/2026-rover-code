@@ -1,0 +1,1 @@
+Invoking command in '/workspaces/2026-rover-code/build/odrive_can': CMAKE_PREFIX_PATH=/workspaces/2026-rover-code/install/image_processor:/opt/ros/humble /usr/bin/cmake /workspaces/2026-rover-code/ros_odrive/odrive_node -DCMAKE_INSTALL_PREFIX=/workspaces/2026-rover-code/install/odrive_can

@@ -1,0 +1,35 @@
+[0.131s] Invoking command in '/workspaces/2026-rover-code/build/id_polygon': CMAKE_PREFIX_PATH=/workspaces/2026-rover-code/install/image_processor:/opt/ros/humble /usr/bin/cmake --build /workspaces/2026-rover-code/build/id_polygon -- -j15 -l15
+[0.552s] [35m[1mConsolidate compiler generated dependencies of target id_polygon__rosidl_generator_c[0m
+[0.627s] [  3%] Built target id_polygon__rs
+[0.650s] [  6%] Built target id_polygon__cpp
+[0.698s] [ 15%] Built target id_polygon__rosidl_generator_c
+[0.711s] [ 15%] Built target ament_cmake_python_copy_id_polygon
+[0.741s] [35m[1mConsolidate compiler generated dependencies of target id_polygon__rosidl_typesupport_introspection_cpp[0m
+[0.744s] [35m[1mConsolidate compiler generated dependencies of target id_polygon__rosidl_typesupport_cpp[0m
+[0.761s] [35m[1mConsolidate compiler generated dependencies of target id_polygon__rosidl_typesupport_fastrtps_cpp[0m
+[0.784s] [35m[1mConsolidate compiler generated dependencies of target id_polygon__rosidl_typesupport_fastrtps_c[0m
+[0.786s] [35m[1mConsolidate compiler generated dependencies of target id_polygon__rosidl_typesupport_c[0m
+[0.789s] [35m[1mConsolidate compiler generated dependencies of target id_polygon__rosidl_typesupport_introspection_c[0m
+[0.899s] [ 25%] Built target id_polygon__rosidl_typesupport_c
+[0.911s] [ 34%] Built target id_polygon__rosidl_typesupport_cpp
+[0.919s] [ 43%] Built target id_polygon__rosidl_typesupport_introspection_cpp
+[0.939s] [ 53%] Built target id_polygon__rosidl_typesupport_introspection_c
+[0.974s] [ 62%] Built target id_polygon__rosidl_typesupport_fastrtps_c
+[0.979s] [ 71%] Built target id_polygon__rosidl_typesupport_fastrtps_cpp
+[1.230s] running egg_info
+[1.231s] writing id_polygon.egg-info/PKG-INFO
+[1.235s] writing dependency_links to id_polygon.egg-info/dependency_links.txt
+[1.238s] writing top-level names to id_polygon.egg-info/top_level.txt
+[1.246s] reading manifest file 'id_polygon.egg-info/SOURCES.txt'
+[1.248s] writing manifest file 'id_polygon.egg-info/SOURCES.txt'
+[1.263s] [ 71%] Built target id_polygon
+[1.343s] [ 71%] Built target ament_cmake_python_build_id_polygon_egg
+[1.597s] [ 75%] Built target id_polygon__py
+[1.750s] [35m[1mConsolidate compiler generated dependencies of target id_polygon__rosidl_generator_py[0m
+[1.970s] [ 81%] Built target id_polygon__rosidl_generator_py
+[2.079s] [35m[1mConsolidate compiler generated dependencies of target id_polygon__rosidl_typesupport_introspection_c__pyext[0m
+[2.094s] [35m[1mConsolidate compiler generated dependencies of target id_polygon__rosidl_typesupport_fastrtps_c__pyext[0m
+[2.095s] [35m[1mConsolidate compiler generated dependencies of target id_polygon__rosidl_typesupport_c__pyext[0m
+[2.289s] [ 87%] Built target id_polygon__rosidl_typesupport_c__pyext
+[2.298s] [ 93%] Built target id_polygon__rosidl_typesupport_introspection_c__pyext
+[2.319s] [100%] Built target id_polygon__rosidl_typesupport_fastrtps_c__pyext

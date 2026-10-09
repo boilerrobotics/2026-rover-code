@@ -1,0 +1,37 @@
+[1.261s] Invoking command in '/workspaces/2026-rover-code/src/image_processor': PYTHONPATH=/workspaces/2026-rover-code/src/build/image_processor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/2026-rover-code/src/install/image_processor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/image_processor build --build-base /workspaces/2026-rover-code/src/build/image_processor/build install --record /workspaces/2026-rover-code/src/build/image_processor/install.log --install-scripts $base/lib/image_processor --single-version-externally-managed install_data
+[1.677s] running egg_info
+[1.678s] creating ../build/image_processor/image_processor.egg-info
+[1.679s] writing ../build/image_processor/image_processor.egg-info/PKG-INFO
+[1.682s] writing dependency_links to ../build/image_processor/image_processor.egg-info/dependency_links.txt
+[1.683s] writing entry points to ../build/image_processor/image_processor.egg-info/entry_points.txt
+[1.685s] writing requirements to ../build/image_processor/image_processor.egg-info/requires.txt
+[1.687s] writing top-level names to ../build/image_processor/image_processor.egg-info/top_level.txt
+[1.690s] writing manifest file '../build/image_processor/image_processor.egg-info/SOURCES.txt'
+[1.701s] reading manifest file '../build/image_processor/image_processor.egg-info/SOURCES.txt'
+[1.708s] writing manifest file '../build/image_processor/image_processor.egg-info/SOURCES.txt'
+[1.710s] running build
+[1.712s] running build_py
+[1.713s] creating /workspaces/2026-rover-code/src/build/image_processor/build
+[1.715s] creating /workspaces/2026-rover-code/src/build/image_processor/build/lib
+[1.717s] creating /workspaces/2026-rover-code/src/build/image_processor/build/lib/image_processor
+[1.718s] copying image_processor/__init__.py -> /workspaces/2026-rover-code/src/build/image_processor/build/lib/image_processor
+[1.719s] copying image_processor/ImageProcess.py -> /workspaces/2026-rover-code/src/build/image_processor/build/lib/image_processor
+[1.720s] running install
+[1.721s] running install_lib
+[1.722s] creating /workspaces/2026-rover-code/src/install/image_processor/lib/python3.10/site-packages/image_processor
+[1.723s] copying /workspaces/2026-rover-code/src/build/image_processor/build/lib/image_processor/__init__.py -> /workspaces/2026-rover-code/src/install/image_processor/lib/python3.10/site-packages/image_processor
+[1.725s] copying /workspaces/2026-rover-code/src/build/image_processor/build/lib/image_processor/ImageProcess.py -> /workspaces/2026-rover-code/src/install/image_processor/lib/python3.10/site-packages/image_processor
+[1.729s] byte-compiling /workspaces/2026-rover-code/src/install/image_processor/lib/python3.10/site-packages/image_processor/__init__.py to __init__.cpython-310.pyc
+[1.735s] byte-compiling /workspaces/2026-rover-code/src/install/image_processor/lib/python3.10/site-packages/image_processor/ImageProcess.py to ImageProcess.cpython-310.pyc
+[1.747s] running install_data
+[1.748s] creating /workspaces/2026-rover-code/src/install/image_processor/share/ament_index
+[1.749s] creating /workspaces/2026-rover-code/src/install/image_processor/share/ament_index/resource_index
+[1.750s] creating /workspaces/2026-rover-code/src/install/image_processor/share/ament_index/resource_index/packages
+[1.751s] copying resource/image_processor -> /workspaces/2026-rover-code/src/install/image_processor/share/ament_index/resource_index/packages
+[1.752s] copying package.xml -> /workspaces/2026-rover-code/src/install/image_processor/share/image_processor
+[1.752s] running install_egg_info
+[1.755s] Copying ../build/image_processor/image_processor.egg-info to /workspaces/2026-rover-code/src/install/image_processor/lib/python3.10/site-packages/image_processor-0.0.0-py3.10.egg-info
+[1.769s] running install_scripts
+[1.818s] Installing ImageProcess script to /workspaces/2026-rover-code/src/install/image_processor/lib/image_processor
+[1.820s] writing list of installed files to '/workspaces/2026-rover-code/src/build/image_processor/install.log'
+[1.856s] Invoked command in '/workspaces/2026-rover-code/src/image_processor' returned '0': PYTHONPATH=/workspaces/2026-rover-code/src/build/image_processor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/2026-rover-code/src/install/image_processor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/image_processor build --build-base /workspaces/2026-rover-code/src/build/image_processor/build install --record /workspaces/2026-rover-code/src/build/image_processor/install.log --install-scripts $base/lib/image_processor --single-version-externally-managed install_data

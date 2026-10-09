@@ -1,0 +1,36 @@
+[0.826s] Invoking command in '/workspaces/2026-rover-code/build/image_processor': AMENT_PREFIX_PATH=/workspaces/2026-rover-code/install/id_polygon:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/2026-rover-code/install/id_polygon LD_LIBRARY_PATH=/workspaces/2026-rover-code/install/id_polygon/lib:${LD_LIBRARY_PATH} PYTHONPATH=/workspaces/2026-rover-code/build/image_processor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/2026-rover-code/install/image_processor/lib/python3.10/site-packages:/workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /workspaces/2026-rover-code/build/image_processor/build
+[1.058s] running develop
+[1.141s] Removing /workspaces/2026-rover-code/install/image_processor/lib/python3.10/site-packages/image-processor.egg-link (link to .)
+[1.162s] Invoked command in '/workspaces/2026-rover-code/build/image_processor' returned '0': AMENT_PREFIX_PATH=/workspaces/2026-rover-code/install/id_polygon:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/2026-rover-code/install/id_polygon LD_LIBRARY_PATH=/workspaces/2026-rover-code/install/id_polygon/lib:${LD_LIBRARY_PATH} PYTHONPATH=/workspaces/2026-rover-code/build/image_processor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/2026-rover-code/install/image_processor/lib/python3.10/site-packages:/workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /workspaces/2026-rover-code/build/image_processor/build
+[1.172s] Invoking command in '/workspaces/2026-rover-code/src/image_processor': AMENT_PREFIX_PATH=/workspaces/2026-rover-code/install/id_polygon:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/2026-rover-code/install/id_polygon LD_LIBRARY_PATH=/workspaces/2026-rover-code/install/id_polygon/lib:${LD_LIBRARY_PATH} PYTHONPATH=/workspaces/2026-rover-code/build/image_processor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/2026-rover-code/install/image_processor/lib/python3.10/site-packages:/workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/image_processor build --build-base /workspaces/2026-rover-code/build/image_processor/build install --record /workspaces/2026-rover-code/build/image_processor/install.log --install-scripts $base/lib/image_processor --single-version-externally-managed install_data --force
+[1.429s] running egg_info
+[1.430s] writing ../../build/image_processor/image_processor.egg-info/PKG-INFO
+[1.430s] writing dependency_links to ../../build/image_processor/image_processor.egg-info/dependency_links.txt
+[1.431s] writing entry points to ../../build/image_processor/image_processor.egg-info/entry_points.txt
+[1.431s] writing requirements to ../../build/image_processor/image_processor.egg-info/requires.txt
+[1.432s] writing top-level names to ../../build/image_processor/image_processor.egg-info/top_level.txt
+[1.434s] reading manifest file '../../build/image_processor/image_processor.egg-info/SOURCES.txt'
+[1.435s] writing manifest file '../../build/image_processor/image_processor.egg-info/SOURCES.txt'
+[1.436s] running build
+[1.436s] running build_py
+[1.437s] creating /workspaces/2026-rover-code/build/image_processor/build
+[1.437s] creating /workspaces/2026-rover-code/build/image_processor/build/lib
+[1.438s] creating /workspaces/2026-rover-code/build/image_processor/build/lib/image_processor
+[1.438s] copying image_processor/__init__.py -> /workspaces/2026-rover-code/build/image_processor/build/lib/image_processor
+[1.438s] copying image_processor/ImageProcess.py -> /workspaces/2026-rover-code/build/image_processor/build/lib/image_processor
+[1.440s] running install
+[1.441s] running install_lib
+[1.441s] creating /workspaces/2026-rover-code/install/image_processor/lib/python3.10/site-packages/image_processor
+[1.442s] copying /workspaces/2026-rover-code/build/image_processor/build/lib/image_processor/__init__.py -> /workspaces/2026-rover-code/install/image_processor/lib/python3.10/site-packages/image_processor
+[1.443s] copying /workspaces/2026-rover-code/build/image_processor/build/lib/image_processor/ImageProcess.py -> /workspaces/2026-rover-code/install/image_processor/lib/python3.10/site-packages/image_processor
+[1.444s] byte-compiling /workspaces/2026-rover-code/install/image_processor/lib/python3.10/site-packages/image_processor/__init__.py to __init__.cpython-310.pyc
+[1.450s] byte-compiling /workspaces/2026-rover-code/install/image_processor/lib/python3.10/site-packages/image_processor/ImageProcess.py to ImageProcess.cpython-310.pyc
+[1.453s] running install_data
+[1.454s] copying resource/image_processor -> /workspaces/2026-rover-code/install/image_processor/share/ament_index/resource_index/packages
+[1.455s] copying package.xml -> /workspaces/2026-rover-code/install/image_processor/share/image_processor
+[1.458s] running install_egg_info
+[1.459s] Copying ../../build/image_processor/image_processor.egg-info to /workspaces/2026-rover-code/install/image_processor/lib/python3.10/site-packages/image_processor-0.0.0-py3.10.egg-info
+[1.471s] running install_scripts
+[1.503s] Installing ImageProcess script to /workspaces/2026-rover-code/install/image_processor/lib/image_processor
+[1.504s] writing list of installed files to '/workspaces/2026-rover-code/build/image_processor/install.log'
+[1.541s] Invoked command in '/workspaces/2026-rover-code/src/image_processor' returned '0': AMENT_PREFIX_PATH=/workspaces/2026-rover-code/install/id_polygon:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/2026-rover-code/install/id_polygon LD_LIBRARY_PATH=/workspaces/2026-rover-code/install/id_polygon/lib:${LD_LIBRARY_PATH} PYTHONPATH=/workspaces/2026-rover-code/build/image_processor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/2026-rover-code/install/image_processor/lib/python3.10/site-packages:/workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/image_processor build --build-base /workspaces/2026-rover-code/build/image_processor/build install --record /workspaces/2026-rover-code/build/image_processor/install.log --install-scripts $base/lib/image_processor --single-version-externally-managed install_data --force

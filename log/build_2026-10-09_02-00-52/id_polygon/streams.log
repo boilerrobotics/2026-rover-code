@@ -1,0 +1,155 @@
+[0.066s] Invoking command in '/workspaces/2026-rover-code/build/id_polygon': CMAKE_PREFIX_PATH=/workspaces/2026-rover-code/install/image_processor:/opt/ros/humble /usr/bin/cmake --build /workspaces/2026-rover-code/build/id_polygon -- -j15 -l15
+[0.535s] [  3%] Built target id_polygon__cpp
+[0.573s] [  6%] Built target id_polygon__rs
+[0.589s] [ 15%] Built target id_polygon__rosidl_generator_c
+[0.630s] [ 15%] Built target ament_cmake_python_copy_id_polygon
+[0.723s] [ 25%] Built target id_polygon__rosidl_typesupport_fastrtps_cpp
+[0.757s] [ 34%] Built target id_polygon__rosidl_typesupport_cpp
+[0.783s] [ 43%] Built target id_polygon__rosidl_typesupport_fastrtps_c
+[0.788s] [ 53%] Built target id_polygon__rosidl_typesupport_c
+[0.795s] [ 62%] Built target id_polygon__rosidl_typesupport_introspection_cpp
+[0.825s] [ 71%] Built target id_polygon__rosidl_typesupport_introspection_c
+[1.044s] [ 71%] Built target id_polygon
+[1.103s] running egg_info
+[1.103s] writing id_polygon.egg-info/PKG-INFO
+[1.105s] writing dependency_links to id_polygon.egg-info/dependency_links.txt
+[1.107s] writing top-level names to id_polygon.egg-info/top_level.txt
+[1.112s] reading manifest file 'id_polygon.egg-info/SOURCES.txt'
+[1.114s] writing manifest file 'id_polygon.egg-info/SOURCES.txt'
+[1.194s] [ 71%] Built target ament_cmake_python_build_id_polygon_egg
+[1.237s] [ 75%] Built target id_polygon__py
+[1.432s] [ 81%] Built target id_polygon__rosidl_generator_py
+[1.621s] [ 96%] Built target id_polygon__rosidl_typesupport_c__pyext
+[1.622s] [ 96%] Built target id_polygon__rosidl_typesupport_fastrtps_c__pyext
+[1.623s] [100%] Built target id_polygon__rosidl_typesupport_introspection_c__pyext
+[1.669s] Invoked command in '/workspaces/2026-rover-code/build/id_polygon' returned '0': CMAKE_PREFIX_PATH=/workspaces/2026-rover-code/install/image_processor:/opt/ros/humble /usr/bin/cmake --build /workspaces/2026-rover-code/build/id_polygon -- -j15 -l15
+[1.721s] Invoking command in '/workspaces/2026-rover-code/build/id_polygon': CMAKE_PREFIX_PATH=/workspaces/2026-rover-code/install/image_processor:/opt/ros/humble /usr/bin/cmake --install /workspaces/2026-rover-code/build/id_polygon
+[1.766s] -- Install configuration: ""
+[1.767s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/ament_index/resource_index/rosidl_interfaces/id_polygon
+[1.768s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon
+[1.768s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg
+[1.769s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/rosidl_generator_c__visibility_control.h
+[1.772s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail
+[1.773s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__functions.c
+[1.773s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__type_support.h
+[1.774s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__functions.h
+[1.774s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__struct.h
+[1.774s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/id_polygon.h
+[1.775s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/environment/library_path.sh
+[1.775s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/environment/library_path.dsv
+[1.776s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/lib/libid_polygon__rosidl_generator_c.so
+[1.776s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon
+[1.777s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg
+[1.778s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail
+[1.779s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__rosidl_typesupport_fastrtps_c.h
+[1.779s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.780s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/lib/libid_polygon__rosidl_typesupport_fastrtps_c.so
+[1.780s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon
+[1.781s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg
+[1.781s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/id_polygon.hpp
+[1.782s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail
+[1.782s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__type_support.hpp
+[1.783s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__traits.hpp
+[1.783s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__builder.hpp
+[1.784s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__struct.hpp
+[1.785s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/rosidl_generator_cpp__visibility_control.hpp
+[1.786s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon
+[1.786s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg
+[1.787s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.789s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail
+[1.789s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__rosidl_typesupport_fastrtps_cpp.hpp
+[1.790s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/dds_fastrtps
+[1.790s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/lib/libid_polygon__rosidl_typesupport_fastrtps_cpp.so
+[1.790s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon
+[1.791s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg
+[1.791s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail
+[1.792s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__rosidl_typesupport_introspection_c.h
+[1.792s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__type_support.c
+[1.793s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.794s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/lib/libid_polygon__rosidl_typesupport_introspection_c.so
+[1.794s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/lib/libid_polygon__rosidl_typesupport_c.so
+[1.795s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon
+[1.797s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg
+[1.797s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail
+[1.797s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__rosidl_typesupport_introspection_cpp.hpp
+[1.798s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__type_support.cpp
+[1.799s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/lib/libid_polygon__rosidl_typesupport_introspection_cpp.so
+[1.800s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/lib/libid_polygon__rosidl_typesupport_cpp.so
+[1.800s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/environment/pythonpath.sh
+[1.801s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/environment/pythonpath.dsv
+[1.801s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon-0.0.0-py3.10.egg-info
+[1.802s] -- Installing: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon-0.0.0-py3.10.egg-info/PKG-INFO
+[1.802s] -- Installing: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon-0.0.0-py3.10.egg-info/SOURCES.txt
+[1.804s] -- Installing: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon-0.0.0-py3.10.egg-info/top_level.txt
+[1.807s] -- Installing: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon-0.0.0-py3.10.egg-info/dependency_links.txt
+[1.811s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon
+[1.813s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/libid_polygon__rosidl_generator_py.so
+[1.813s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/msg
+[1.814s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/msg/__init__.py
+[1.814s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/msg/_id_polygon_s.c
+[1.815s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/msg/_id_polygon.py
+[1.816s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/_id_polygon_s.ep.rosidl_typesupport_fastrtps_c.c
+[1.820s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/__init__.py
+[1.821s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/id_polygon_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.822s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/_id_polygon_s.ep.rosidl_typesupport_c.c
+[1.822s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/id_polygon_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.823s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/_id_polygon_s.ep.rosidl_typesupport_introspection_c.c
+[1.823s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/id_polygon_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.918s] Listing '/workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon'...
+[1.918s] Listing '/workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/msg'...
+[1.926s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/id_polygon_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.927s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/id_polygon_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.928s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/id_polygon_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.928s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/lib/libid_polygon__rosidl_generator_py.so
+[1.929s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/ament_index/resource_index/rust_packages/id_polygon
+[1.929s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/rust
+[1.929s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/rust/Cargo.toml
+[1.930s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/rust/build.rs
+[1.934s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/rust/src
+[1.934s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/rust/src/msg
+[1.935s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/rust/src/msg/rmw.rs
+[1.936s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/rust/src/lib.rs
+[1.936s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/rust/src/msg.rs
+[1.937s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/msg/IdPolygon.idl
+[1.938s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/msg/IdPolygon.msg
+[1.938s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/ament_index/resource_index/package_run_dependencies/id_polygon
+[1.939s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/ament_index/resource_index/parent_prefix_path/id_polygon
+[1.939s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/environment/ament_prefix_path.sh
+[1.939s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/environment/ament_prefix_path.dsv
+[1.940s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/environment/path.sh
+[1.941s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/environment/path.dsv
+[1.942s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/local_setup.bash
+[1.942s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/local_setup.sh
+[1.942s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/local_setup.zsh
+[1.942s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/local_setup.dsv
+[1.943s] -- Installing: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/package.dsv
+[1.943s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/ament_index/resource_index/packages/id_polygon
+[1.944s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/export_id_polygon__rosidl_generator_cExport.cmake
+[1.945s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/export_id_polygon__rosidl_generator_cExport-noconfig.cmake
+[1.945s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/export_id_polygon__rosidl_typesupport_fastrtps_cExport.cmake
+[1.945s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/export_id_polygon__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[1.946s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/export_id_polygon__rosidl_generator_cppExport.cmake
+[1.946s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/export_id_polygon__rosidl_typesupport_fastrtps_cppExport.cmake
+[1.947s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/export_id_polygon__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[1.947s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/id_polygon__rosidl_typesupport_introspection_cExport.cmake
+[1.948s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/id_polygon__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[1.948s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/id_polygon__rosidl_typesupport_cExport.cmake
+[1.949s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/id_polygon__rosidl_typesupport_cExport-noconfig.cmake
+[1.950s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/id_polygon__rosidl_typesupport_introspection_cppExport.cmake
+[1.950s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/id_polygon__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[1.951s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/id_polygon__rosidl_typesupport_cppExport.cmake
+[1.951s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/id_polygon__rosidl_typesupport_cppExport-noconfig.cmake
+[1.952s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/export_id_polygon__rosidl_generator_pyExport.cmake
+[1.952s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/export_id_polygon__rosidl_generator_pyExport-noconfig.cmake
+[1.952s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/rosidl_cmake-extras.cmake
+[1.954s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.955s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.956s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/ament_cmake_export_libraries-extras.cmake
+[1.957s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/ament_cmake_export_targets-extras.cmake
+[1.957s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.958s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.958s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/rosidl_cmake_aggregate_target-extras.cmake
+[1.959s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/id_polygonConfig.cmake
+[1.959s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/id_polygonConfig-version.cmake
+[1.960s] -- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/package.xml
+[1.964s] Invoked command in '/workspaces/2026-rover-code/build/id_polygon' returned '0': CMAKE_PREFIX_PATH=/workspaces/2026-rover-code/install/image_processor:/opt/ros/humble /usr/bin/cmake --install /workspaces/2026-rover-code/build/id_polygon

@@ -1,0 +1,34 @@
+[35m[1mConsolidate compiler generated dependencies of target id_polygon__rosidl_generator_c[0m
+[  3%] Built target id_polygon__rs
+[  6%] Built target id_polygon__cpp
+[ 15%] Built target id_polygon__rosidl_generator_c
+[ 15%] Built target ament_cmake_python_copy_id_polygon
+[35m[1mConsolidate compiler generated dependencies of target id_polygon__rosidl_typesupport_introspection_cpp[0m
+[35m[1mConsolidate compiler generated dependencies of target id_polygon__rosidl_typesupport_cpp[0m
+[35m[1mConsolidate compiler generated dependencies of target id_polygon__rosidl_typesupport_fastrtps_cpp[0m
+[35m[1mConsolidate compiler generated dependencies of target id_polygon__rosidl_typesupport_fastrtps_c[0m
+[35m[1mConsolidate compiler generated dependencies of target id_polygon__rosidl_typesupport_c[0m
+[35m[1mConsolidate compiler generated dependencies of target id_polygon__rosidl_typesupport_introspection_c[0m
+[ 25%] Built target id_polygon__rosidl_typesupport_c
+[ 34%] Built target id_polygon__rosidl_typesupport_cpp
+[ 43%] Built target id_polygon__rosidl_typesupport_introspection_cpp
+[ 53%] Built target id_polygon__rosidl_typesupport_introspection_c
+[ 62%] Built target id_polygon__rosidl_typesupport_fastrtps_c
+[ 71%] Built target id_polygon__rosidl_typesupport_fastrtps_cpp
+running egg_info
+writing id_polygon.egg-info/PKG-INFO
+writing dependency_links to id_polygon.egg-info/dependency_links.txt
+writing top-level names to id_polygon.egg-info/top_level.txt
+reading manifest file 'id_polygon.egg-info/SOURCES.txt'
+writing manifest file 'id_polygon.egg-info/SOURCES.txt'
+[ 71%] Built target id_polygon
+[ 71%] Built target ament_cmake_python_build_id_polygon_egg
+[ 75%] Built target id_polygon__py
+[35m[1mConsolidate compiler generated dependencies of target id_polygon__rosidl_generator_py[0m
+[ 81%] Built target id_polygon__rosidl_generator_py
+[35m[1mConsolidate compiler generated dependencies of target id_polygon__rosidl_typesupport_introspection_c__pyext[0m
+[35m[1mConsolidate compiler generated dependencies of target id_polygon__rosidl_typesupport_fastrtps_c__pyext[0m
+[35m[1mConsolidate compiler generated dependencies of target id_polygon__rosidl_typesupport_c__pyext[0m
+[ 87%] Built target id_polygon__rosidl_typesupport_c__pyext
+[ 93%] Built target id_polygon__rosidl_typesupport_introspection_c__pyext
+[100%] Built target id_polygon__rosidl_typesupport_fastrtps_c__pyext

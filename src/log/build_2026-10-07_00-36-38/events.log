@@ -1,0 +1,117 @@
+[0.000000] (-) TimerEvent: {}
+[0.003407] (image_processor) JobQueued: {'identifier': 'image_processor', 'dependencies': OrderedDict()}
+[0.004007] (zed_components) JobQueued: {'identifier': 'zed_components', 'dependencies': OrderedDict()}
+[0.004321] (zed_debug) JobQueued: {'identifier': 'zed_debug', 'dependencies': OrderedDict([('zed_components', '/workspaces/2026-rover-code/src/install/zed_components')])}
+[0.005903] (zed_wrapper) JobQueued: {'identifier': 'zed_wrapper', 'dependencies': OrderedDict([('zed_components', '/workspaces/2026-rover-code/src/install/zed_components')])}
+[0.006206] (zed_ros2) JobQueued: {'identifier': 'zed_ros2', 'dependencies': OrderedDict([('zed_components', '/workspaces/2026-rover-code/src/install/zed_components'), ('zed_wrapper', '/workspaces/2026-rover-code/src/install/zed_wrapper')])}
+[0.007445] (zed_components) JobStarted: {'identifier': 'zed_components'}
+[0.040341] (image_processor) JobStarted: {'identifier': 'image_processor'}
+[0.097271] (-) TimerEvent: {}
+[0.113052] (zed_components) JobProgress: {'identifier': 'zed_components', 'progress': 'cmake'}
+[0.127890] (zed_components) Command: {'cmd': ['/usr/bin/cmake', '/workspaces/2026-rover-code/src/zed-ros2-wrapper/zed_components', '-DCMAKE_INSTALL_PREFIX=/workspaces/2026-rover-code/src/install/zed_components'], 'cwd': '/workspaces/2026-rover-code/src/build/zed_components', 'env': OrderedDict([('HOSTNAME', 'bc602964da08'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/07f806f999227108933c2e30515b26eecc1fda74/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/07f806f999227108933c2e30515b26eecc1fda74/bin/helpers/browser.sh'), ('HOME', '/home/devuser'), ('OLDPWD', '//workspaces/2026-rover-code'), ('TERM_PROGRAM_VERSION', '1.140.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-7e62cddb-2e80-48d1-aedd-ddf335282eeb.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/07f806f999227108933c2e30515b26eecc1fda74/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/07f806f999227108933c2e30515b26eecc1fda74/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/devuser/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/workspaces/2026-rover-code/src/image_processor/install:/workspaces/2026-rover-code/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-00fb4896-fd06-4c15-a087-624c56bfb748.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('UV_USE_IO_URING', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/home/devuser/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/devuser/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-x64/07f806f999227108933c2e30515b26eecc1fda74/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/devuser/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-00fb4896-fd06-4c15-a087-624c56bfb748.sock"]'), ('DISPLAY', ':1'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/devuser/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-fdfbf0e4a3e6702c.txt'), ('LANG', 'C.UTF-8'), ('PYTHONSTARTUP', '/home/devuser/.vscode-server/data/User/workspaceStorage/85b3a11b8d8e29f6437ba3391c3acbc4/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-e11f08c4f5.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-00fb4896-fd06-4c15-a087-624c56bfb748.sock'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/workspaces/2026-rover-code/src/image_processor/install/image_processor:/workspaces/2026-rover-code/install/image_processor:/opt/ros/humble'), ('SHELL', '/bin/sh'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/workspaces/2026-rover-code/src/build/zed_components'), ('LC_ALL', 'C.UTF-8'), ('COPILOT_DEBUG_NONCE', 'aec9a8de5a65ff5b705106195fb9be97'), ('PYTHONPATH', '/workspaces/2026-rover-code/src/image_processor/install/image_processor/lib/python3.10/site-packages:/workspaces/2026-rover-code/build/image_processor:/workspaces/2026-rover-code/install/image_processor/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspaces/2026-rover-code/src/image_processor/install/image_processor:/workspaces/2026-rover-code/install/image_processor:/opt/ros/humble')]), 'shell': False}
+[0.197420] (-) TimerEvent: {}
+[0.299050] (-) TimerEvent: {}
+[0.400898] (-) TimerEvent: {}
+[0.502255] (-) TimerEvent: {}
+[0.603840] (-) TimerEvent: {}
+[0.708378] (-) TimerEvent: {}
+[0.809416] (-) TimerEvent: {}
+[0.910978] (-) TimerEvent: {}
+[0.960242] (zed_components) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[1.011656] (-) TimerEvent: {}
+[1.112588] (-) TimerEvent: {}
+[1.213596] (-) TimerEvent: {}
+[1.293170] (image_processor) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/image_processor', 'build', '--build-base', '/workspaces/2026-rover-code/src/build/image_processor/build', 'install', '--record', '/workspaces/2026-rover-code/src/build/image_processor/install.log', '--install-scripts', '$base/lib/image_processor', '--single-version-externally-managed', 'install_data'], 'cwd': '/workspaces/2026-rover-code/src/image_processor', 'env': {'HOSTNAME': 'bc602964da08', 'GIT_ASKPASS': '/vscode/vscode-server/bin/linux-x64/07f806f999227108933c2e30515b26eecc1fda74/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/vscode/vscode-server/bin/linux-x64/07f806f999227108933c2e30515b26eecc1fda74/bin/helpers/browser.sh', 'HOME': '/home/devuser', 'OLDPWD': '//workspaces/2026-rover-code', 'TERM_PROGRAM_VERSION': '1.140.0', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-7e62cddb-2e80-48d1-aedd-ddf335282eeb.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/vscode/vscode-server/bin/linux-x64/07f806f999227108933c2e30515b26eecc1fda74/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/vscode/vscode-server/bin/linux-x64/07f806f999227108933c2e30515b26eecc1fda74/node', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/devuser/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'COLCON_PREFIX_PATH': '/workspaces/2026-rover-code/src/image_processor/install:/workspaces/2026-rover-code/install', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-00fb4896-fd06-4c15-a087-624c56bfb748.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'UV_USE_IO_URING': '0', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/humble/bin:/home/devuser/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/devuser/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-x64/07f806f999227108933c2e30515b26eecc1fda74/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/devuser/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/vscode-ssh-auth-00fb4896-fd06-4c15-a087-624c56bfb748.sock"]', 'DISPLAY': ':1', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/devuser/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-fdfbf0e4a3e6702c.txt', 'LANG': 'C.UTF-8', 'PYTHONSTARTUP': '/home/devuser/.vscode-server/data/User/workspaceStorage/85b3a11b8d8e29f6437ba3391c3acbc4/ms-python.python/pythonrc.py', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-e11f08c4f5.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/vscode-ssh-auth-00fb4896-fd06-4c15-a087-624c56bfb748.sock', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/workspaces/2026-rover-code/src/image_processor/install/image_processor:/workspaces/2026-rover-code/install/image_processor:/opt/ros/humble', 'SHELL': '/bin/sh', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/workspaces/2026-rover-code/src/build/image_processor', 'LC_ALL': 'C.UTF-8', 'COPILOT_DEBUG_NONCE': 'aec9a8de5a65ff5b705106195fb9be97', 'PYTHONPATH': '/workspaces/2026-rover-code/src/build/image_processor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/2026-rover-code/src/install/image_processor/lib/python3.10/site-packages:/workspaces/2026-rover-code/src/image_processor/install/image_processor/lib/python3.10/site-packages:/workspaces/2026-rover-code/build/image_processor:/workspaces/2026-rover-code/install/image_processor/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[1.313792] (-) TimerEvent: {}
+[1.414693] (-) TimerEvent: {}
+[1.500517] (zed_components) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.514768] (-) TimerEvent: {}
+[1.549903] (zed_components) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.615132] (-) TimerEvent: {}
+[1.716222] (-) TimerEvent: {}
+[1.719990] (image_processor) StdoutLine: {'line': b'running egg_info\n'}
+[1.721352] (image_processor) StdoutLine: {'line': b'creating ../build/image_processor/image_processor.egg-info\n'}
+[1.722141] (image_processor) StdoutLine: {'line': b'writing ../build/image_processor/image_processor.egg-info/PKG-INFO\n'}
+[1.724655] (image_processor) StdoutLine: {'line': b'writing dependency_links to ../build/image_processor/image_processor.egg-info/dependency_links.txt\n'}
+[1.726552] (image_processor) StdoutLine: {'line': b'writing entry points to ../build/image_processor/image_processor.egg-info/entry_points.txt\n'}
+[1.728293] (image_processor) StdoutLine: {'line': b'writing requirements to ../build/image_processor/image_processor.egg-info/requires.txt\n'}
+[1.729693] (image_processor) StdoutLine: {'line': b'writing top-level names to ../build/image_processor/image_processor.egg-info/top_level.txt\n'}
+[1.731992] (image_processor) StdoutLine: {'line': b"writing manifest file '../build/image_processor/image_processor.egg-info/SOURCES.txt'\n"}
+[1.744179] (image_processor) StdoutLine: {'line': b"reading manifest file '../build/image_processor/image_processor.egg-info/SOURCES.txt'\n"}
+[1.750530] (image_processor) StdoutLine: {'line': b"writing manifest file '../build/image_processor/image_processor.egg-info/SOURCES.txt'\n"}
+[1.752044] (image_processor) StdoutLine: {'line': b'running build\n'}
+[1.755134] (image_processor) StdoutLine: {'line': b'running build_py\n'}
+[1.756019] (image_processor) StdoutLine: {'line': b'creating /workspaces/2026-rover-code/src/build/image_processor/build\n'}
+[1.757619] (image_processor) StdoutLine: {'line': b'creating /workspaces/2026-rover-code/src/build/image_processor/build/lib\n'}
+[1.759641] (image_processor) StdoutLine: {'line': b'creating /workspaces/2026-rover-code/src/build/image_processor/build/lib/image_processor\n'}
+[1.761536] (image_processor) StdoutLine: {'line': b'copying image_processor/__init__.py -> /workspaces/2026-rover-code/src/build/image_processor/build/lib/image_processor\n'}
+[1.762448] (image_processor) StdoutLine: {'line': b'copying image_processor/ImageProcess.py -> /workspaces/2026-rover-code/src/build/image_processor/build/lib/image_processor\n'}
+[1.763180] (image_processor) StdoutLine: {'line': b'running install\n'}
+[1.764198] (image_processor) StdoutLine: {'line': b'running install_lib\n'}
+[1.765292] (image_processor) StdoutLine: {'line': b'creating /workspaces/2026-rover-code/src/install/image_processor/lib/python3.10/site-packages/image_processor\n'}
+[1.766255] (image_processor) StdoutLine: {'line': b'copying /workspaces/2026-rover-code/src/build/image_processor/build/lib/image_processor/__init__.py -> /workspaces/2026-rover-code/src/install/image_processor/lib/python3.10/site-packages/image_processor\n'}
+[1.767897] (image_processor) StdoutLine: {'line': b'copying /workspaces/2026-rover-code/src/build/image_processor/build/lib/image_processor/ImageProcess.py -> /workspaces/2026-rover-code/src/install/image_processor/lib/python3.10/site-packages/image_processor\n'}
+[1.772418] (image_processor) StdoutLine: {'line': b'byte-compiling /workspaces/2026-rover-code/src/install/image_processor/lib/python3.10/site-packages/image_processor/__init__.py to __init__.cpython-310.pyc\n'}
+[1.778040] (image_processor) StdoutLine: {'line': b'byte-compiling /workspaces/2026-rover-code/src/install/image_processor/lib/python3.10/site-packages/image_processor/ImageProcess.py to ImageProcess.cpython-310.pyc\n'}
+[1.789883] (image_processor) StdoutLine: {'line': b'running install_data\n'}
+[1.790931] (image_processor) StdoutLine: {'line': b'creating /workspaces/2026-rover-code/src/install/image_processor/share/ament_index\n'}
+[1.792218] (image_processor) StdoutLine: {'line': b'creating /workspaces/2026-rover-code/src/install/image_processor/share/ament_index/resource_index\n'}
+[1.793154] (image_processor) StdoutLine: {'line': b'creating /workspaces/2026-rover-code/src/install/image_processor/share/ament_index/resource_index/packages\n'}
+[1.794336] (image_processor) StdoutLine: {'line': b'copying resource/image_processor -> /workspaces/2026-rover-code/src/install/image_processor/share/ament_index/resource_index/packages\n'}
+[1.795515] (image_processor) StdoutLine: {'line': b'copying package.xml -> /workspaces/2026-rover-code/src/install/image_processor/share/image_processor\n'}
+[1.795858] (image_processor) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.798656] (image_processor) StdoutLine: {'line': b'Copying ../build/image_processor/image_processor.egg-info to /workspaces/2026-rover-code/src/install/image_processor/lib/python3.10/site-packages/image_processor-0.0.0-py3.10.egg-info\n'}
+[1.811274] (image_processor) StdoutLine: {'line': b'running install_scripts\n'}
+[1.816570] (-) TimerEvent: {}
+[1.861172] (image_processor) StdoutLine: {'line': b'Installing ImageProcess script to /workspaces/2026-rover-code/src/install/image_processor/lib/image_processor\n'}
+[1.863251] (image_processor) StdoutLine: {'line': b"writing list of installed files to '/workspaces/2026-rover-code/src/build/image_processor/install.log'\n"}
+[1.899686] (image_processor) CommandEnded: {'returncode': 0}
+[1.916881] (-) TimerEvent: {}
+[1.950978] (image_processor) JobEnded: {'identifier': 'image_processor', 'rc': 0}
+[2.017579] (-) TimerEvent: {}
+[2.118202] (-) TimerEvent: {}
+[2.219836] (-) TimerEvent: {}
+[2.320972] (-) TimerEvent: {}
+[2.380154] (zed_components) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.402008] (zed_components) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[2.403006] (zed_components) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.404390] (zed_components) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.409913] (zed_components) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.421124] (-) TimerEvent: {}
+[2.521692] (-) TimerEvent: {}
+[2.624575] (-) TimerEvent: {}
+[2.725032] (-) TimerEvent: {}
+[2.825854] (-) TimerEvent: {}
+[2.926928] (-) TimerEvent: {}
+[3.030408] (-) TimerEvent: {}
+[3.095564] (zed_components) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[3.117632] (zed_components) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[3.118460] (zed_components) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[3.119248] (zed_components) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[3.130537] (-) TimerEvent: {}
+[3.137743] (zed_components) StdoutLine: {'line': b'-- Found nlohmann_json: /usr/lib/cmake/nlohmann_json/nlohmann_jsonConfig.cmake (found version "3.10.5") \n'}
+[3.155095] (zed_components) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:94 (find_package):\n'}
+[3.156069] (zed_components) StderrLine: {'line': b'  By not providing "FindZED.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[3.156379] (zed_components) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "ZED", but\n'}
+[3.156931] (zed_components) StderrLine: {'line': b'  CMake did not find one.\n'}
+[3.158032] (zed_components) StderrLine: {'line': b'\n'}
+[3.158305] (zed_components) StderrLine: {'line': b'  Could not find a package configuration file provided by "ZED" with any of\n'}
+[3.158700] (zed_components) StderrLine: {'line': b'  the following names:\n'}
+[3.158989] (zed_components) StderrLine: {'line': b'\n'}
+[3.159382] (zed_components) StderrLine: {'line': b'    ZEDConfig.cmake\n'}
+[3.159720] (zed_components) StderrLine: {'line': b'    zed-config.cmake\n'}
+[3.160091] (zed_components) StderrLine: {'line': b'\n'}
+[3.160504] (zed_components) StderrLine: {'line': b'  Add the installation prefix of "ZED" to CMAKE_PREFIX_PATH or set "ZED_DIR"\n'}
+[3.160886] (zed_components) StderrLine: {'line': b'  to a directory containing one of the above files.  If "ZED" provides a\n'}
+[3.161223] (zed_components) StderrLine: {'line': b'  separate development package or SDK, be sure it has been installed.\n'}
+[3.161496] (zed_components) StderrLine: {'line': b'\n'}
+[3.161739] (zed_components) StderrLine: {'line': b'\x1b[0m\n'}
+[3.161987] (zed_components) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[3.162312] (zed_components) StdoutLine: {'line': b'See also "/workspaces/2026-rover-code/src/build/zed_components/CMakeFiles/CMakeOutput.log".\n'}
+[3.168897] (zed_components) CommandEnded: {'returncode': 1}
+[3.230722] (-) TimerEvent: {}
+[3.266925] (zed_components) JobEnded: {'identifier': 'zed_components', 'rc': 1}
+[3.269785] (zed_debug) JobSkipped: {'identifier': 'zed_debug'}
+[3.269872] (zed_wrapper) JobSkipped: {'identifier': 'zed_wrapper'}
+[3.269951] (zed_ros2) JobSkipped: {'identifier': 'zed_ros2'}
+[3.270045] (-) EventReactorShutdown: {}

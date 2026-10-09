@@ -1,0 +1,191 @@
+[0.000000] (-) TimerEvent: {}
+[0.001227] (-) JobUnselected: {'identifier': 'image_processor'}
+[0.003086] (-) JobUnselected: {'identifier': 'odrive_botwheel_explorer'}
+[0.003486] (-) JobUnselected: {'identifier': 'odrive_can'}
+[0.003599] (-) JobUnselected: {'identifier': 'odrive_ros2_control'}
+[0.004590] (-) JobUnselected: {'identifier': 'zed_components'}
+[0.005322] (-) JobUnselected: {'identifier': 'zed_debug'}
+[0.005537] (-) JobUnselected: {'identifier': 'zed_ros2'}
+[0.005588] (-) JobUnselected: {'identifier': 'zed_wrapper'}
+[0.005661] (id_polygon) JobQueued: {'identifier': 'id_polygon', 'dependencies': OrderedDict()}
+[0.005967] (id_polygon) JobStarted: {'identifier': 'id_polygon'}
+[0.059127] (id_polygon) JobProgress: {'identifier': 'id_polygon', 'progress': 'cmake'}
+[0.062535] (id_polygon) JobProgress: {'identifier': 'id_polygon', 'progress': 'build'}
+[0.066811] (id_polygon) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspaces/2026-rover-code/build/id_polygon', '--', '-j15', '-l15'], 'cwd': '/workspaces/2026-rover-code/build/id_polygon', 'env': OrderedDict([('HOSTNAME', 'bc602964da08'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/bin/helpers/browser.sh'), ('HOME', '/home/devuser'), ('OLDPWD', '/workspaces/2026-rover-code/src'), ('TERM_PROGRAM_VERSION', '1.141.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-832872fe-e577-44d4-83cd-bfb58eb73e19.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/devuser/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/workspaces/2026-rover-code/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-8b559af3-f25f-4068-8dce-a915a858a8bb.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('UV_USE_IO_URING', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/home/devuser/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/devuser/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-x64/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/devuser/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-8b559af3-f25f-4068-8dce-a915a858a8bb.sock"]'), ('DISPLAY', ':1'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/devuser/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-19ba350bd06c9b4f.txt'), ('LANG', 'C.UTF-8'), ('PYTHONSTARTUP', '/home/devuser/.vscode-server/data/User/workspaceStorage/85b3a11b8d8e29f6437ba3391c3acbc4/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-e11f08c4f5.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-8b559af3-f25f-4068-8dce-a915a858a8bb.sock'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/workspaces/2026-rover-code/install/image_processor:/opt/ros/humble'), ('SHELL', '/bin/sh'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/workspaces/2026-rover-code/build/id_polygon'), ('LC_ALL', 'C.UTF-8'), ('COPILOT_DEBUG_NONCE', 'aec9a8de5a65ff5b705106195fb9be97'), ('PYTHONPATH', '/workspaces/2026-rover-code/build/image_processor:/workspaces/2026-rover-code/install/image_processor/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspaces/2026-rover-code/install/image_processor:/opt/ros/humble')]), 'shell': False}
+[0.097482] (-) TimerEvent: {}
+[0.198174] (-) TimerEvent: {}
+[0.300213] (-) TimerEvent: {}
+[0.400952] (-) TimerEvent: {}
+[0.501892] (-) TimerEvent: {}
+[0.536632] (id_polygon) StdoutLine: {'line': b'[  3%] Built target id_polygon__cpp\n'}
+[0.578380] (id_polygon) StdoutLine: {'line': b'[  6%] Built target id_polygon__rs\n'}
+[0.594503] (id_polygon) StdoutLine: {'line': b'[ 15%] Built target id_polygon__rosidl_generator_c\n'}
+[0.602746] (-) TimerEvent: {}
+[0.633540] (id_polygon) StdoutLine: {'line': b'[ 15%] Built target ament_cmake_python_copy_id_polygon\n'}
+[0.702428] (-) TimerEvent: {}
+[0.727644] (id_polygon) StdoutLine: {'line': b'[ 25%] Built target id_polygon__rosidl_typesupport_fastrtps_cpp\n'}
+[0.761298] (id_polygon) StdoutLine: {'line': b'[ 34%] Built target id_polygon__rosidl_typesupport_cpp\n'}
+[0.787875] (id_polygon) StdoutLine: {'line': b'[ 43%] Built target id_polygon__rosidl_typesupport_fastrtps_c\n'}
+[0.793490] (id_polygon) StdoutLine: {'line': b'[ 53%] Built target id_polygon__rosidl_typesupport_c\n'}
+[0.799609] (id_polygon) StdoutLine: {'line': b'[ 62%] Built target id_polygon__rosidl_typesupport_introspection_cpp\n'}
+[0.803200] (-) TimerEvent: {}
+[0.830224] (id_polygon) StdoutLine: {'line': b'[ 71%] Built target id_polygon__rosidl_typesupport_introspection_c\n'}
+[0.903708] (-) TimerEvent: {}
+[1.004297] (-) TimerEvent: {}
+[1.048903] (id_polygon) StdoutLine: {'line': b'[ 71%] Built target id_polygon\n'}
+[1.104273] (-) TimerEvent: {}
+[1.108388] (id_polygon) StdoutLine: {'line': b'running egg_info\n'}
+[1.109094] (id_polygon) StdoutLine: {'line': b'writing id_polygon.egg-info/PKG-INFO\n'}
+[1.110604] (id_polygon) StdoutLine: {'line': b'writing dependency_links to id_polygon.egg-info/dependency_links.txt\n'}
+[1.112486] (id_polygon) StdoutLine: {'line': b'writing top-level names to id_polygon.egg-info/top_level.txt\n'}
+[1.117506] (id_polygon) StdoutLine: {'line': b"reading manifest file 'id_polygon.egg-info/SOURCES.txt'\n"}
+[1.119501] (id_polygon) StdoutLine: {'line': b"writing manifest file 'id_polygon.egg-info/SOURCES.txt'\n"}
+[1.199719] (id_polygon) StdoutLine: {'line': b'[ 71%] Built target ament_cmake_python_build_id_polygon_egg\n'}
+[1.204593] (-) TimerEvent: {}
+[1.242897] (id_polygon) StdoutLine: {'line': b'[ 75%] Built target id_polygon__py\n'}
+[1.304828] (-) TimerEvent: {}
+[1.405867] (-) TimerEvent: {}
+[1.434433] (id_polygon) StdoutLine: {'line': b'[ 81%] Built target id_polygon__rosidl_generator_py\n'}
+[1.507278] (-) TimerEvent: {}
+[1.608579] (-) TimerEvent: {}
+[1.626140] (id_polygon) StdoutLine: {'line': b'[ 96%] Built target id_polygon__rosidl_typesupport_c__pyext\n'}
+[1.627414] (id_polygon) StdoutLine: {'line': b'[ 96%] Built target id_polygon__rosidl_typesupport_fastrtps_c__pyext\n'}
+[1.628436] (id_polygon) StdoutLine: {'line': b'[100%] Built target id_polygon__rosidl_typesupport_introspection_c__pyext\n'}
+[1.674195] (id_polygon) CommandEnded: {'returncode': 0}
+[1.682513] (id_polygon) JobProgress: {'identifier': 'id_polygon', 'progress': 'install'}
+[1.708720] (-) TimerEvent: {}
+[1.725470] (id_polygon) Command: {'cmd': ['/usr/bin/cmake', '--install', '/workspaces/2026-rover-code/build/id_polygon'], 'cwd': '/workspaces/2026-rover-code/build/id_polygon', 'env': OrderedDict([('HOSTNAME', 'bc602964da08'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/bin/helpers/browser.sh'), ('HOME', '/home/devuser'), ('OLDPWD', '/workspaces/2026-rover-code/src'), ('TERM_PROGRAM_VERSION', '1.141.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-832872fe-e577-44d4-83cd-bfb58eb73e19.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/devuser/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/workspaces/2026-rover-code/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-8b559af3-f25f-4068-8dce-a915a858a8bb.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('UV_USE_IO_URING', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/home/devuser/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/devuser/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-x64/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/devuser/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-8b559af3-f25f-4068-8dce-a915a858a8bb.sock"]'), ('DISPLAY', ':1'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/devuser/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-19ba350bd06c9b4f.txt'), ('LANG', 'C.UTF-8'), ('PYTHONSTARTUP', '/home/devuser/.vscode-server/data/User/workspaceStorage/85b3a11b8d8e29f6437ba3391c3acbc4/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-e11f08c4f5.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-8b559af3-f25f-4068-8dce-a915a858a8bb.sock'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/workspaces/2026-rover-code/install/image_processor:/opt/ros/humble'), ('SHELL', '/bin/sh'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/workspaces/2026-rover-code/build/id_polygon'), ('LC_ALL', 'C.UTF-8'), ('COPILOT_DEBUG_NONCE', 'aec9a8de5a65ff5b705106195fb9be97'), ('PYTHONPATH', '/workspaces/2026-rover-code/build/image_processor:/workspaces/2026-rover-code/install/image_processor/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspaces/2026-rover-code/install/image_processor:/opt/ros/humble')]), 'shell': False}
+[1.770868] (id_polygon) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.772350] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/ament_index/resource_index/rosidl_interfaces/id_polygon\n'}
+[1.773313] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon\n'}
+[1.773845] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg\n'}
+[1.774522] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/rosidl_generator_c__visibility_control.h\n'}
+[1.775503] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail\n'}
+[1.778332] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__functions.c\n'}
+[1.778806] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__type_support.h\n'}
+[1.779196] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__functions.h\n'}
+[1.779739] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__struct.h\n'}
+[1.780108] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/id_polygon.h\n'}
+[1.780479] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/environment/library_path.sh\n'}
+[1.780826] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/environment/library_path.dsv\n'}
+[1.781303] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/lib/libid_polygon__rosidl_generator_c.so\n'}
+[1.781869] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon\n'}
+[1.782824] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg\n'}
+[1.783641] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail\n'}
+[1.784315] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__rosidl_typesupport_fastrtps_c.h\n'}
+[1.785054] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[1.785439] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/lib/libid_polygon__rosidl_typesupport_fastrtps_c.so\n'}
+[1.786130] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon\n'}
+[1.786584] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg\n'}
+[1.786995] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/id_polygon.hpp\n'}
+[1.787513] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail\n'}
+[1.788054] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__type_support.hpp\n'}
+[1.788374] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__traits.hpp\n'}
+[1.788808] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__builder.hpp\n'}
+[1.789658] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__struct.hpp\n'}
+[1.790724] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[1.791458] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon\n'}
+[1.791846] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg\n'}
+[1.792477] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[1.793703] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail\n'}
+[1.794799] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.795226] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/dds_fastrtps\n'}
+[1.795734] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/lib/libid_polygon__rosidl_typesupport_fastrtps_cpp.so\n'}
+[1.796213] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon\n'}
+[1.796621] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg\n'}
+[1.797005] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail\n'}
+[1.797552] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__rosidl_typesupport_introspection_c.h\n'}
+[1.797964] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__type_support.c\n'}
+[1.798337] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[1.799705] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/lib/libid_polygon__rosidl_typesupport_introspection_c.so\n'}
+[1.800032] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/lib/libid_polygon__rosidl_typesupport_c.so\n'}
+[1.800408] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon\n'}
+[1.802309] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg\n'}
+[1.802809] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail\n'}
+[1.803123] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.803589] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/include/id_polygon/id_polygon/msg/detail/id_polygon__type_support.cpp\n'}
+[1.804141] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/lib/libid_polygon__rosidl_typesupport_introspection_cpp.so\n'}
+[1.805350] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/lib/libid_polygon__rosidl_typesupport_cpp.so\n'}
+[1.805833] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/environment/pythonpath.sh\n'}
+[1.806423] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/environment/pythonpath.dsv\n'}
+[1.806823] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon-0.0.0-py3.10.egg-info\n'}
+[1.807152] (id_polygon) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[1.807750] (id_polygon) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[1.808811] (-) TimerEvent: {}
+[1.809513] (id_polygon) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[1.812793] (id_polygon) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[1.815859] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon\n'}
+[1.817735] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/libid_polygon__rosidl_generator_py.so\n'}
+[1.818850] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/msg\n'}
+[1.819581] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/msg/__init__.py\n'}
+[1.819808] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/msg/_id_polygon_s.c\n'}
+[1.820336] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/msg/_id_polygon.py\n'}
+[1.821510] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/_id_polygon_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[1.822437] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/__init__.py\n'}
+[1.826508] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/id_polygon_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.827218] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/_id_polygon_s.ep.rosidl_typesupport_c.c\n'}
+[1.828175] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/id_polygon_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.828620] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/_id_polygon_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[1.828993] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/id_polygon_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.909282] (-) TimerEvent: {}
+[1.923613] (id_polygon) StdoutLine: {'line': b"Listing '/workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon'...\n"}
+[1.924046] (id_polygon) StdoutLine: {'line': b"Listing '/workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/msg'...\n"}
+[1.931969] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/id_polygon_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.932720] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/id_polygon_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.933418] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages/id_polygon/id_polygon_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.934169] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/lib/libid_polygon__rosidl_generator_py.so\n'}
+[1.934659] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/ament_index/resource_index/rust_packages/id_polygon\n'}
+[1.934936] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/rust\n'}
+[1.935255] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/rust/Cargo.toml\n'}
+[1.935507] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/rust/build.rs\n'}
+[1.939353] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/rust/src\n'}
+[1.940072] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/rust/src/msg\n'}
+[1.940961] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/rust/src/msg/rmw.rs\n'}
+[1.941427] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/rust/src/lib.rs\n'}
+[1.942146] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/rust/src/msg.rs\n'}
+[1.943244] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/msg/IdPolygon.idl\n'}
+[1.943555] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/msg/IdPolygon.msg\n'}
+[1.944242] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/ament_index/resource_index/package_run_dependencies/id_polygon\n'}
+[1.944732] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/ament_index/resource_index/parent_prefix_path/id_polygon\n'}
+[1.945025] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/environment/ament_prefix_path.sh\n'}
+[1.945346] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/environment/ament_prefix_path.dsv\n'}
+[1.945895] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/environment/path.sh\n'}
+[1.946292] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/environment/path.dsv\n'}
+[1.947337] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/local_setup.bash\n'}
+[1.947805] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/local_setup.sh\n'}
+[1.947967] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/local_setup.zsh\n'}
+[1.948120] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/local_setup.dsv\n'}
+[1.948352] (id_polygon) StdoutLine: {'line': b'-- Installing: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/package.dsv\n'}
+[1.948693] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/ament_index/resource_index/packages/id_polygon\n'}
+[1.949101] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/export_id_polygon__rosidl_generator_cExport.cmake\n'}
+[1.950560] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/export_id_polygon__rosidl_generator_cExport-noconfig.cmake\n'}
+[1.950768] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/export_id_polygon__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[1.950934] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/export_id_polygon__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[1.951331] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/export_id_polygon__rosidl_generator_cppExport.cmake\n'}
+[1.951712] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/export_id_polygon__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[1.952764] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/export_id_polygon__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[1.952967] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/id_polygon__rosidl_typesupport_introspection_cExport.cmake\n'}
+[1.953265] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/id_polygon__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[1.953795] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/id_polygon__rosidl_typesupport_cExport.cmake\n'}
+[1.954308] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/id_polygon__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[1.955457] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/id_polygon__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[1.955804] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/id_polygon__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[1.956238] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/id_polygon__rosidl_typesupport_cppExport.cmake\n'}
+[1.957017] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/id_polygon__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[1.957543] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/export_id_polygon__rosidl_generator_pyExport.cmake\n'}
+[1.957941] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/export_id_polygon__rosidl_generator_pyExport-noconfig.cmake\n'}
+[1.958299] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/rosidl_cmake-extras.cmake\n'}
+[1.958599] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[1.960347] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.960610] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[1.961800] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[1.962945] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[1.963327] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[1.963766] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/rosidl_cmake_aggregate_target-extras.cmake\n'}
+[1.964470] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/id_polygonConfig.cmake\n'}
+[1.964839] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/cmake/id_polygonConfig-version.cmake\n'}
+[1.965302] (id_polygon) StdoutLine: {'line': b'-- Up-to-date: /workspaces/2026-rover-code/install/id_polygon/share/id_polygon/package.xml\n'}
+[1.969390] (id_polygon) CommandEnded: {'returncode': 0}
+[2.009605] (-) TimerEvent: {}
+[2.068276] (id_polygon) JobEnded: {'identifier': 'id_polygon', 'rc': 0}
+[2.070803] (-) EventReactorShutdown: {}

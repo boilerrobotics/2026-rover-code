@@ -163,7 +163,6 @@ class ArUcoNode(Node):
                 point.y = float((self.cx - coords[i][j][0]) / self.fx * coords[i][j][2])
                 point.z = float((self.cy - coords[i][j][1]) / self.fy * coords[i][j][2])
                 message.polygon.points.append(point)
-            # WARNING: Center calculated as a mean of all x/y coordinates, which may not work if only one corner is detected. Needs a better solution later.
             message.center.x = float(np.mean(coords[i][:, 0]))
             message.center.y = float(np.mean(coords[i][:, 1]))
             message.center.z = 0.00

@@ -1,0 +1,2 @@
+WRADIUS = 0.5
+WBASE = 0.5

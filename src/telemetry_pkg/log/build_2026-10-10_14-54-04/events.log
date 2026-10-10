@@ -1,0 +1,63 @@
+[0.000000] (-) TimerEvent: {}
+[0.000734] (telemetry_pkg) JobQueued: {'identifier': 'telemetry_pkg', 'dependencies': OrderedDict()}
+[0.001261] (telemetry_pkg) JobStarted: {'identifier': 'telemetry_pkg'}
+[0.097422] (-) TimerEvent: {}
+[0.198581] (-) TimerEvent: {}
+[0.299783] (-) TimerEvent: {}
+[0.400735] (-) TimerEvent: {}
+[0.501718] (-) TimerEvent: {}
+[0.602478] (-) TimerEvent: {}
+[0.703436] (-) TimerEvent: {}
+[0.804294] (-) TimerEvent: {}
+[0.905262] (-) TimerEvent: {}
+[1.006165] (-) TimerEvent: {}
+[1.107071] (-) TimerEvent: {}
+[1.207821] (-) TimerEvent: {}
+[1.308705] (-) TimerEvent: {}
+[1.386294] (telemetry_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', 'build/telemetry_pkg', 'build', '--build-base', '/workspaces/2026-rover-code/src/telemetry_pkg/build/telemetry_pkg/build', 'install', '--record', '/workspaces/2026-rover-code/src/telemetry_pkg/build/telemetry_pkg/install.log', '--install-scripts', '$base/lib/telemetry_pkg', '--single-version-externally-managed', 'install_data'], 'cwd': '/workspaces/2026-rover-code/src/telemetry_pkg', 'env': {'HOSTNAME': 'a938be853f6d', 'GIT_ASKPASS': '/vscode/vscode-server/bin/linux-x64/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/workspaces/2026-rover-code/src/install/telemetry_interface/lib:/workspaces/2026-rover-code/ros_odrive/odrive_node/install/odrive_can/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/vscode/vscode-server/bin/linux-x64/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/bin/helpers/browser.sh', 'HOME': '/home/devuser', 'OLDPWD': '/workspaces/2026-rover-code/src', 'TERM_PROGRAM_VERSION': '1.141.0', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-926a0ffd-26ad-4606-888d-253136e55748.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/vscode/vscode-server/bin/linux-x64/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/vscode/vscode-server/bin/linux-x64/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/node', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/devuser/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'COLCON_PREFIX_PATH': '/workspaces/2026-rover-code/install:/workspaces/2026-rover-code/src/install:/workspaces/2026-rover-code/ros_odrive/odrive_node/install', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-dc284ab7-85c1-4f8b-a7db-b2ef8cde3894.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/humble/bin:/home/devuser/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/devuser/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-x64/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/devuser/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/vscode-ssh-auth-dc284ab7-85c1-4f8b-a7db-b2ef8cde3894.sock","/home/devuser/.gnupg/S.gpg-agent"]', 'DISPLAY': ':1', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/devuser/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-49e2dbc823e0c178.txt', 'LANG': 'C.UTF-8', 'PYTHONSTARTUP': '/home/devuser/.vscode-server/data/User/workspaceStorage/de4a39d53a5260141e530cdccb370419/ms-python.python/pythonrc.py', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-a9ce9d0256.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/vscode-ssh-auth-dc284ab7-85c1-4f8b-a7db-b2ef8cde3894.sock', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/workspaces/2026-rover-code/install/telemetry_pkg:/workspaces/2026-rover-code/src/install/telemetry_pkg:/workspaces/2026-rover-code/src/install/telemetry_interface:/workspaces/2026-rover-code/ros_odrive/odrive_node/install/odrive_can:/opt/ros/humble', 'SHELL': '/bin/sh', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/workspaces/2026-rover-code/src/telemetry_pkg/build/telemetry_pkg', 'LC_ALL': 'C.UTF-8', 'COPILOT_DEBUG_NONCE': 'db11eb875aea3baacef2c682a2a702e1', 'PYTHONPATH': '/workspaces/2026-rover-code/src/telemetry_pkg/build/telemetry_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/2026-rover-code/src/telemetry_pkg/install/telemetry_pkg/lib/python3.10/site-packages:/workspaces/2026-rover-code/install/telemetry_pkg/lib/python3.10/site-packages:/workspaces/2026-rover-code/src/install/telemetry_pkg/lib/python3.10/site-packages:/workspaces/2026-rover-code/src/install/telemetry_interface/local/lib/python3.10/dist-packages:/workspaces/2026-rover-code/ros_odrive/odrive_node/install/odrive_can/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspaces/2026-rover-code/src/install/telemetry_interface:/workspaces/2026-rover-code/ros_odrive/odrive_node/install/odrive_can'}, 'shell': False}
+[1.408867] (-) TimerEvent: {}
+[1.509776] (-) TimerEvent: {}
+[1.610581] (-) TimerEvent: {}
+[1.711999] (-) TimerEvent: {}
+[1.803367] (telemetry_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[1.805425] (telemetry_pkg) StdoutLine: {'line': b'creating build/telemetry_pkg/telemetry_pkg.egg-info\n'}
+[1.806574] (telemetry_pkg) StdoutLine: {'line': b'writing build/telemetry_pkg/telemetry_pkg.egg-info/PKG-INFO\n'}
+[1.808303] (telemetry_pkg) StdoutLine: {'line': b'writing dependency_links to build/telemetry_pkg/telemetry_pkg.egg-info/dependency_links.txt\n'}
+[1.809731] (telemetry_pkg) StdoutLine: {'line': b'writing entry points to build/telemetry_pkg/telemetry_pkg.egg-info/entry_points.txt\n'}
+[1.810877] (telemetry_pkg) StdoutLine: {'line': b'writing requirements to build/telemetry_pkg/telemetry_pkg.egg-info/requires.txt\n'}
+[1.812057] (-) TimerEvent: {}
+[1.812502] (telemetry_pkg) StdoutLine: {'line': b'writing top-level names to build/telemetry_pkg/telemetry_pkg.egg-info/top_level.txt\n'}
+[1.813617] (telemetry_pkg) StdoutLine: {'line': b"writing manifest file 'build/telemetry_pkg/telemetry_pkg.egg-info/SOURCES.txt'\n"}
+[1.821946] (telemetry_pkg) StdoutLine: {'line': b"reading manifest file 'build/telemetry_pkg/telemetry_pkg.egg-info/SOURCES.txt'\n"}
+[1.825030] (telemetry_pkg) StdoutLine: {'line': b"writing manifest file 'build/telemetry_pkg/telemetry_pkg.egg-info/SOURCES.txt'\n"}
+[1.826404] (telemetry_pkg) StdoutLine: {'line': b'running build\n'}
+[1.827406] (telemetry_pkg) StdoutLine: {'line': b'running build_py\n'}
+[1.828707] (telemetry_pkg) StdoutLine: {'line': b'creating /workspaces/2026-rover-code/src/telemetry_pkg/build/telemetry_pkg/build\n'}
+[1.830100] (telemetry_pkg) StdoutLine: {'line': b'creating /workspaces/2026-rover-code/src/telemetry_pkg/build/telemetry_pkg/build/lib\n'}
+[1.831785] (telemetry_pkg) StdoutLine: {'line': b'creating /workspaces/2026-rover-code/src/telemetry_pkg/build/telemetry_pkg/build/lib/telemetry_pkg\n'}
+[1.836429] (telemetry_pkg) StdoutLine: {'line': b'copying telemetry_pkg/__init__.py -> /workspaces/2026-rover-code/src/telemetry_pkg/build/telemetry_pkg/build/lib/telemetry_pkg\n'}
+[1.839651] (telemetry_pkg) StdoutLine: {'line': b'copying telemetry_pkg/telemetry_node.py -> /workspaces/2026-rover-code/src/telemetry_pkg/build/telemetry_pkg/build/lib/telemetry_pkg\n'}
+[1.845147] (telemetry_pkg) StdoutLine: {'line': b'running install\n'}
+[1.850281] (telemetry_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[1.851548] (telemetry_pkg) StdoutLine: {'line': b'creating /workspaces/2026-rover-code/src/telemetry_pkg/install/telemetry_pkg/lib/python3.10/site-packages/telemetry_pkg\n'}
+[1.853344] (telemetry_pkg) StdoutLine: {'line': b'copying /workspaces/2026-rover-code/src/telemetry_pkg/build/telemetry_pkg/build/lib/telemetry_pkg/__init__.py -> /workspaces/2026-rover-code/src/telemetry_pkg/install/telemetry_pkg/lib/python3.10/site-packages/telemetry_pkg\n'}
+[1.858469] (telemetry_pkg) StdoutLine: {'line': b'copying /workspaces/2026-rover-code/src/telemetry_pkg/build/telemetry_pkg/build/lib/telemetry_pkg/telemetry_node.py -> /workspaces/2026-rover-code/src/telemetry_pkg/install/telemetry_pkg/lib/python3.10/site-packages/telemetry_pkg\n'}
+[1.863261] (telemetry_pkg) StdoutLine: {'line': b'byte-compiling /workspaces/2026-rover-code/src/telemetry_pkg/install/telemetry_pkg/lib/python3.10/site-packages/telemetry_pkg/__init__.py to __init__.cpython-310.pyc\n'}
+[1.865715] (telemetry_pkg) StdoutLine: {'line': b'byte-compiling /workspaces/2026-rover-code/src/telemetry_pkg/install/telemetry_pkg/lib/python3.10/site-packages/telemetry_pkg/telemetry_node.py to telemetry_node.cpython-310.pyc\n'}
+[1.873503] (telemetry_pkg) StdoutLine: {'line': b'running install_data\n'}
+[1.875092] (telemetry_pkg) StdoutLine: {'line': b'creating /workspaces/2026-rover-code/src/telemetry_pkg/install/telemetry_pkg/share/ament_index\n'}
+[1.877010] (telemetry_pkg) StdoutLine: {'line': b'creating /workspaces/2026-rover-code/src/telemetry_pkg/install/telemetry_pkg/share/ament_index/resource_index\n'}
+[1.878644] (telemetry_pkg) StdoutLine: {'line': b'creating /workspaces/2026-rover-code/src/telemetry_pkg/install/telemetry_pkg/share/ament_index/resource_index/packages\n'}
+[1.880126] (telemetry_pkg) StdoutLine: {'line': b'copying resource/telemetry_pkg -> /workspaces/2026-rover-code/src/telemetry_pkg/install/telemetry_pkg/share/ament_index/resource_index/packages\n'}
+[1.881144] (telemetry_pkg) StdoutLine: {'line': b'copying package.xml -> /workspaces/2026-rover-code/src/telemetry_pkg/install/telemetry_pkg/share/telemetry_pkg\n'}
+[1.883646] (telemetry_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.892788] (telemetry_pkg) StdoutLine: {'line': b'Copying build/telemetry_pkg/telemetry_pkg.egg-info to /workspaces/2026-rover-code/src/telemetry_pkg/install/telemetry_pkg/lib/python3.10/site-packages/telemetry_pkg-0.0.0-py3.10.egg-info\n'}
+[1.910319] (telemetry_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[1.912201] (-) TimerEvent: {}
+[1.961525] (telemetry_pkg) StdoutLine: {'line': b'Installing telemetry_node script to /workspaces/2026-rover-code/src/telemetry_pkg/install/telemetry_pkg/lib/telemetry_pkg\n'}
+[1.965757] (telemetry_pkg) StdoutLine: {'line': b"writing list of installed files to '/workspaces/2026-rover-code/src/telemetry_pkg/build/telemetry_pkg/install.log'\n"}
+[2.012466] (-) TimerEvent: {}
+[2.072473] (telemetry_pkg) CommandEnded: {'returncode': 0}
+[2.112829] (-) TimerEvent: {}
+[2.151019] (telemetry_pkg) JobEnded: {'identifier': 'telemetry_pkg', 'rc': 0}
+[2.155823] (-) EventReactorShutdown: {}

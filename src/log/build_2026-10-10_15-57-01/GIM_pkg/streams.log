@@ -1,0 +1,24 @@
+[2.408s] Invoking command in '/workspaces/2026-rover-code/src/GIM_pkg': PYTHONPATH=/workspaces/2026-rover-code/src/build/GIM_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/2026-rover-code/src/install/GIM_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/GIM_pkg build --build-base /workspaces/2026-rover-code/src/build/GIM_pkg/build install --record /workspaces/2026-rover-code/src/build/GIM_pkg/install.log --install-scripts $base/lib/GIM_pkg --single-version-externally-managed install_data
+[2.945s] running egg_info
+[2.948s] writing ../build/GIM_pkg/GIM_pkg.egg-info/PKG-INFO
+[2.949s] writing dependency_links to ../build/GIM_pkg/GIM_pkg.egg-info/dependency_links.txt
+[2.951s] writing entry points to ../build/GIM_pkg/GIM_pkg.egg-info/entry_points.txt
+[2.952s] writing requirements to ../build/GIM_pkg/GIM_pkg.egg-info/requires.txt
+[2.953s] writing top-level names to ../build/GIM_pkg/GIM_pkg.egg-info/top_level.txt
+[2.963s] reading manifest file '../build/GIM_pkg/GIM_pkg.egg-info/SOURCES.txt'
+[2.970s] writing manifest file '../build/GIM_pkg/GIM_pkg.egg-info/SOURCES.txt'
+[2.974s] running build
+[2.975s] running build_py
+[2.976s] copying GIM_pkg/GIM.py -> /workspaces/2026-rover-code/src/build/GIM_pkg/build/lib/GIM_pkg
+[2.979s] running install
+[2.981s] running install_lib
+[2.984s] copying /workspaces/2026-rover-code/src/build/GIM_pkg/build/lib/GIM_pkg/GIM.py -> /workspaces/2026-rover-code/src/install/GIM_pkg/lib/python3.10/site-packages/GIM_pkg
+[2.989s] byte-compiling /workspaces/2026-rover-code/src/install/GIM_pkg/lib/python3.10/site-packages/GIM_pkg/GIM.py to GIM.cpython-310.pyc
+[2.994s] running install_data
+[2.996s] running install_egg_info
+[3.000s] removing '/workspaces/2026-rover-code/src/install/GIM_pkg/lib/python3.10/site-packages/GIM_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[3.006s] Copying ../build/GIM_pkg/GIM_pkg.egg-info to /workspaces/2026-rover-code/src/install/GIM_pkg/lib/python3.10/site-packages/GIM_pkg-0.0.0-py3.10.egg-info
+[3.025s] running install_scripts
+[3.077s] Installing gim_node script to /workspaces/2026-rover-code/src/install/GIM_pkg/lib/GIM_pkg
+[3.078s] writing list of installed files to '/workspaces/2026-rover-code/src/build/GIM_pkg/install.log'
+[3.175s] Invoked command in '/workspaces/2026-rover-code/src/GIM_pkg' returned '0': PYTHONPATH=/workspaces/2026-rover-code/src/build/GIM_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspaces/2026-rover-code/src/install/GIM_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/GIM_pkg build --build-base /workspaces/2026-rover-code/src/build/GIM_pkg/build install --record /workspaces/2026-rover-code/src/build/GIM_pkg/install.log --install-scripts $base/lib/GIM_pkg --single-version-externally-managed install_data

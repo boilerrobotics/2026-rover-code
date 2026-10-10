@@ -57,7 +57,7 @@ class TelemetryNode(Node):
         self.odrive_subscribers_list = []
         super().__init__('telemetry_node')
 
-        self.telemetry_publisher = self.create_publisher(TelemetryData, 'telemetry_node', 10)
+        self.telemetry_publisher = self.create_publisher(TelemetryData, 'telemetry_data', 10)
 
         self.timer = self.create_timer(0.1, self.publish_telemetry)
 

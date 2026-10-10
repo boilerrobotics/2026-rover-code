@@ -1,0 +1,35 @@
+running egg_info
+creating ../build/GIM_pkg/GIM_pkg.egg-info
+writing ../build/GIM_pkg/GIM_pkg.egg-info/PKG-INFO
+writing dependency_links to ../build/GIM_pkg/GIM_pkg.egg-info/dependency_links.txt
+writing entry points to ../build/GIM_pkg/GIM_pkg.egg-info/entry_points.txt
+writing requirements to ../build/GIM_pkg/GIM_pkg.egg-info/requires.txt
+writing top-level names to ../build/GIM_pkg/GIM_pkg.egg-info/top_level.txt
+writing manifest file '../build/GIM_pkg/GIM_pkg.egg-info/SOURCES.txt'
+reading manifest file '../build/GIM_pkg/GIM_pkg.egg-info/SOURCES.txt'
+writing manifest file '../build/GIM_pkg/GIM_pkg.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /workspaces/2026-rover-code/src/build/GIM_pkg/build
+creating /workspaces/2026-rover-code/src/build/GIM_pkg/build/lib
+creating /workspaces/2026-rover-code/src/build/GIM_pkg/build/lib/GIM_pkg
+copying GIM_pkg/GIM.py -> /workspaces/2026-rover-code/src/build/GIM_pkg/build/lib/GIM_pkg
+copying GIM_pkg/__init__.py -> /workspaces/2026-rover-code/src/build/GIM_pkg/build/lib/GIM_pkg
+running install
+running install_lib
+creating /workspaces/2026-rover-code/src/install/GIM_pkg/lib/python3.10/site-packages/GIM_pkg
+copying /workspaces/2026-rover-code/src/build/GIM_pkg/build/lib/GIM_pkg/GIM.py -> /workspaces/2026-rover-code/src/install/GIM_pkg/lib/python3.10/site-packages/GIM_pkg
+copying /workspaces/2026-rover-code/src/build/GIM_pkg/build/lib/GIM_pkg/__init__.py -> /workspaces/2026-rover-code/src/install/GIM_pkg/lib/python3.10/site-packages/GIM_pkg
+byte-compiling /workspaces/2026-rover-code/src/install/GIM_pkg/lib/python3.10/site-packages/GIM_pkg/GIM.py to GIM.cpython-310.pyc
+byte-compiling /workspaces/2026-rover-code/src/install/GIM_pkg/lib/python3.10/site-packages/GIM_pkg/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /workspaces/2026-rover-code/src/install/GIM_pkg/share/ament_index
+creating /workspaces/2026-rover-code/src/install/GIM_pkg/share/ament_index/resource_index
+creating /workspaces/2026-rover-code/src/install/GIM_pkg/share/ament_index/resource_index/packages
+copying resource/GIM_pkg -> /workspaces/2026-rover-code/src/install/GIM_pkg/share/ament_index/resource_index/packages
+copying package.xml -> /workspaces/2026-rover-code/src/install/GIM_pkg/share/GIM_pkg
+running install_egg_info
+Copying ../build/GIM_pkg/GIM_pkg.egg-info to /workspaces/2026-rover-code/src/install/GIM_pkg/lib/python3.10/site-packages/GIM_pkg-0.0.0-py3.10.egg-info
+running install_scripts
+Installing gim_node script to /workspaces/2026-rover-code/src/install/GIM_pkg/lib/GIM_pkg
+writing list of installed files to '/workspaces/2026-rover-code/src/build/GIM_pkg/install.log'

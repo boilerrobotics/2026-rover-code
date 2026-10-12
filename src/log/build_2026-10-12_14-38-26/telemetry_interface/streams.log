@@ -1,0 +1,42 @@
+[0.373s] Invoking command in '/home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/lyrical DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/kamil-poreba/Documents/BRC/2026-rover-code/src/telemetry_interface -DCMAKE_INSTALL_PREFIX=/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface
+[0.392s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.392s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.392s]   CMake.
+[0.392s] 
+[0.392s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.393s]   to tell CMake that the project requires at least <min> but has been updated
+[0.393s]   to work with policies introduced by <max> or earlier.
+[0.393s] 
+[0.393s] [0m
+[0.478s] -- The C compiler identification is GNU 15.2.0
+[0.598s] -- The CXX compiler identification is GNU 15.2.0
+[0.617s] -- Detecting C compiler ABI info
+[0.748s] -- Detecting C compiler ABI info - done
+[0.773s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.773s] -- Detecting C compile features
+[0.774s] -- Detecting C compile features - done
+[0.796s] -- Detecting CXX compiler ABI info
+[0.944s] -- Detecting CXX compiler ABI info - done
+[0.965s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.965s] -- Detecting CXX compile features
+[0.966s] -- Detecting CXX compile features - done
+[0.983s] -- Found ament_cmake: 2.8.8 (/opt/ros/lyrical/share/ament_cmake/cmake)
+[1.460s] -- Found ament_lint_auto: 0.20.6 (/opt/ros/lyrical/share/ament_lint_auto/cmake)
+[1.493s] Traceback (most recent call last):
+[1.493s]   File "/opt/ros/lyrical/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 22, in <module>
+[1.493s]     from catkin_pkg.package import parse_package_string
+[1.493s] ModuleNotFoundError: No module named 'catkin_pkg'
+[1.500s] [31mCMake Error at /opt/ros/lyrical/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):
+[1.500s]   execute_process(/home/kamil-poreba/.local/bin/python3.11
+[1.500s]   /opt/ros/lyrical/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[1.500s]   /home/kamil-poreba/Documents/BRC/2026-rover-code/src/telemetry_interface/package.xml
+[1.500s]   /home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_interface/ament_cmake_core/package.cmake)
+[1.500s]   returned error code 1
+[1.500s] Call Stack (most recent call first):
+[1.500s]   /opt/ros/lyrical/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[1.501s]   /opt/ros/lyrical/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)
+[1.501s]   CMakeLists.txt:23 (ament_lint_auto_find_test_dependencies)
+[1.501s] 
+[1.501s] [0m
+[1.501s] -- Configuring incomplete, errors occurred!
+[1.514s] Invoked command in '/home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_interface' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/lyrical DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/kamil-poreba/Documents/BRC/2026-rover-code/src/telemetry_interface -DCMAKE_INSTALL_PREFIX=/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface

@@ -1,0 +1,35 @@
+[1.362s] Invoking command in '/home/kamil-poreba/Documents/BRC/2026-rover-code/src/gim_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/gim_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/gim_pkg/lib/python3.14/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/gim_pkg build --build-base /home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/gim_pkg/build install --record /home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/gim_pkg/install.log --install-scripts $base/lib/gim_pkg --single-version-externally-managed install_data
+[1.708s] running egg_info
+[1.724s] creating ../build/gim_pkg/gim_pkg.egg-info
+[1.724s] writing ../build/gim_pkg/gim_pkg.egg-info/PKG-INFO
+[1.725s] writing dependency_links to ../build/gim_pkg/gim_pkg.egg-info/dependency_links.txt
+[1.725s] writing entry points to ../build/gim_pkg/gim_pkg.egg-info/entry_points.txt
+[1.725s] writing requirements to ../build/gim_pkg/gim_pkg.egg-info/requires.txt
+[1.726s] writing top-level names to ../build/gim_pkg/gim_pkg.egg-info/top_level.txt
+[1.726s] writing manifest file '../build/gim_pkg/gim_pkg.egg-info/SOURCES.txt'
+[1.768s] reading manifest file '../build/gim_pkg/gim_pkg.egg-info/SOURCES.txt'
+[1.769s] writing manifest file '../build/gim_pkg/gim_pkg.egg-info/SOURCES.txt'
+[1.769s] running build
+[1.769s] running build_py
+[1.769s] creating /home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/gim_pkg/build/lib/gim_pkg
+[1.770s] copying gim_pkg/GIM.py -> /home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/gim_pkg/build/lib/gim_pkg
+[1.770s] copying gim_pkg/__init__.py -> /home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/gim_pkg/build/lib/gim_pkg
+[1.770s] copying gim_pkg/CONSTANTS.py -> /home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/gim_pkg/build/lib/gim_pkg
+[1.770s] running install
+[1.776s] running install_lib
+[1.793s] creating /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/gim_pkg/lib/python3.14/site-packages/gim_pkg
+[1.793s] copying /home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/gim_pkg/build/lib/gim_pkg/GIM.py -> /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/gim_pkg/lib/python3.14/site-packages/gim_pkg
+[1.793s] copying /home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/gim_pkg/build/lib/gim_pkg/__init__.py -> /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/gim_pkg/lib/python3.14/site-packages/gim_pkg
+[1.793s] copying /home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/gim_pkg/build/lib/gim_pkg/CONSTANTS.py -> /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/gim_pkg/lib/python3.14/site-packages/gim_pkg
+[1.794s] byte-compiling /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/gim_pkg/lib/python3.14/site-packages/gim_pkg/GIM.py to GIM.cpython-314.pyc
+[1.796s] byte-compiling /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/gim_pkg/lib/python3.14/site-packages/gim_pkg/__init__.py to __init__.cpython-314.pyc
+[1.796s] byte-compiling /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/gim_pkg/lib/python3.14/site-packages/gim_pkg/CONSTANTS.py to CONSTANTS.cpython-314.pyc
+[1.796s] running install_data
+[1.797s] creating /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/gim_pkg/share/ament_index/resource_index/packages
+[1.797s] copying resource/gim_pkg -> /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/gim_pkg/share/ament_index/resource_index/packages
+[1.797s] copying package.xml -> /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/gim_pkg/share/gim_pkg
+[1.797s] running install_egg_info
+[1.815s] Copying ../build/gim_pkg/gim_pkg.egg-info to /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/gim_pkg/lib/python3.14/site-packages/gim_pkg-0.0.0-py3.14.egg-info
+[1.816s] running install_scripts
+[1.912s] Installing gim_node script to /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/gim_pkg/lib/gim_pkg
+[1.912s] writing list of installed files to '/home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/gim_pkg/install.log'

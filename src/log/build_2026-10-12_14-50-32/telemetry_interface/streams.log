@@ -1,0 +1,212 @@
+[0.422s] Invoking command in '/home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_pkg:/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/gim_pkg:/opt/ros/lyrical DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/kamil-poreba/Documents/BRC/2026-rover-code/src/telemetry_interface -DCMAKE_INSTALL_PREFIX=/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface
+[0.440s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.441s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.441s]   CMake.
+[0.441s] 
+[0.441s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.441s]   to tell CMake that the project requires at least <min> but has been updated
+[0.441s]   to work with policies introduced by <max> or earlier.
+[0.441s] 
+[0.441s] [0m
+[0.449s] -- Found ament_cmake: 2.8.8 (/opt/ros/lyrical/share/ament_cmake/cmake)
+[0.711s] -- Found ament_lint_auto: 0.20.6 (/opt/ros/lyrical/share/ament_lint_auto/cmake)
+[0.941s] -- Found geometry_msgs: 5.9.3 (/opt/ros/lyrical/share/geometry_msgs/cmake)
+[0.980s] -- Found rosidl_generator_c: 5.2.1 (/opt/ros/lyrical/share/rosidl_generator_c/cmake)
+[0.988s] -- Found rosidl_generator_cpp: 5.2.1 (/opt/ros/lyrical/share/rosidl_generator_cpp/cmake)
+[1.006s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.024s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.083s] -- Found rosidl_default_generators: 1.8.1 (/opt/ros/lyrical/share/rosidl_default_generators/cmake)
+[1.098s] -- Found rosidl_adapter: 5.2.1 (/opt/ros/lyrical/share/rosidl_adapter/cmake)
+[1.757s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.883s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.567s] -- Found Python3: /usr/bin/python3 (found version "3.14.4") found components: Interpreter Development NumPy Development.Module Development.Embed
+[2.662s] -- Found Python3: /usr/bin/python3 (found version "3.14.4") found components: Interpreter
+[2.670s] -- Added test 'lint_cmake' to check CMake code style
+[2.672s] -- Added test 'xmllint' to check XML markup files
+[2.682s] -- Configuring done (2.2s)
+[2.762s] -- Generating done (0.1s)
+[2.795s] -- Build files have been written to: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_interface
+[2.812s] Invoked command in '/home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_pkg:/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/gim_pkg:/opt/ros/lyrical DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/kamil-poreba/Documents/BRC/2026-rover-code/src/telemetry_interface -DCMAKE_INSTALL_PREFIX=/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface
+[2.816s] Invoking command in '/home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_pkg:/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/gim_pkg:/opt/ros/lyrical DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_interface -- -j16 -l16
+[2.922s] [  4%] Built target telemetry_interface__rs
+[2.923s] [  4%] Built target telemetry_interface__rosidl_generator_type_description
+[2.966s] [  6%] Built target telemetry_interface__cpp
+[2.974s] [ 24%] Built target telemetry_interface__rosidl_generator_c
+[3.021s] [ 42%] Built target telemetry_interface__rosidl_typesupport_introspection_cpp
+[3.021s] [ 42%] Built target telemetry_interface__rosidl_typesupport_c
+[3.022s] [ 51%] Built target telemetry_interface__rosidl_typesupport_introspection_c
+[3.025s] [ 60%] Built target telemetry_interface__rosidl_typesupport_fastrtps_c
+[3.031s] [ 68%] Built target telemetry_interface__rosidl_typesupport_cpp
+[3.082s] [ 77%] Built target telemetry_interface__rosidl_typesupport_fastrtps_cpp
+[3.128s] [ 77%] Built target telemetry_interface
+[3.172s] [ 80%] Built target telemetry_interface__py
+[3.221s] [ 86%] Built target telemetry_interface__rosidl_generator_py
+[3.236s] [ 86%] Built target ament_cmake_python_sync_telemetry_interface
+[3.267s] [ 91%] Built target telemetry_interface_s__rosidl_typesupport_fastrtps_c
+[3.269s] [ 95%] Built target telemetry_interface_s__rosidl_typesupport_introspection_c
+[3.277s] [100%] Built target telemetry_interface_s__rosidl_typesupport_c
+[3.659s] running egg_info
+[3.678s] writing telemetry_interface.egg-info/PKG-INFO
+[3.679s] writing dependency_links to telemetry_interface.egg-info/dependency_links.txt
+[3.679s] writing top-level names to telemetry_interface.egg-info/top_level.txt
+[3.742s] reading manifest file 'telemetry_interface.egg-info/SOURCES.txt'
+[3.743s] writing manifest file 'telemetry_interface.egg-info/SOURCES.txt'
+[3.843s] [100%] Built target ament_cmake_python_build_telemetry_interface_egg
+[3.868s] Invoked command in '/home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_pkg:/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/gim_pkg:/opt/ros/lyrical DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_interface -- -j16 -l16
+[3.890s] Invoking command in '/home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_pkg:/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/gim_pkg:/opt/ros/lyrical DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_interface
+[3.907s] -- Install configuration: ""
+[3.908s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/ament_index/resource_index/rosidl_interfaces/telemetry_interface
+[3.908s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/msg/TelemetryData.json
+[3.908s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/msg/GIM.json
+[3.909s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface
+[3.909s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg
+[3.909s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/rosidl_generator_c__visibility_control.h
+[3.909s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/gim.h
+[3.909s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/telemetry_data.h
+[3.909s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail
+[3.909s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/gim__type_support.h
+[3.909s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/gim__functions.c
+[3.910s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/gim__type_support.c
+[3.910s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__functions.h
+[3.910s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__type_support.c
+[3.910s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/gim__functions.h
+[3.910s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__description.c
+[3.910s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__functions.c
+[3.910s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/gim__description.c
+[3.910s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__struct.h
+[3.910s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/gim__struct.h
+[3.910s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__type_support.h
+[3.910s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/environment/library_path.sh
+[3.911s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/environment/library_path.dsv
+[3.911s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_generator_c.so
+[3.911s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface
+[3.911s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg
+[3.911s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail
+[3.911s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/gim__rosidl_typesupport_fastrtps_c.h
+[3.911s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__rosidl_typesupport_fastrtps_c.h
+[3.911s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[3.911s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_typesupport_fastrtps_c.so
+[3.911s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface
+[3.911s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg
+[3.911s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/rosidl_generator_cpp__visibility_control.hpp
+[3.911s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/gim.hpp
+[3.911s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/telemetry_data.hpp
+[3.912s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail
+[3.912s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__builder.hpp
+[3.912s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__struct.hpp
+[3.912s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/gim__traits.hpp
+[3.912s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/gim__struct.hpp
+[3.912s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__type_support.hpp
+[3.912s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/gim__type_support.hpp
+[3.912s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/gim__builder.hpp
+[3.912s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__traits.hpp
+[3.912s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface
+[3.912s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg
+[3.912s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[3.912s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail
+[3.912s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/gim__rosidl_typesupport_fastrtps_cpp.hpp
+[3.912s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__rosidl_typesupport_fastrtps_cpp.hpp
+[3.912s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/dds_fastrtps
+[3.912s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_typesupport_fastrtps_cpp.so
+[3.912s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface
+[3.912s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg
+[3.912s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[3.913s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail
+[3.913s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/gim__type_support.c
+[3.913s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__rosidl_typesupport_introspection_c.h
+[3.913s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/gim__rosidl_typesupport_introspection_c.h
+[3.913s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__type_support.c
+[3.913s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_typesupport_introspection_c.so
+[3.913s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_typesupport_c.so
+[3.913s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface
+[3.913s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg
+[3.913s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail
+[3.913s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/gim__type_support.cpp
+[3.913s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__rosidl_typesupport_introspection_cpp.hpp
+[3.913s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/gim__rosidl_typesupport_introspection_cpp.hpp
+[3.913s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/include/telemetry_interface/telemetry_interface/msg/detail/telemetry_data__type_support.cpp
+[3.913s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_typesupport_introspection_cpp.so
+[3.914s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_typesupport_cpp.so
+[3.914s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/environment/pythonpath.sh
+[3.914s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/environment/pythonpath.dsv
+[3.914s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/python3.14/site-packages/telemetry_interface/telemetry_interface_s__rosidl_typesupport_fastrtps_c.so
+[3.914s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/python3.14/site-packages/telemetry_interface/telemetry_interface_s__rosidl_typesupport_introspection_c.so
+[3.914s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/python3.14/site-packages/telemetry_interface/telemetry_interface_s__rosidl_typesupport_c.so
+[3.915s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/libtelemetry_interface__rosidl_generator_py.so
+[3.915s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/rust
+[3.915s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/rust/Cargo.toml
+[3.915s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/rust/src
+[3.915s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/rust/src/lib.rs
+[3.915s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/rust/src/msg
+[3.915s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/rust/src/msg/rmw.rs
+[3.915s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/rust/src/msg.rs
+[3.916s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/rust/build.rs
+[3.916s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/msg/TelemetryData.idl
+[3.916s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/msg/GIM.idl
+[3.916s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/msg/TelemetryData.msg
+[3.916s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/msg/GIM.msg
+[3.916s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/ament_index/resource_index/package_run_dependencies/telemetry_interface
+[3.916s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/ament_index/resource_index/parent_prefix_path/telemetry_interface
+[3.916s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/environment/ament_prefix_path.sh
+[3.916s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/environment/ament_prefix_path.dsv
+[3.916s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/environment/path.sh
+[3.916s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/environment/path.dsv
+[3.916s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/local_setup.bash
+[3.916s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/local_setup.fish
+[3.917s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/local_setup.sh
+[3.917s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/local_setup.zsh
+[3.917s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/local_setup.dsv
+[3.917s] -- Installing: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/package.dsv
+[3.917s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/ament_index/resource_index/packages/telemetry_interface
+[3.917s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/export_telemetry_interface__rosidl_generator_cExport.cmake
+[3.917s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/export_telemetry_interface__rosidl_generator_cExport-noconfig.cmake
+[3.917s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/export_telemetry_interface__rosidl_typesupport_fastrtps_cExport.cmake
+[3.917s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/export_telemetry_interface__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[3.917s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/export_telemetry_interface__rosidl_generator_cppExport.cmake
+[3.917s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/export_telemetry_interface__rosidl_typesupport_fastrtps_cppExport.cmake
+[3.917s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/export_telemetry_interface__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[3.917s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interface__rosidl_typesupport_introspection_cExport.cmake
+[3.918s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interface__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[3.918s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interface__rosidl_typesupport_cExport.cmake
+[3.918s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interface__rosidl_typesupport_cExport-noconfig.cmake
+[3.918s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interface__rosidl_typesupport_introspection_cppExport.cmake
+[3.918s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interface__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[3.918s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interface__rosidl_typesupport_cppExport.cmake
+[3.918s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interface__rosidl_typesupport_cppExport-noconfig.cmake
+[3.918s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/export_telemetry_interface__rosidl_generator_pyExport.cmake
+[3.918s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/export_telemetry_interface__rosidl_generator_pyExport-noconfig.cmake
+[3.918s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/python3.14/site-packages/telemetry_interface-0.0.0-py3.14.egg-info
+[3.918s] -- Installing: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/python3.14/site-packages/telemetry_interface-0.0.0-py3.14.egg-info/top_level.txt
+[3.918s] -- Installing: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/python3.14/site-packages/telemetry_interface-0.0.0-py3.14.egg-info/PKG-INFO
+[3.918s] -- Installing: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/python3.14/site-packages/telemetry_interface-0.0.0-py3.14.egg-info/dependency_links.txt
+[3.918s] -- Installing: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/python3.14/site-packages/telemetry_interface-0.0.0-py3.14.egg-info/SOURCES.txt
+[3.919s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/python3.14/site-packages/telemetry_interface
+[3.919s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/python3.14/site-packages/telemetry_interface/_telemetry_interface_s.ep.rosidl_typesupport_fastrtps_c.c
+[3.919s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/python3.14/site-packages/telemetry_interface/telemetry_interface_s__rosidl_typesupport_fastrtps_c.so
+[3.919s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/python3.14/site-packages/telemetry_interface/_telemetry_interface_s.ep.rosidl_typesupport_introspection_c.c
+[3.919s] -- Installing: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/python3.14/site-packages/telemetry_interface/__init__.py
+[3.919s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/python3.14/site-packages/telemetry_interface/_telemetry_interface_s.ep.rosidl_typesupport_c.c
+[3.919s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/python3.14/site-packages/telemetry_interface/py.typed
+[3.919s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/python3.14/site-packages/telemetry_interface/telemetry_interface_s__rosidl_typesupport_introspection_c.so
+[3.919s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/python3.14/site-packages/telemetry_interface/msg
+[3.919s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/python3.14/site-packages/telemetry_interface/msg/_telemetry_data_s.c
+[3.919s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/python3.14/site-packages/telemetry_interface/msg/_gim_s.c
+[3.919s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/python3.14/site-packages/telemetry_interface/msg/__init__.py
+[3.919s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/python3.14/site-packages/telemetry_interface/msg/_telemetry_data.py
+[3.919s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/python3.14/site-packages/telemetry_interface/msg/_gim.py
+[3.919s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/python3.14/site-packages/telemetry_interface/telemetry_interface_s__rosidl_typesupport_c.so
+[4.033s] Listing '/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/python3.14/site-packages/telemetry_interface'...
+[4.033s] Compiling '/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/python3.14/site-packages/telemetry_interface/__init__.py'...
+[4.033s] Listing '/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/lib/python3.14/site-packages/telemetry_interface/msg'...
+[4.060s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/rosidl_cmake-extras.cmake
+[4.060s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.060s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/ament_cmake_export_libraries-extras.cmake
+[4.060s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/ament_cmake_export_targets-extras.cmake
+[4.060s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[4.060s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.060s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[4.060s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/rosidl_cmake_aggregate_target-extras.cmake
+[4.060s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interfaceConfig.cmake
+[4.060s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/cmake/telemetry_interfaceConfig-version.cmake
+[4.060s] -- Up-to-date: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface/share/telemetry_interface/package.xml
+[4.066s] Invoked command in '/home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_pkg:/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/gim_pkg:/opt/ros/lyrical DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_interface

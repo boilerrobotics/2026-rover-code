@@ -1,0 +1,24 @@
+[0.320s] Invoking command in '/home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_interface': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/kamil-poreba/Documents/BRC/2026-rover-code/src/telemetry_interface -DCMAKE_INSTALL_PREFIX=/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface
+[0.333s] [33mCMake Warning (dev) at CMakeLists.txt:31:
+[0.333s]   Syntax Warning in cmake code at column 26
+[0.334s] 
+[0.334s]   Argument not separated from preceding token by whitespace.
+[0.334s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.334s] [0m
+[0.334s] [31mCMake Error at CMakeLists.txt:37:
+[0.334s]   Parse error.  Function missing ending ")".  Instead found unterminated
+[0.334s]   string with text "msg/GIM.msg
+[0.334s] 
+[0.334s]     
+[0.334s] 
+[0.334s]   )
+[0.334s] 
+[0.334s] 
+[0.334s] 
+[0.334s]   ament_package()
+[0.334s] 
+[0.334s]   ".
+[0.334s] 
+[0.334s] [0m
+[0.334s] -- Configuring incomplete, errors occurred!
+[0.616s] Invoked command in '/home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_interface' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/kamil-poreba/Documents/BRC/2026-rover-code/src/telemetry_interface -DCMAKE_INSTALL_PREFIX=/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface

@@ -1,0 +1,41 @@
+[0.290s] Invoking command in '/home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_interface': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/kamil-poreba/Documents/BRC/2026-rover-code/src/telemetry_interface -DCMAKE_INSTALL_PREFIX=/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface
+[0.306s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.306s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.307s]   CMake.
+[0.307s] 
+[0.307s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.307s]   to tell CMake that the project requires at least <min> but has been updated
+[0.307s]   to work with policies introduced by <max> or earlier.
+[0.307s] 
+[0.307s] [0m
+[0.382s] -- The C compiler identification is GNU 15.2.0
+[0.477s] -- The CXX compiler identification is GNU 15.2.0
+[0.488s] -- Detecting C compiler ABI info
+[0.599s] -- Detecting C compiler ABI info - done
+[0.624s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.625s] -- Detecting C compile features
+[0.625s] -- Detecting C compile features - done
+[0.652s] -- Detecting CXX compiler ABI info
+[0.796s] -- Detecting CXX compiler ABI info - done
+[0.819s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.819s] -- Detecting CXX compile features
+[0.820s] -- Detecting CXX compile features - done
+[0.844s] [31mCMake Error at CMakeLists.txt:9 (find_package):
+[0.844s]   By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project
+[0.844s]   has asked CMake to find a package configuration file provided by
+[0.844s]   "ament_cmake", but CMake did not find one.
+[0.844s] 
+[0.844s]   Could not find a package configuration file provided by "ament_cmake" with
+[0.844s]   any of the following names:
+[0.844s] 
+[0.844s]     ament_cmakeConfig.cmake
+[0.844s]     ament_cmake-config.cmake
+[0.844s] 
+[0.844s]   Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set
+[0.844s]   "ament_cmake_DIR" to a directory containing one of the above files.  If
+[0.844s]   "ament_cmake" provides a separate development package or SDK, be sure it
+[0.845s]   has been installed.
+[0.845s] 
+[0.845s] [0m
+[0.845s] -- Configuring incomplete, errors occurred!
+[0.852s] Invoked command in '/home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_interface' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/kamil-poreba/Documents/BRC/2026-rover-code/src/telemetry_interface -DCMAKE_INSTALL_PREFIX=/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface

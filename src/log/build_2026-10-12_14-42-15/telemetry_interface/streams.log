@@ -1,0 +1,87 @@
+[0.387s] Invoking command in '/home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/lyrical DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/kamil-poreba/Documents/BRC/2026-rover-code/src/telemetry_interface -DPython3_EXECUTABLE=/usr/bin/python3 -DCMAKE_INSTALL_PREFIX=/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface
+[0.405s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.405s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.405s]   CMake.
+[0.406s] 
+[0.406s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.406s]   to tell CMake that the project requires at least <min> but has been updated
+[0.406s]   to work with policies introduced by <max> or earlier.
+[0.406s] 
+[0.406s] [0m
+[0.484s] -- The C compiler identification is GNU 15.2.0
+[0.587s] -- The CXX compiler identification is GNU 15.2.0
+[0.599s] -- Detecting C compiler ABI info
+[0.721s] -- Detecting C compiler ABI info - done
+[0.740s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.741s] -- Detecting C compile features
+[0.742s] -- Detecting C compile features - done
+[0.760s] -- Detecting CXX compiler ABI info
+[0.907s] -- Detecting CXX compiler ABI info - done
+[0.931s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.932s] -- Detecting CXX compile features
+[0.933s] -- Detecting CXX compile features - done
+[0.949s] -- Found ament_cmake: 2.8.8 (/opt/ros/lyrical/share/ament_cmake/cmake)
+[1.324s] -- Found ament_lint_auto: 0.20.6 (/opt/ros/lyrical/share/ament_lint_auto/cmake)
+[1.505s] -- Found geometry_msgs: 5.9.3 (/opt/ros/lyrical/share/geometry_msgs/cmake)
+[1.563s] -- Found rosidl_generator_c: 5.2.1 (/opt/ros/lyrical/share/rosidl_generator_c/cmake)
+[1.578s] -- Found rosidl_generator_cpp: 5.2.1 (/opt/ros/lyrical/share/rosidl_generator_cpp/cmake)
+[1.615s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.643s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.714s] -- Found rosidl_default_generators: 1.8.1 (/opt/ros/lyrical/share/rosidl_default_generators/cmake)
+[1.736s] -- Found rosidl_adapter: 5.2.1 (/opt/ros/lyrical/share/rosidl_adapter/cmake)
+[1.932s] -- Found Python3: /usr/bin/python3 (found version "3.14.4") found components: Interpreter
+[2.177s] [31mCMake Error at /opt/ros/lyrical/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:57 (message):
+[2.177s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name
+[2.177s]   telemetry_interface --arguments-file
+[2.177s]   /home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_interface/rosidl_adapter__arguments__telemetry_interface.json
+[2.177s]   --output-dir
+[2.177s]   /home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_interface/rosidl_adapter/telemetry_interface
+[2.177s]   --output-file
+[2.177s]   /home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_interface/rosidl_adapter/telemetry_interface.idls)
+[2.177s]   returned error code 1:
+[2.177s] 
+[2.178s]   Error processing 'float32[4][2] swerve_controls' of
+[2.178s]   'telemetry_interface/GIM': ''float32[4]' is an invalid message name.  It
+[2.178s]   should have the pattern '^[A-Z][A-Za-z0-9]*$''
+[2.178s] 
+[2.178s]   Traceback (most recent call last):
+[2.178s] 
+[2.178s]     File "<frozen runpy>", line 198, in _run_module_as_main
+[2.178s]     File "<frozen runpy>", line 88, in _run_code
+[2.178s]     File "/opt/ros/lyrical/lib/python3.14/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[2.178s]       main()
+[2.178s]       ~~~~^^
+[2.178s]     File "/opt/ros/lyrical/lib/python3.14/site-packages/rosidl_adapter/main.py", line 54, in main
+[2.178s]       abs_idl_file = convert_to_idl(
+[2.179s]           pathlib.Path(basepath), args.package_name,
+[2.179s]           pathlib.Path(relative_path), output_dir)
+[2.179s]     File "/opt/ros/lyrical/lib/python3.14/site-packages/rosidl_adapter/__init__.py", line 22, in convert_to_idl
+[2.179s]       return convert_msg_to_idl(
+[2.179s]           package_dir, package_name, interface_file, output_dir / 'msg')
+[2.179s]     File "/opt/ros/lyrical/lib/python3.14/site-packages/rosidl_adapter/msg/__init__.py", line 32, in convert_msg_to_idl
+[2.179s]       msg = parse_message_string(package_name, input_file.stem, content)
+[2.179s]     File "/opt/ros/lyrical/lib/python3.14/site-packages/rosidl_adapter/parser.py", line 558, in parse_message_string
+[2.179s]       Type(type_string, context_package_name=pkg_name),
+[2.179s]       ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2.179s]     File "/opt/ros/lyrical/lib/python3.14/site-packages/rosidl_adapter/parser.py", line 300, in __init__
+[2.179s]       super(Type, self).__init__(
+[2.179s]       ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[2.179s]           type_string,
+[2.180s]           ^^^^^^^^^^^^
+[2.180s]           context_package_name=context_package_name)
+[2.180s]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2.180s]     File "/opt/ros/lyrical/lib/python3.14/site-packages/rosidl_adapter/parser.py", line 228, in __init__
+[2.180s]       raise InvalidResourceName(
+[2.180s]           "'{}' is an invalid message name. It should have the pattern '{}'".format(
+[2.180s]               self.type, VALID_MESSAGE_NAME_PATTERN.pattern))
+[2.180s] 
+[2.180s]   rosidl_adapter.parser.InvalidResourceName: 'float32[4]' is an invalid
+[2.180s]   message name.  It should have the pattern '^[A-Z][A-Za-z0-9]*$'
+[2.180s] 
+[2.180s] Call Stack (most recent call first):
+[2.180s]   /opt/ros/lyrical/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:132 (rosidl_adapt_interfaces)
+[2.181s]   CMakeLists.txt:30 (rosidl_generate_interfaces)
+[2.181s] 
+[2.181s] [0m
+[2.181s] -- Configuring incomplete, errors occurred!
+[2.192s] Invoked command in '/home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_interface' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/lyrical DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/kamil-poreba/Documents/BRC/2026-rover-code/src/telemetry_interface -DPython3_EXECUTABLE=/usr/bin/python3 -DCMAKE_INSTALL_PREFIX=/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface

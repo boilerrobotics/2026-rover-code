@@ -1,4 +1,0 @@
-[31mCMake Error at CMakeLists.txt:30 (pluginlib_export_plugin_description_file):
-  Unknown CMake command "pluginlib_export_plugin_description_file".
-
-[0m

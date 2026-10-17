@@ -1,0 +1,78 @@
+# ros_gz_bridge config for the rover (ROS 2 Humble + Gazebo Fortress)
+#
+# Run:
+#   ros2 run ros_gz_bridge parameter_bridge --ros-args -p config_file:=$(pwd)/rover_bridge.yaml
+#
+# Each entry:
+#   ros_topic_name / gz_topic_name : topic names on each side (can differ)
+#   ros_type_name  / gz_type_name  : message types on each side
+#   direction                      : ROS_TO_GZ, GZ_TO_ROS, or BIDIRECTIONAL
+
+# ---- Simulation clock (so ROS nodes can use use_sim_time) ----
+- ros_topic_name: "/clock"
+  gz_topic_name: "/clock"
+  ros_type_name: "rosgraph_msgs/msg/Clock"
+  gz_type_name: "ignition.msgs.Clock"
+  direction: GZ_TO_ROS
+
+# ---- Steering position commands (rad), 4 corner wheels ----
+- ros_topic_name: "/rover/left_front/steer/cmd_pos"
+  gz_topic_name: "/rover/left_front/steer/cmd_pos"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "ignition.msgs.Double"
+  direction: ROS_TO_GZ
+
+- ros_topic_name: "/rover/right_front/steer/cmd_pos"
+  gz_topic_name: "/rover/right_front/steer/cmd_pos"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "ignition.msgs.Double"
+  direction: ROS_TO_GZ
+
+- ros_topic_name: "/rover/left_rear/steer/cmd_pos"
+  gz_topic_name: "/rover/left_rear/steer/cmd_pos"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "ignition.msgs.Double"
+  direction: ROS_TO_GZ
+
+- ros_topic_name: "/rover/right_rear/steer/cmd_pos"
+  gz_topic_name: "/rover/right_rear/steer/cmd_pos"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "ignition.msgs.Double"
+  direction: ROS_TO_GZ
+
+# ---- Wheel velocity commands (rad/s), all 6 wheels ----
+- ros_topic_name: "/rover/left_front/wheel/cmd_vel"
+  gz_topic_name: "/rover/left_front/wheel/cmd_vel"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "ignition.msgs.Double"
+  direction: ROS_TO_GZ
+
+- ros_topic_name: "/rover/left_middle/wheel/cmd_vel"
+  gz_topic_name: "/rover/left_middle/wheel/cmd_vel"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "ignition.msgs.Double"
+  direction: ROS_TO_GZ
+
+- ros_topic_name: "/rover/left_rear/wheel/cmd_vel"
+  gz_topic_name: "/rover/left_rear/wheel/cmd_vel"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "ignition.msgs.Double"
+  direction: ROS_TO_GZ
+
+- ros_topic_name: "/rover/right_front/wheel/cmd_vel"
+  gz_topic_name: "/rover/right_front/wheel/cmd_vel"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "ignition.msgs.Double"
+  direction: ROS_TO_GZ
+
+- ros_topic_name: "/rover/right_middle/wheel/cmd_vel"
+  gz_topic_name: "/rover/right_middle/wheel/cmd_vel"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "ignition.msgs.Double"
+  direction: ROS_TO_GZ
+
+- ros_topic_name: "/rover/right_rear/wheel/cmd_vel"
+  gz_topic_name: "/rover/right_rear/wheel/cmd_vel"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "ignition.msgs.Double"
+  direction: ROS_TO_GZ

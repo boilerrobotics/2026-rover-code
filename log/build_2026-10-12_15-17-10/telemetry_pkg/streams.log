@@ -1,0 +1,32 @@
+[1.500s] Invoking command in '/home/kamil-poreba/Documents/BRC/2026-rover-code/src/telemetry_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/kamil-poreba/Documents/BRC/2026-rover-code/build/telemetry_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kamil-poreba/Documents/BRC/2026-rover-code/install/telemetry_pkg/lib/python3.14/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/telemetry_pkg build --build-base /home/kamil-poreba/Documents/BRC/2026-rover-code/build/telemetry_pkg/build install --record /home/kamil-poreba/Documents/BRC/2026-rover-code/build/telemetry_pkg/install.log --install-scripts $base/lib/telemetry_pkg --single-version-externally-managed install_data
+[1.829s] running egg_info
+[1.850s] creating ../../build/telemetry_pkg/telemetry_pkg.egg-info
+[1.850s] writing ../../build/telemetry_pkg/telemetry_pkg.egg-info/PKG-INFO
+[1.851s] writing dependency_links to ../../build/telemetry_pkg/telemetry_pkg.egg-info/dependency_links.txt
+[1.851s] writing entry points to ../../build/telemetry_pkg/telemetry_pkg.egg-info/entry_points.txt
+[1.852s] writing requirements to ../../build/telemetry_pkg/telemetry_pkg.egg-info/requires.txt
+[1.852s] writing top-level names to ../../build/telemetry_pkg/telemetry_pkg.egg-info/top_level.txt
+[1.852s] writing manifest file '../../build/telemetry_pkg/telemetry_pkg.egg-info/SOURCES.txt'
+[1.891s] reading manifest file '../../build/telemetry_pkg/telemetry_pkg.egg-info/SOURCES.txt'
+[1.892s] writing manifest file '../../build/telemetry_pkg/telemetry_pkg.egg-info/SOURCES.txt'
+[1.892s] running build
+[1.892s] running build_py
+[1.893s] creating /home/kamil-poreba/Documents/BRC/2026-rover-code/build/telemetry_pkg/build/lib/telemetry_pkg
+[1.893s] copying telemetry_pkg/__init__.py -> /home/kamil-poreba/Documents/BRC/2026-rover-code/build/telemetry_pkg/build/lib/telemetry_pkg
+[1.893s] copying telemetry_pkg/telemetry_node.py -> /home/kamil-poreba/Documents/BRC/2026-rover-code/build/telemetry_pkg/build/lib/telemetry_pkg
+[1.893s] running install
+[1.900s] running install_lib
+[1.917s] creating /home/kamil-poreba/Documents/BRC/2026-rover-code/install/telemetry_pkg/lib/python3.14/site-packages/telemetry_pkg
+[1.917s] copying /home/kamil-poreba/Documents/BRC/2026-rover-code/build/telemetry_pkg/build/lib/telemetry_pkg/__init__.py -> /home/kamil-poreba/Documents/BRC/2026-rover-code/install/telemetry_pkg/lib/python3.14/site-packages/telemetry_pkg
+[1.917s] copying /home/kamil-poreba/Documents/BRC/2026-rover-code/build/telemetry_pkg/build/lib/telemetry_pkg/telemetry_node.py -> /home/kamil-poreba/Documents/BRC/2026-rover-code/install/telemetry_pkg/lib/python3.14/site-packages/telemetry_pkg
+[1.918s] byte-compiling /home/kamil-poreba/Documents/BRC/2026-rover-code/install/telemetry_pkg/lib/python3.14/site-packages/telemetry_pkg/__init__.py to __init__.cpython-314.pyc
+[1.919s] byte-compiling /home/kamil-poreba/Documents/BRC/2026-rover-code/install/telemetry_pkg/lib/python3.14/site-packages/telemetry_pkg/telemetry_node.py to telemetry_node.cpython-314.pyc
+[1.921s] running install_data
+[1.921s] creating /home/kamil-poreba/Documents/BRC/2026-rover-code/install/telemetry_pkg/share/ament_index/resource_index/packages
+[1.921s] copying resource/telemetry_pkg -> /home/kamil-poreba/Documents/BRC/2026-rover-code/install/telemetry_pkg/share/ament_index/resource_index/packages
+[1.921s] copying package.xml -> /home/kamil-poreba/Documents/BRC/2026-rover-code/install/telemetry_pkg/share/telemetry_pkg
+[1.921s] running install_egg_info
+[1.939s] Copying ../../build/telemetry_pkg/telemetry_pkg.egg-info to /home/kamil-poreba/Documents/BRC/2026-rover-code/install/telemetry_pkg/lib/python3.14/site-packages/telemetry_pkg-0.0.0-py3.14.egg-info
+[1.940s] running install_scripts
+[2.043s] Installing telemetry_node script to /home/kamil-poreba/Documents/BRC/2026-rover-code/install/telemetry_pkg/lib/telemetry_pkg
+[2.044s] writing list of installed files to '/home/kamil-poreba/Documents/BRC/2026-rover-code/build/telemetry_pkg/install.log'

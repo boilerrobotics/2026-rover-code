@@ -2,10 +2,12 @@ import rclpy
 from rclpy.node import Node
 
 from geometry_msgs.msg import Twist
+from odrive_can.srv import AxisState
 
 from gim_pkg import CONSTANTS
 import math
 from telemetry_interface.msg import GIM
+from odrive_can.msg import ControlMessage
 
 
 class GIMNode(Node):
@@ -17,10 +19,21 @@ class GIMNode(Node):
     def __init__(self):
         super().__init__('gim_node')
 
+
+        #self.odrive_srv = self.create_client(AxisState, "/odrive_axis0/request_axis_state")
+
+       # self.odrive0_srv_timer = self.create_timer(0.1, self.)
+            
+
         self.joystick_vals = self.create_subscription(Twist, 'cmd_vel', self.cmd_vel_callback, 10) # Joystick input command
 
-        self.steering_values = self.create_publisher(GIM, 'swerve_controls', 1)
-        self.timer = self.create_timer(0.1, self.publish_swerve_controls)
+        self.control_vals = []
+
+        for i in range(10):
+            self.control_vals.append(self.create_publisher(ControlMessage, f'/odrive_axis{i}/control_message', 10))
+
+        
+        
 
         self.declare_parameter('max_chassis_vel', 1.0) # Max velocity command for the chassis in m/s
         self.declare_parameter('max_chassis_ang_vel', 0.5) # Max angular command for the chassis in rad/s
@@ -61,6 +74,19 @@ class GIMNode(Node):
 
         self.kinematics()
 
+         #Publishh speeds and turn angles for swerves and speeds for middle tank drives
+        self.swerve_values[0].publish(ControlMessage(input_pos=self.swerve_values["Swerve1"][2]))
+        self.swerve_values[1].publish(ControlMessage(input_vel=self.swerve_values["Swerve1"][3]))
+        self.swerve_values[2].publish(ControlMessage(input_pos=self.swerve_values["Swerve2"][2]))
+        self.swerve_values[3].publish(ControlMessage(input_vel=self.swerve_values["Swerve2"][3]))
+        self.swerve_values[4].publish(ControlMessage(input_pos=self.swerve_values["Swerve3"][2]))
+        self.swerve_values[5].publish(ControlMessage(input_vel=self.swerve_values["Swerve3"][3]))
+        self.swerve_values[6].publish(ControlMessage(input_pos=self.swerve_values["Swerve4"][2]))
+        self.swerve_values[7].publish(ControlMessage(input_vel=self.swerve_values["Swerve4"][3]))
+        self.swerve_values[8].publish(ControlMessage(input_vel=self.tank_values["Middle Left"]))
+        self.swerve_values[9].publish(ControlMessage(input_vel=self.tank_values["Middle Right"]))
+        
+
     def kinematics(self):
 
         # middle right and left wheel Speeds (m/s)
@@ -82,18 +108,8 @@ class GIMNode(Node):
             self.swerve_values[swerve] = [V_x, V_y, phi, V_f]
             i+=1
 
-    def publish_swerve_controls(self):
-
-        #Publishh speeds and turn angles for swerves and speeds for middle tank drives
-
-        self.steering_values.publish(GIM(swerve1_controls=list(self.swerve_values["Swerve1"][2:4]),
-                                         swerve2_controls=list(self.swerve_values["Swerve2"][2:4]),
-                                         swerve3_controls=list(self.swerve_values["Swerve3"][2:4]),
-                                         swerve4_controls=list(self.swerve_values["Swerve4"][2:4]),
-                                         tank_controls=[self.tank_values.get("Middle Left", 0.0), self.tank_values.get("Middle Right", 0.0)]))
 
 
-    
 
 def main(args=None):
     rclpy.init(args=args)

@@ -1,0 +1,41 @@
+[0.447s] Invoking command in '/home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_pkg:/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/gim_pkg:/opt/ros/lyrical DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/kamil-poreba/Documents/BRC/2026-rover-code/src/telemetry_interface -DPython3_EXECUTABLE=/usr/bin/python3 -DCMAKE_INSTALL_PREFIX=/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_interface
+[0.466s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.466s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.467s]   CMake.
+[0.467s] 
+[0.467s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.467s]   to tell CMake that the project requires at least <min> but has been updated
+[0.467s]   to work with policies introduced by <max> or earlier.
+[0.467s] 
+[0.467s] [0m
+[0.564s] -- The C compiler identification is GNU 15.2.0
+[0.715s] -- The CXX compiler identification is GNU 15.2.0
+[0.729s] -- Detecting C compiler ABI info
+[0.873s] -- Detecting C compiler ABI info - done
+[0.902s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.903s] -- Detecting C compile features
+[0.903s] -- Detecting C compile features - done
+[0.924s] -- Detecting CXX compiler ABI info
+[1.103s] -- Detecting CXX compiler ABI info - done
+[1.125s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.125s] -- Detecting CXX compile features
+[1.126s] -- Detecting CXX compile features - done
+[1.145s] -- Found ament_cmake: 2.8.8 (/opt/ros/lyrical/share/ament_cmake/cmake)
+[1.690s] -- Found ament_lint_auto: 0.20.6 (/opt/ros/lyrical/share/ament_lint_auto/cmake)
+[1.948s] -- Found geometry_msgs: 5.9.3 (/opt/ros/lyrical/share/geometry_msgs/cmake)
+[1.998s] -- Found rosidl_generator_c: 5.2.1 (/opt/ros/lyrical/share/rosidl_generator_c/cmake)
+[2.015s] -- Found rosidl_generator_cpp: 5.2.1 (/opt/ros/lyrical/share/rosidl_generator_cpp/cmake)
+[2.041s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.065s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.142s] -- Found rosidl_default_generators: 1.8.1 (/opt/ros/lyrical/share/rosidl_default_generators/cmake)
+[2.164s] -- Found rosidl_adapter: 5.2.1 (/opt/ros/lyrical/share/rosidl_adapter/cmake)
+[2.425s] -- Found Python3: /usr/bin/python3 (found version "3.14.4") found components: Interpreter
+[4.770s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[5.410s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[6.575s] -- Found Python3: /usr/bin/python3 (found version "3.14.4") found components: Interpreter Development NumPy Development.Module Development.Embed
+[6.704s] -- Found Python3: /usr/bin/python3 (found version "3.14.4") found components: Interpreter
+[6.714s] -- Added test 'lint_cmake' to check CMake code style
+[6.723s] -- Added test 'xmllint' to check XML markup files
+[6.739s] -- Configuring done (6.3s)
+[6.824s] -- Generating done (0.1s)
+[6.855s] -- Build files have been written to: /home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_interface

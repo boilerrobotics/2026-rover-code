@@ -1,0 +1,44 @@
+[0.453s] Invoking command in '/home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/odrive_can': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_pkg:/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/gim_pkg:/opt/ros/lyrical DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/kamil-poreba/Documents/BRC/2026-rover-code/src/ros_odrive/odrive_node -DPython3_EXECUTABLE=/usr/bin/python3 -DCMAKE_INSTALL_PREFIX=/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/odrive_can
+[0.465s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.465s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.465s]   CMake.
+[0.465s] 
+[0.465s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.465s]   to tell CMake that the project requires at least <min> but has been updated
+[0.466s]   to work with policies introduced by <max> or earlier.
+[0.466s] 
+[0.466s] [0m
+[0.571s] -- The C compiler identification is GNU 15.2.0
+[0.689s] -- The CXX compiler identification is GNU 15.2.0
+[0.701s] -- Detecting C compiler ABI info
+[0.869s] -- Detecting C compiler ABI info - done
+[0.889s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.889s] -- Detecting C compile features
+[0.890s] -- Detecting C compile features - done
+[0.914s] -- Detecting CXX compiler ABI info
+[1.080s] -- Detecting CXX compiler ABI info - done
+[1.106s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.106s] -- Detecting CXX compile features
+[1.107s] -- Detecting CXX compile features - done
+[1.126s] -- Found ament_cmake: 2.8.8 (/opt/ros/lyrical/share/ament_cmake/cmake)
+[1.696s] -- Found rclcpp: 32.0.3 (/opt/ros/lyrical/share/rclcpp/cmake)
+[1.744s] -- Found rosidl_generator_c: 5.2.1 (/opt/ros/lyrical/share/rosidl_generator_c/cmake)
+[1.756s] -- Found rosidl_generator_cpp: 5.2.1 (/opt/ros/lyrical/share/rosidl_generator_cpp/cmake)
+[1.777s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.799s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.910s] -- Found rmw_implementation_cmake: 7.10.2 (/opt/ros/lyrical/share/rmw_implementation_cmake/cmake)
+[1.914s] -- Found rmw_fastrtps_cpp: 9.4.10 (/opt/ros/lyrical/share/rmw_fastrtps_cpp/cmake)
+[1.960s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.069s] -- Found rosidl_default_generators: 1.8.1 (/opt/ros/lyrical/share/rosidl_default_generators/cmake)
+[2.091s] -- Found rosidl_adapter: 5.2.1 (/opt/ros/lyrical/share/rosidl_adapter/cmake)
+[2.098s] -- Found std_srvs: 5.9.3 (/opt/ros/lyrical/share/std_srvs/cmake)
+[2.410s] -- Found Python3: /usr/bin/python3 (found version "3.14.4") found components: Interpreter
+[5.115s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[5.751s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[7.021s] -- Found Python3: /usr/bin/python3 (found version "3.14.4") found components: Interpreter Development NumPy Development.Module Development.Embed
+[7.151s] -- Found Python3: /usr/bin/python3 (found version "3.14.4") found components: Interpreter
+[7.154s] [31mCMake Error at CMakeLists.txt:32 (ament_target_dependencies):
+[7.154s]   Unknown CMake command "ament_target_dependencies".
+[7.155s] 
+[7.155s] [0m
+[7.155s] -- Configuring incomplete, errors occurred!

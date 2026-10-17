@@ -6,7 +6,6 @@ from odrive_can.srv import AxisState
 
 from gim_pkg import CONSTANTS
 import math
-from telemetry_interface.msg import GIM
 from odrive_can.msg import ControlMessage
 
 
@@ -75,16 +74,16 @@ class GIMNode(Node):
         self.kinematics()
 
          #Publishh speeds and turn angles for swerves and speeds for middle tank drives
-        self.swerve_values[0].publish(ControlMessage(input_pos=self.swerve_values["Swerve1"][2]))
-        self.swerve_values[1].publish(ControlMessage(input_vel=self.swerve_values["Swerve1"][3]))
-        self.swerve_values[2].publish(ControlMessage(input_pos=self.swerve_values["Swerve2"][2]))
-        self.swerve_values[3].publish(ControlMessage(input_vel=self.swerve_values["Swerve2"][3]))
-        self.swerve_values[4].publish(ControlMessage(input_pos=self.swerve_values["Swerve3"][2]))
-        self.swerve_values[5].publish(ControlMessage(input_vel=self.swerve_values["Swerve3"][3]))
-        self.swerve_values[6].publish(ControlMessage(input_pos=self.swerve_values["Swerve4"][2]))
-        self.swerve_values[7].publish(ControlMessage(input_vel=self.swerve_values["Swerve4"][3]))
-        self.swerve_values[8].publish(ControlMessage(input_vel=self.tank_values["Middle Left"]))
-        self.swerve_values[9].publish(ControlMessage(input_vel=self.tank_values["Middle Right"]))
+        self.control_vals[0].publish(ControlMessage(input_pos=self.swerve_values.get("Swerve1")[2]))
+        self.control_vals[1].publish(ControlMessage(control_mode = 2,input_vel=self.swerve_values["Swerve1"][3]))
+        self.control_vals[2].publish(ControlMessage(input_pos=self.swerve_values["Swerve2"][2]))
+        self.control_vals[3].publish(ControlMessage(control_mode = 2,input_vel=self.swerve_values["Swerve2"][3]))
+        self.control_vals[4].publish(ControlMessage(input_pos=self.swerve_values["Swerve3"][2]))
+        self.control_vals[5].publish(ControlMessage(control_mode = 2,input_vel=self.swerve_values["Swerve3"][3]))
+        self.control_vals[6].publish(ControlMessage(input_pos=self.swerve_values["Swerve4"][2]))
+        self.control_vals[7].publish(ControlMessage(control_mode = 2,input_vel=self.swerve_values["Swerve4"][3]))
+        self.control_vals[8].publish(ControlMessage(control_mode = 2,input_vel=self.tank_values["Middle Left"]))
+        self.control_vals[9].publish(ControlMessage(control_mode = 2,input_vel=self.tank_values["Middle Right"]))
         
 
     def kinematics(self):

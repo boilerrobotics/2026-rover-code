@@ -7,6 +7,8 @@
   <maintainer email="gautham.paramasivam2006@gmail.com">devuser</maintainer>
   <license>TODO: License declaration</license>
 
+
+  <depend>odrive_can</depend>
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>

@@ -24,7 +24,7 @@ def generate_launch_description():
             executable='transformer',
             name='left_rear_steer',
             remappings=[
-                ('cmd_in', '/odrive_axis1/control_message'),
+                ('cmd_in', '/odrive_axis2/control_message'),
                 ('cmd_out', '/rover/left_rear/steer/cmd_pos'),
             ]
         ),
@@ -33,7 +33,7 @@ def generate_launch_description():
             executable='transformer',
             name='right_front_steer',
             remappings=[
-                ('cmd_in', '/odrive_axis2/control_message'),
+                ('cmd_in', '/odrive_axis4/control_message'),
                 ('cmd_out', '/rover/right_front/steer/cmd_pos'),
             ]
         ),
@@ -42,7 +42,7 @@ def generate_launch_description():
             executable='transformer',
             name='right_rear_steer',
             remappings=[
-                ('cmd_in', '/odrive_axis3/control_message'),
+                ('cmd_in', '/odrive_axis6/control_message'),
                 ('cmd_out', '/rover/right_rear/steer/cmd_pos'),
             ]
         ),
@@ -51,7 +51,7 @@ def generate_launch_description():
             executable='transformer',
             name='left_front_wheel',
             remappings=[
-                ('cmd_in', '/odrive_axis4/control_message'),
+                ('cmd_in', '/odrive_axis1/control_message'),
                 ('cmd_out', '/rover/left_front/wheel/cmd_vel'),
             ]
         ),
@@ -60,7 +60,7 @@ def generate_launch_description():
             executable='transformer',
             name='left_rear_wheel',
             remappings=[
-                ('cmd_in', '/odrive_axis5/control_message'),
+                ('cmd_in', '/odrive_axis3/control_message'),
                 ('cmd_out', '/rover/left_rear/wheel/cmd_vel'),
             ]
         ),
@@ -69,7 +69,7 @@ def generate_launch_description():
             executable='transformer',
             name='right_front_wheel',
             remappings=[
-                ('cmd_in', '/odrive_axis6/control_message'),
+                ('cmd_in', '/odrive_axis5/control_message'),
                 ('cmd_out', '/rover/right_front/wheel/cmd_vel'),
             ]
         ),

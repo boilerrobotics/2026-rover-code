@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<!--
+  6-wheel rigid-chassis rover (no suspension)
+    - 4 corner wheels (front/rear, left/right): drive + explicit steering
+    - 2 middle wheels: drive only (no steering joint)
+    - Every wheel/steering module is rigidly mounted to base_link.
+
+  Joint names, controller plugins, and topics are the same as the suspended
+  version, so existing controllers and move_rover.sh work unchanged.
+
+  Convert to plain URDF:  xacro rover.urdf.xacro > rover.urdf
+  Frame convention: x forward, y left, z up.
+-->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rover">
+
+  <!-- ===================== Parameters ===================== -->
+  <xacro:property name="PI" value="3.14159265359"/>
+
+  <!-- Chassis -->
+  <xacro:property name="chassis_l" value="0.60"/>
+  <xacro:property name="chassis_w" value="0.40"/>
+  <xacro:property name="chassis_h" value="0.15"/>
+  <xacro:property name="chassis_m" value="15.0"/>
+
+  <!-- Wheels -->
+  <xacro:property name="wheel_r" value="0.10"/>
+  <xacro:property name="wheel_w" value="0.08"/>
+  <xacro:property name="wheel_m" value="0.8"/>
+
+  <!-- Drivetrain geometry (edit these to match your kinematics controller) -->
+  <xacro:property name="wheelbase" value="0.80"/>   <!-- front axle to rear axle -->
+  <xacro:property name="middle_x"  value="0.0"/>    <!-- middle axle position along x -->
+  <xacro:property name="wheel_y"   value="0.31"/>   <!-- wheel center lateral offset (track = 2 * this) -->
+  <xacro:property name="wheel_z"   value="0.25"/>   <!-- wheel center height below base_link -->
+  <xacro:property name="steer_to_wheel" value="0.05"/>  <!-- steering axis to wheel center, vertical -->
+  <xacro:property name="arm_z"     value="-0.05"/>  <!-- height of the mounting arms on the chassis -->
+
+  <!-- Steering -->
+  <xacro:property name="steer_limit" value="0.70"/>  <!-- rad, about 40 deg -->
+
+  <!-- Gazebo steering position-controller PID gains (tune in sim) -->
+  <xacro:property name="steer_p"   value="20.0"/>
+  <xacro:property name="steer_i"   value="0.0"/>
+  <xacro:property name="steer_d"   value="1.0"/>
+  <xacro:property name="steer_cmd_max" value="20.0"/>   <!-- N*m, matches steer joint effort limit -->
+  <xacro:property name="ns" value="/rover"/>            <!-- topic namespace for all controllers -->
+
+  <!-- Wheels touch z=0 when base_footprint sits (wheel_z + wheel_r) below base_link. -->
+
+  <!-- ===================== Materials ===================== -->
+  <material name="body_blue"><color rgba="0.15 0.30 0.60 1.0"/></material>
+  <material name="grey"><color rgba="0.55 0.55 0.58 1.0"/></material>
+  <material name="dark"><color rgba="0.10 0.10 0.10 1.0"/></material>
+
+  <!-- ===================== Macros ===================== -->
+
+  <xacro:macro name="box_inertial" params="m x y z">
+    <inertial>
+      <mass value="${m}"/>
+      <inertia ixx="${m*(y*y+z*z)/12}" ixy="0" ixz="0"
+               iyy="${m*(x*x+z*z)/12}" iyz="0"
+               izz="${m*(x*x+y*y)/12}"/>
+    </inertial>
+  </xacro:macro>
+
+  <!-- Visual-only mounting arm and post from the chassis side down to a wheel station.
+       Goes inside base_link. -->
+  <xacro:macro name="strut" params="x s">
+    <visual>
+      <origin xyz="${x} ${s*(wheel_y + chassis_w/2)/2} ${arm_z}"/>
+      <geometry><box size="0.04 ${wheel_y - chassis_w/2} 0.03"/></geometry>
+      <material name="grey"/>
+    </visual>
+    <visual>
+      <origin xyz="${x} ${s*wheel_y} ${(arm_z - (wheel_z - steer_to_wheel))/2}"/>
+      <geometry><box size="0.04 0.03 ${(wheel_z - steer_to_wheel) + arm_z}"/></geometry>
+      <material name="grey"/>
+    </visual>
+  </xacro:macro>
+
+  <!-- Drive wheel: continuous joint about y. Positive rotation = forward on both sides. -->
+  <xacro:macro name="wheel" params="name parent x y z">
+    <link name="${name}_wheel">
+      <visual>
+        <origin xyz="0 0 0" rpy="${PI/2} 0 0"/>
+        <geometry><cylinder radius="${wheel_r}" length="${wheel_w}"/></geometry>
+        <material name="dark"/>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="${PI/2} 0 0"/>
+        <geometry><cylinder radius="${wheel_r}" length="${wheel_w}"/></geometry>
+      </collision>
+      <inertial>
+        <origin xyz="0 0 0" rpy="${PI/2} 0 0"/>
+        <mass value="${wheel_m}"/>
+        <inertia ixx="${wheel_m*(3*wheel_r*wheel_r+wheel_w*wheel_w)/12}" ixy="0" ixz="0"
+                 iyy="${wheel_m*(3*wheel_r*wheel_r+wheel_w*wheel_w)/12}" iyz="0"
+                 izz="${0.5*wheel_m*wheel_r*wheel_r}"/>
+      </inertial>
+    </link>
+    <joint name="${name}_wheel_joint" type="continuous">
+      <parent link="${parent}"/>
+      <child link="${name}_wheel"/>
+      <origin xyz="${x} ${y} ${z}" rpy="0 0 0"/>
+      <axis xyz="0 1 0"/>
+      <limit effort="10.0" velocity="30.0"/>
+      <dynamics damping="0.01" friction="0.01"/>
+    </joint>
+    <gazebo reference="${name}_wheel">
+      <mu1>1.0</mu1>
+      <mu2>1.0</mu2>
+    </gazebo>
+
+    <!-- Gazebo Fortress velocity controller for this drive joint.
+         Command: ign topic -t ${ns}/${name}/wheel/cmd_vel -m ignition.msgs.Double -p 'data: 5.0' -->
+    <gazebo>
+      <plugin filename="ignition-gazebo-joint-controller-system"
+              name="ignition::gazebo::systems::JointController">
+        <joint_name>${name}_wheel_joint</joint_name>
+        <topic>${ns}/${name}/wheel/cmd_vel</topic>
+        <initial_velocity>0.0</initial_velocity>
+      </plugin>
+    </gazebo>
+  </xacro:macro>
+
+  <!-- Steered wheel module: vertical steering joint, then the drive wheel on a short fork. -->
+  <xacro:macro name="steer_module" params="name parent x y z">
+    <link name="${name}_steer_link">
+      <visual>
+        <origin xyz="0 0 ${-steer_to_wheel/2}"/>
+        <geometry><box size="0.03 0.03 ${steer_to_wheel}"/></geometry>
+        <material name="grey"/>
+      </visual>
+      <xacro:box_inertial m="0.2" x="0.03" y="0.03" z="${steer_to_wheel}"/>
+    </link>
+    <joint name="${name}_steer_joint" type="revolute">
+      <parent link="${parent}"/>
+      <child link="${name}_steer_link"/>
+      <origin xyz="${x} ${y} ${z}" rpy="0 0 0"/>
+      <axis xyz="0 0 1"/>
+      <limit lower="${-steer_limit}" upper="${steer_limit}" effort="20.0" velocity="3.0"/>
+      <dynamics damping="0.1" friction="0.05"/>
+    </joint>
+
+    <!-- Gazebo Fortress position controller for this steering joint.
+         Command: ign topic -t ${ns}/${name}/steer/cmd_pos -m ignition.msgs.Double -p 'data: 0.3' -->
+    <gazebo>
+      <plugin filename="ignition-gazebo-joint-position-controller-system"
+              name="ignition::gazebo::systems::JointPositionController">
+        <joint_name>${name}_steer_joint</joint_name>
+        <topic>${ns}/${name}/steer/cmd_pos</topic>
+        <p_gain>${steer_p}</p_gain>
+        <i_gain>${steer_i}</i_gain>
+        <d_gain>${steer_d}</d_gain>
+        <cmd_max>${steer_cmd_max}</cmd_max>
+        <cmd_min>${-steer_cmd_max}</cmd_min>
+        <initial_position>0.0</initial_position>
+      </plugin>
+    </gazebo>
+
+    <xacro:wheel name="${name}" parent="${name}_steer_link" x="0" y="0" z="${-steer_to_wheel}"/>
+  </xacro:macro>
+
+  <!-- One side of the drivetrain. s = +1 (left) or -1 (right). All modules mount to base_link. -->
+  <xacro:macro name="side" params="side s">
+    <!-- Front corner: steer + drive -->
+    <xacro:steer_module name="${side}_front" parent="base_link"
+                        x="${wheelbase/2}" y="${s*wheel_y}" z="${-(wheel_z - steer_to_wheel)}"/>
+
+    <!-- Middle: drive only (no steering joint) -->
+    <xacro:wheel name="${side}_middle" parent="base_link"
+                 x="${middle_x}" y="${s*wheel_y}" z="${-wheel_z}"/>
+
+    <!-- Rear corner: steer + drive -->
+    <xacro:steer_module name="${side}_rear" parent="base_link"
+                        x="${-wheelbase/2}" y="${s*wheel_y}" z="${-(wheel_z - steer_to_wheel)}"/>
+  </xacro:macro>
+
+  <!-- ===================== Robot ===================== -->
+
+  <link name="base_footprint"/>
+
+  <link name="base_link">
+    <visual>
+      <geometry><box size="${chassis_l} ${chassis_w} ${chassis_h}"/></geometry>
+      <material name="body_blue"/>
+    </visual>
+    <collision>
+      <geometry><box size="${chassis_l} ${chassis_w} ${chassis_h}"/></geometry>
+    </collision>
+    <xacro:box_inertial m="${chassis_m}" x="${chassis_l}" y="${chassis_w}" z="${chassis_h}"/>
+
+    <!-- Mounting struts for the six wheel stations (visual only) -->
+    <xacro:strut x="${wheelbase/2}"  s="1"/>
+    <xacro:strut x="${middle_x}"     s="1"/>
+    <xacro:strut x="${-wheelbase/2}" s="1"/>
+    <xacro:strut x="${wheelbase/2}"  s="-1"/>
+    <xacro:strut x="${middle_x}"     s="-1"/>
+    <xacro:strut x="${-wheelbase/2}" s="-1"/>
+  </link>
+
+  <joint name="base_footprint_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 ${wheel_z + wheel_r}" rpy="0 0 0"/>
+  </joint>
+
+  <xacro:side side="left"  s="1"/>
+  <xacro:side side="right" s="-1"/>
+
+</robot>

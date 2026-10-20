@@ -1,7 +1,9 @@
 import rclpy
 from rclpy.node import Node
-
 from geometry_msgs.msg import Twist
+from odrive_can.srv import AxisState
+from odrive_can.msg import ControlMessage, ControllerStatus, ODriveStatus
+
 
 from gim_pkg import CONSTANTS
 import math
@@ -16,7 +18,10 @@ class GIMNode(Node):
 
     def __init__(self):
         super().__init__('gim_node')
+        self.e_stop = False
+        self.control_vals = []
 
+        
         self.joystick_vals = self.create_subscription(Twist, 'cmd_vel', self.cmd_vel_callback, 10) # Joystick input command
 
         self.steering_values = self.create_publisher(GIM, 'swerve_controls', 1)
@@ -52,6 +57,23 @@ class GIMNode(Node):
         
 
     def cmd_vel_callback(self, msg):
+
+        #checks for emergency stop button press first
+
+
+        #if (e-stop button pressed):
+            #if (self.e_stop is False):
+                #self.e_stop = True
+            #else:
+                #self.e_stop = False
+        if self.e_stop:
+            req = AxisState.Request()
+            req.axis_requested_state = 1
+            future = self.client.call_async(req)
+            future.add_done_callback(self.check_success)
+            for publisher in self.control_vals:
+                publisher.publish(ControlMessage(input_vel=0))
+            return
 
         # Chassis forward/backward linear speed (m/s)
         self.Vc_x = msg.linear.x * self.get_parameter('max_chassis_vel').get_parameter_value().double_value

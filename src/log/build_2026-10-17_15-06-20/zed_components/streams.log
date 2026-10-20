@@ -1,0 +1,20 @@
+[0.120s] Invoking command in '/workspaces/2026-rover-code/src/build/zed_components': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/2026-rover-code/install/image_processor:/opt/ros/humble /usr/bin/cmake /workspaces/2026-rover-code/src/zed-ros2-wrapper/zed_components -DCMAKE_INSTALL_PREFIX=/workspaces/2026-rover-code/src/install/zed_components
+[0.515s] -- Configuring incomplete, errors occurred!
+[0.517s] See also "/workspaces/2026-rover-code/src/build/zed_components/CMakeFiles/CMakeOutput.log".
+[0.518s] [31mCMake Error at CMakeLists.txt:94 (find_package):
+[0.522s]   By not providing "FindZED.cmake" in CMAKE_MODULE_PATH this project has
+[0.523s]   asked CMake to find a package configuration file provided by "ZED", but
+[0.526s]   CMake did not find one.
+[0.530s] 
+[0.533s]   Could not find a package configuration file provided by "ZED" with any of
+[0.535s]   the following names:
+[0.536s] 
+[0.538s]     ZEDConfig.cmake
+[0.539s]     zed-config.cmake
+[0.539s] 
+[0.540s]   Add the installation prefix of "ZED" to CMAKE_PREFIX_PATH or set "ZED_DIR"
+[0.541s]   to a directory containing one of the above files.  If "ZED" provides a
+[0.541s]   separate development package or SDK, be sure it has been installed.
+[0.542s] 
+[0.543s] [0m
+[0.876s] Invoked command in '/workspaces/2026-rover-code/src/build/zed_components' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspaces/2026-rover-code/install/image_processor:/opt/ros/humble /usr/bin/cmake /workspaces/2026-rover-code/src/zed-ros2-wrapper/zed_components -DCMAKE_INSTALL_PREFIX=/workspaces/2026-rover-code/src/install/zed_components

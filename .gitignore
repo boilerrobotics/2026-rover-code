@@ -7,3 +7,4 @@ ros_odrive/
 .vscode
 bags/
 log/
+log

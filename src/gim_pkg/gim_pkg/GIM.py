@@ -13,10 +13,6 @@ from odrive_can.msg import ControlMessage
 
 class GIMNode(Node):
 
-
-
-    
-
     def __init__(self):
         super().__init__('gim_node')
         self.e_stop = False
@@ -30,10 +26,9 @@ class GIMNode(Node):
         for i in range(10):
             self.control_vals.append(self.create_publisher(ControlMessage, f'/odrive_axis{i}/control_message', 10))
 
-        
-        
-        self.client = self.create_client(AxisState, 'odrive/axis0/set_axis_state')
-
+        self.clients = []
+        for i in range(10):
+            self.clients.append(self.create_client(AxisState, f'/odrive/axis{i}/set_axis_state'))
 
         self.declare_parameter('max_chassis_vel', 1.0) # Max velocity command for the chassis in m/s
         self.declare_parameter('max_chassis_ang_vel', 0.5) # Max angular command for the chassis in rad/s
@@ -103,11 +98,6 @@ class GIMNode(Node):
         elif (msg.angular.x == 1):
             self.req_state(8)
 
-
-        
-        
-
-
         # Chassis forward/backward linear speed (m/s)
         self.Vc_x = msg.linear.x * self.get_parameter('max_chassis_vel').get_parameter_value().double_value
 
@@ -137,9 +127,6 @@ class GIMNode(Node):
         self.tank_values["Middle Left"] = theta_left
         self.tank_values["Middle Right"] = theta_right
 
-       
-
-
         # Calculate the motion component vectors of each swerve
         i = 1
         for swerve in self.swerve_values:
@@ -149,9 +136,6 @@ class GIMNode(Node):
             V_f = math.sqrt(V_x**2 + V_y**2)
             self.swerve_values[swerve] = [V_x, V_y, phi, V_f]
             i+=1
-
-
-
 
 def main():
     rclpy.init()

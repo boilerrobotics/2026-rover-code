@@ -1,0 +1,24 @@
+[1.704s] Invoking command in '/home/kamil-poreba/Documents/BRC/2026-rover-code/src/telemetry_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_pkg/lib/python3.14/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/telemetry_pkg build --build-base /home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_pkg/build install --record /home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_pkg/install.log --install-scripts $base/lib/telemetry_pkg --single-version-externally-managed install_data
+[2.140s] running egg_info
+[2.163s] writing ../build/telemetry_pkg/telemetry_pkg.egg-info/PKG-INFO
+[2.165s] writing dependency_links to ../build/telemetry_pkg/telemetry_pkg.egg-info/dependency_links.txt
+[2.165s] writing entry points to ../build/telemetry_pkg/telemetry_pkg.egg-info/entry_points.txt
+[2.166s] writing requirements to ../build/telemetry_pkg/telemetry_pkg.egg-info/requires.txt
+[2.167s] writing top-level names to ../build/telemetry_pkg/telemetry_pkg.egg-info/top_level.txt
+[2.234s] reading manifest file '../build/telemetry_pkg/telemetry_pkg.egg-info/SOURCES.txt'
+[2.235s] writing manifest file '../build/telemetry_pkg/telemetry_pkg.egg-info/SOURCES.txt'
+[2.236s] running build
+[2.236s] running build_py
+[2.236s] copying telemetry_pkg/__init__.py -> /home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_pkg/build/lib/telemetry_pkg
+[2.236s] copying telemetry_pkg/telemetry_node.py -> /home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_pkg/build/lib/telemetry_pkg
+[2.237s] running install
+[2.243s] running install_lib
+[2.262s] running install_data
+[2.263s] copying resource/telemetry_pkg -> /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_pkg/share/ament_index/resource_index/packages
+[2.263s] copying package.xml -> /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_pkg/share/telemetry_pkg
+[2.263s] running install_egg_info
+[2.281s] removing '/home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_pkg/lib/python3.14/site-packages/telemetry_pkg-0.0.0-py3.14.egg-info' (and everything under it)
+[2.281s] Copying ../build/telemetry_pkg/telemetry_pkg.egg-info to /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_pkg/lib/python3.14/site-packages/telemetry_pkg-0.0.0-py3.14.egg-info
+[2.282s] running install_scripts
+[2.392s] Installing telemetry_node script to /home/kamil-poreba/Documents/BRC/2026-rover-code/src/install/telemetry_pkg/lib/telemetry_pkg
+[2.392s] writing list of installed files to '/home/kamil-poreba/Documents/BRC/2026-rover-code/src/build/telemetry_pkg/install.log'

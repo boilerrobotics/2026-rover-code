@@ -9,24 +9,31 @@ ARG USER_GID=$USER_UID
 
 # --- Base tooling -------------------------------------------------------
     RUN apt-get update && apt-get install -y --no-install-recommends \
-    python3-pip \
-    python3-colcon-common-extensions \
-    python3-rosdep \
-    python3-argcomplete \
-    git curl wget nano vim bash-completion sudo \
-    # GUI / graphics support
-    mesa-utils \
-    libgl1-mesa-dri \
-    x11-apps \
-    # extra rqt plugins (many are already in desktop, these are harmless)
-    ros-humble-rqt-common-plugins \
-    ros-humble-rqt-tf-tree \
-    ros-humble-rqt-robot-steering \
-    # rosbag2 + MCAP storage plugin
-    ros-humble-rosbag2 \
-    ros-humble-rosbag2-storage-mcap \
-    && rm -rf /var/lib/apt/lists/* \
-    && pip3 install --no-cache-dir gdown mcap
+        python3-pip \
+        python3-colcon-common-extensions \
+        python3-rosdep \
+        python3-argcomplete \
+        git curl wget nano vim bash-completion sudo \
+        # GUI / graphics support
+        mesa-utils \
+        libgl1-mesa-dri \
+        x11-apps \
+        # extra rqt plugins (many are already in desktop, these are harmless)
+        ros-humble-rqt-common-plugins \
+        ros-humble-rqt-tf-tree \
+        ros-humble-rqt-robot-steering \
+        # rosbag2 + MCAP storage plugin
+        ros-humble-rosbag2 \
+        ros-humble-rosbag2-storage-mcap \
+        # Gazebo Fortress + ROS 2 integration (ros_gz_sim, ros_gz_bridge, ros_gz_image, ...)
+        ros-humble-ros-gz \
+        ros-humble-ros-gz-sim-demos \
+        # ros2_control + Gazebo hooks (commonly needed for robot sims; drop if unused)
+        ros-humble-gz-ros2-control \
+        ros-humble-ros2-control \
+        ros-humble-ros2-controllers \
+        && rm -rf /var/lib/apt/lists/* \
+        && pip3 install --no-cache-dir gdown mcap
 
 # Helps Qt apps (rqt, rviz2) behave over X11 forwarding
 ENV QT_X11_NO_MITSHM=1

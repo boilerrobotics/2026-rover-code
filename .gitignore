@@ -6,3 +6,4 @@ install/
 ros_odrive/
 .vscode
 bags/
+log/

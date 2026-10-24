@@ -1,0 +1,142 @@
+[0.000000] (-) TimerEvent: {}
+[0.001293] (gim_pkg) JobQueued: {'identifier': 'gim_pkg', 'dependencies': OrderedDict()}
+[0.001446] (telemetry_interface) JobQueued: {'identifier': 'telemetry_interface', 'dependencies': OrderedDict()}
+[0.001612] (telemetry_pkg) JobQueued: {'identifier': 'telemetry_pkg', 'dependencies': OrderedDict()}
+[0.001704] (zed_components) JobQueued: {'identifier': 'zed_components', 'dependencies': OrderedDict()}
+[0.001801] (zed_debug) JobQueued: {'identifier': 'zed_debug', 'dependencies': OrderedDict([('zed_components', '/workspaces/2026-rover-code/src/install/zed_components')])}
+[0.001966] (zed_wrapper) JobQueued: {'identifier': 'zed_wrapper', 'dependencies': OrderedDict([('zed_components', '/workspaces/2026-rover-code/src/install/zed_components')])}
+[0.002168] (zed_ros2) JobQueued: {'identifier': 'zed_ros2', 'dependencies': OrderedDict([('zed_components', '/workspaces/2026-rover-code/src/install/zed_components'), ('zed_wrapper', '/workspaces/2026-rover-code/src/install/zed_wrapper')])}
+[0.002501] (zed_components) JobStarted: {'identifier': 'zed_components'}
+[0.015154] (gim_pkg) JobStarted: {'identifier': 'gim_pkg'}
+[0.038360] (telemetry_interface) JobStarted: {'identifier': 'telemetry_interface'}
+[0.051723] (telemetry_pkg) JobStarted: {'identifier': 'telemetry_pkg'}
+[0.098399] (zed_components) JobProgress: {'identifier': 'zed_components', 'progress': 'cmake'}
+[0.100141] (-) TimerEvent: {}
+[0.105975] (zed_components) Command: {'cmd': ['/usr/bin/cmake', '/workspaces/2026-rover-code/src/zed-ros2-wrapper/zed_components', '-DCMAKE_INSTALL_PREFIX=/workspaces/2026-rover-code/src/install/zed_components'], 'cwd': '/workspaces/2026-rover-code/src/build/zed_components', 'env': OrderedDict([('HOSTNAME', 'bc602964da08'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/workspaces/2026-rover-code/install/id_polygon/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/bin/helpers/browser.sh'), ('HOME', '/home/devuser'), ('OLDPWD', '/workspaces/2026-rover-code'), ('TERM_PROGRAM_VERSION', '1.141.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-26a4f84d-dd65-4069-b665-fd1854b422aa.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/devuser/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/workspaces/2026-rover-code/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-323e7d8d-be90-4fed-b292-46bfcdc50801.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('UV_USE_IO_URING', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/home/devuser/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/devuser/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-x64/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/devuser/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-323e7d8d-be90-4fed-b292-46bfcdc50801.sock"]'), ('DISPLAY', ':1'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/devuser/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-7063c9eefb211d8d.txt'), ('LANG', 'C.UTF-8'), ('PYTHONSTARTUP', '/home/devuser/.vscode-server/data/User/workspaceStorage/85b3a11b8d8e29f6437ba3391c3acbc4/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-e11f08c4f5.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-323e7d8d-be90-4fed-b292-46bfcdc50801.sock'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/workspaces/2026-rover-code/install/image_processor:/workspaces/2026-rover-code/install/id_polygon:/opt/ros/humble'), ('SHELL', '/bin/sh'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/workspaces/2026-rover-code/src/build/zed_components'), ('LC_ALL', 'C.UTF-8'), ('COPILOT_DEBUG_NONCE', 'aec9a8de5a65ff5b705106195fb9be97'), ('PYTHONPATH', '/workspaces/2026-rover-code/install/image_processor/lib/python3.10/site-packages:/workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspaces/2026-rover-code/install/id_polygon:/workspaces/2026-rover-code/install/image_processor:/opt/ros/humble')]), 'shell': False}
+[0.200324] (-) TimerEvent: {}
+[0.302194] (-) TimerEvent: {}
+[0.402919] (-) TimerEvent: {}
+[0.477194] (telemetry_interface) JobProgress: {'identifier': 'telemetry_interface', 'progress': 'cmake'}
+[0.485914] (telemetry_interface) Command: {'cmd': ['/usr/bin/cmake', '/workspaces/2026-rover-code/src/telemetry_interface', '-DCMAKE_INSTALL_PREFIX=/workspaces/2026-rover-code/src/install/telemetry_interface'], 'cwd': '/workspaces/2026-rover-code/src/build/telemetry_interface', 'env': OrderedDict([('HOSTNAME', 'bc602964da08'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/workspaces/2026-rover-code/install/id_polygon/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/bin/helpers/browser.sh'), ('HOME', '/home/devuser'), ('OLDPWD', '/workspaces/2026-rover-code'), ('TERM_PROGRAM_VERSION', '1.141.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-26a4f84d-dd65-4069-b665-fd1854b422aa.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/devuser/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/workspaces/2026-rover-code/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-323e7d8d-be90-4fed-b292-46bfcdc50801.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('UV_USE_IO_URING', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/home/devuser/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/devuser/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-x64/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/devuser/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-323e7d8d-be90-4fed-b292-46bfcdc50801.sock"]'), ('DISPLAY', ':1'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/devuser/.vscode-server/extensions/ms-python.debugpy-2026.6.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-7063c9eefb211d8d.txt'), ('LANG', 'C.UTF-8'), ('PYTHONSTARTUP', '/home/devuser/.vscode-server/data/User/workspaceStorage/85b3a11b8d8e29f6437ba3391c3acbc4/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-e11f08c4f5.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-323e7d8d-be90-4fed-b292-46bfcdc50801.sock'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/workspaces/2026-rover-code/install/image_processor:/workspaces/2026-rover-code/install/id_polygon:/opt/ros/humble'), ('SHELL', '/bin/sh'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/workspaces/2026-rover-code/src/build/telemetry_interface'), ('LC_ALL', 'C.UTF-8'), ('COPILOT_DEBUG_NONCE', 'aec9a8de5a65ff5b705106195fb9be97'), ('PYTHONPATH', '/workspaces/2026-rover-code/install/image_processor/lib/python3.10/site-packages:/workspaces/2026-rover-code/install/id_polygon/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/workspaces/2026-rover-code/install/id_polygon:/workspaces/2026-rover-code/install/image_processor:/opt/ros/humble')]), 'shell': False}
+[0.511546] (-) TimerEvent: {}
+[0.512629] (zed_components) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.518284] (zed_components) StdoutLine: {'line': b'See also "/workspaces/2026-rover-code/src/build/zed_components/CMakeFiles/CMakeOutput.log".\n'}
+[0.520054] (zed_components) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:94 (find_package):\n'}
+[0.521394] (zed_components) StderrLine: {'line': b'  By not providing "FindZED.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[0.524849] (zed_components) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "ZED", but\n'}
+[0.526354] (zed_components) StderrLine: {'line': b'  CMake did not find one.\n'}
+[0.529339] (zed_components) StderrLine: {'line': b'\n'}
+[0.533276] (zed_components) StderrLine: {'line': b'  Could not find a package configuration file provided by "ZED" with any of\n'}
+[0.536671] (zed_components) StderrLine: {'line': b'  the following names:\n'}
+[0.538122] (zed_components) StderrLine: {'line': b'\n'}
+[0.539480] (zed_components) StderrLine: {'line': b'    ZEDConfig.cmake\n'}
+[0.540546] (zed_components) StderrLine: {'line': b'    zed-config.cmake\n'}
+[0.541257] (zed_components) StderrLine: {'line': b'\n'}
+[0.541738] (zed_components) StderrLine: {'line': b'  Add the installation prefix of "ZED" to CMAKE_PREFIX_PATH or set "ZED_DIR"\n'}
+[0.542454] (zed_components) StderrLine: {'line': b'  to a directory containing one of the above files.  If "ZED" provides a\n'}
+[0.543323] (zed_components) StderrLine: {'line': b'  separate development package or SDK, be sure it has been installed.\n'}
+[0.543897] (zed_components) StderrLine: {'line': b'\n'}
+[0.544778] (zed_components) StderrLine: {'line': b'\x1b[0m\n'}
+[0.612020] (-) TimerEvent: {}
+[0.712796] (-) TimerEvent: {}
+[0.815145] (-) TimerEvent: {}
+[0.878270] (zed_components) CommandEnded: {'returncode': 1}
+[0.915317] (-) TimerEvent: {}
+[1.017375] (-) TimerEvent: {}
+[1.019621] (zed_components) JobEnded: {'identifier': 'zed_components', 'rc': 1}
+[1.102077] (telemetry_interface) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[1.117493] (-) TimerEvent: {}
+[1.219288] (-) TimerEvent: {}
+[1.323828] (-) TimerEvent: {}
+[1.383234] (gim_pkg) JobEnded: {'identifier': 'gim_pkg', 'rc': 'SIGINT'}
+[1.406518] (telemetry_pkg) JobEnded: {'identifier': 'telemetry_pkg', 'rc': 'SIGINT'}
+[1.424161] (-) TimerEvent: {}
+[1.525333] (-) TimerEvent: {}
+[1.604254] (telemetry_interface) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.625515] (-) TimerEvent: {}
+[1.640908] (telemetry_interface) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.726137] (-) TimerEvent: {}
+[1.828514] (-) TimerEvent: {}
+[1.929851] (-) TimerEvent: {}
+[2.031201] (-) TimerEvent: {}
+[2.134618] (-) TimerEvent: {}
+[2.237556] (-) TimerEvent: {}
+[2.340625] (-) TimerEvent: {}
+[2.342982] (telemetry_interface) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.366409] (telemetry_interface) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[2.367714] (telemetry_interface) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.368750] (telemetry_interface) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.373634] (telemetry_interface) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.440725] (-) TimerEvent: {}
+[2.541176] (-) TimerEvent: {}
+[2.642413] (-) TimerEvent: {}
+[2.743381] (-) TimerEvent: {}
+[2.811847] (telemetry_interface) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.823230] (telemetry_interface) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[2.824165] (telemetry_interface) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.824412] (telemetry_interface) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.841241] (telemetry_interface) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[2.843445] (-) TimerEvent: {}
+[2.946049] (-) TimerEvent: {}
+[3.049452] (-) TimerEvent: {}
+[3.152407] (-) TimerEvent: {}
+[3.253048] (-) TimerEvent: {}
+[3.311001] (telemetry_interface) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[3.354198] (-) TimerEvent: {}
+[3.456427] (-) TimerEvent: {}
+[3.493906] (telemetry_interface) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[3.556540] (-) TimerEvent: {}
+[3.646480] (telemetry_interface) StdoutLine: {'line': b'-- Found geometry_msgs: 4.9.2 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[3.657143] (-) TimerEvent: {}
+[3.719362] (telemetry_interface) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[3.729470] (telemetry_interface) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[3.743537] (telemetry_interface) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[3.757269] (-) TimerEvent: {}
+[3.762350] (telemetry_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.785984] (telemetry_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.834481] (telemetry_interface) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[3.857476] (-) TimerEvent: {}
+[3.958003] (-) TimerEvent: {}
+[4.058789] (-) TimerEvent: {}
+[4.162287] (-) TimerEvent: {}
+[4.262669] (-) TimerEvent: {}
+[4.323010] (telemetry_interface) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[4.363166] (-) TimerEvent: {}
+[4.466174] (-) TimerEvent: {}
+[4.567385] (-) TimerEvent: {}
+[4.668427] (-) TimerEvent: {}
+[4.769185] (-) TimerEvent: {}
+[4.870402] (-) TimerEvent: {}
+[4.976499] (-) TimerEvent: {}
+[5.077863] (-) TimerEvent: {}
+[5.178548] (-) TimerEvent: {}
+[5.206884] (telemetry_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[5.279162] (-) TimerEvent: {}
+[5.379533] (-) TimerEvent: {}
+[5.480188] (-) TimerEvent: {}
+[5.561789] (telemetry_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[5.581143] (-) TimerEvent: {}
+[5.632351] (telemetry_interface) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[5.637890] (telemetry_interface) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[5.682171] (-) TimerEvent: {}
+[5.709592] (telemetry_interface) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[5.710035] (telemetry_interface) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[5.710305] (telemetry_interface) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[5.710490] (telemetry_interface) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[5.773443] (telemetry_interface) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[5.782275] (-) TimerEvent: {}
+[5.882611] (-) TimerEvent: {}
+[5.984168] (-) TimerEvent: {}
+[6.044123] (telemetry_interface) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[6.047921] (telemetry_interface) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[6.078802] (telemetry_interface) StdoutLine: {'line': b'-- Configuring done\n'}
+[6.084362] (-) TimerEvent: {}
+[6.187381] (-) TimerEvent: {}
+[6.219629] (telemetry_interface) StdoutLine: {'line': b'-- Generating done\n'}
+[6.265174] (telemetry_interface) StdoutLine: {'line': b'-- Build files have been written to: /workspaces/2026-rover-code/src/build/telemetry_interface\n'}
+[6.275130] (telemetry_interface) JobEnded: {'identifier': 'telemetry_interface', 'rc': 'SIGINT'}
+[6.287593] (zed_debug) JobSkipped: {'identifier': 'zed_debug'}
+[6.287750] (-) TimerEvent: {}
+[6.287965] (zed_wrapper) JobSkipped: {'identifier': 'zed_wrapper'}
+[6.288033] (zed_ros2) JobSkipped: {'identifier': 'zed_ros2'}
+[6.288091] (-) EventReactorShutdown: {}

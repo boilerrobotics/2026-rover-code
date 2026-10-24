@@ -1,4 +1,5 @@
 #!/bin/bash
+trap 'pkill -P $$' EXIT INT HUP TERM
 source ../../../opt/ros/humble/setup.bash
 source ../ros_odrive/odrive_node/install/setup.bash
 #colcon build --packages-select odrive_gazebo

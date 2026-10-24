@@ -153,12 +153,12 @@ class GIMNode(Node):
 
 
 
-    def main():
-        rclpy.init(args=args)
-        gim_node = GIMNode()
-        rclpy.spin(gim_node)
-        gim_node.destroy_node()
-        rclpy.shutdown()
+def main():
+    rclpy.init()
+    gim_node = GIMNode()
+    rclpy.spin(gim_node)
+    gim_node.destroy_node()
+    rclpy.shutdown()
 
 if __name__ == '__main__':
     main()

@@ -21,7 +21,7 @@ class GIMNode(Node):
         super().__init__('gim_node')
         self.e_stop = False
         self.control_vals = []
-
+        self.done =True   
         
         self.joystick_vals = self.create_subscription(Twist, 'cmd_vel', self.cmd_vel_callback, 10) # Joystick input command
 
@@ -32,9 +32,12 @@ class GIMNode(Node):
 
         
         
+        self.client = self.create_client(AxisState, 'odrive/axis0/set_axis_state')
+
 
         self.declare_parameter('max_chassis_vel', 1.0) # Max velocity command for the chassis in m/s
         self.declare_parameter('max_chassis_ang_vel', 0.5) # Max angular command for the chassis in rad/s
+        self.declare_parameter('e-stop', False) # Max velocity command for the swerve in m/s
         self.Vc_x = 0.0  # Chassis velocity in the x direction (m/s)
         self.omega_c = 0.0  # Chassis angular velocity (rad/s)
         self.constants = {"WRADIUS": CONSTANTS.WRADIUS, "WBASE": CONSTANTS.WBASE}
@@ -62,6 +65,22 @@ class GIMNode(Node):
         print(f"Wheel radius: {self.constants['WRADIUS']}, Wheel base: {self.constants['WBASE']}")
         
 
+    def req_state(self, state):
+        req = AxisState.Request()
+        if (req.axis_requested_state == state):
+            self.get_logger().info(f"Axis state already set to {state}")
+            return
+
+        if not self.done:
+            return
+        
+        future = self.client.call_async(req)
+        self.done = False
+        future.add_done_callback(self.check_success)
+
+    def check_success(self, future):
+        self.done = True
+
     def cmd_vel_callback(self, msg):
 
         #checks for emergency stop button press first
@@ -72,14 +91,22 @@ class GIMNode(Node):
                 #self.e_stop = True
             #else:
                 #self.e_stop = False
-        if self.e_stop:
-            req = AxisState.Request()
-            req.axis_requested_state = 1
-            future = self.client.call_async(req)
-            future.add_done_callback(self.check_success)
+
+        if (self.get_parameter('e-stop').get_parameter_value().bool_value):
+            self.req_state(1)
             for publisher in self.control_vals:
                 publisher.publish(ControlMessage(input_vel=0))
             return
+
+        if (msg.angular.y == 1):
+            self.req_state(1)
+        elif (msg.angular.x == 1):
+            self.req_state(8)
+
+
+        
+        
+
 
         # Chassis forward/backward linear speed (m/s)
         self.Vc_x = msg.linear.x * self.get_parameter('max_chassis_vel').get_parameter_value().double_value
@@ -126,12 +153,12 @@ class GIMNode(Node):
 
 
 
-def main(args=None):
-    rclpy.init(args=args)
-    gim_node = GIMNode()
-    rclpy.spin(gim_node)
-    gim_node.destroy_node()
-    rclpy.shutdown()
+    def main():
+        rclpy.init(args=args)
+        gim_node = GIMNode()
+        rclpy.spin(gim_node)
+        gim_node.destroy_node()
+        rclpy.shutdown()
 
 if __name__ == '__main__':
     main()

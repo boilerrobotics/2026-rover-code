@@ -133,7 +133,7 @@
       </visual>
       <xacro:box_inertial m="0.2" x="0.03" y="0.03" z="${steer_to_wheel}"/>
     </link>
-    <joint name="${name}_steer_joint" type="revolute">
+    <joint name="${name}_steer_joint" type="continuous">
       <parent link="${parent}"/>
       <child link="${name}_steer_link"/>
       <origin xyz="${x} ${y} ${z}" rpy="0 0 0"/>

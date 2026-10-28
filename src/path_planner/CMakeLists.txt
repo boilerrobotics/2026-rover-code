@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(path_finding_testing)
+project(path_planner)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -12,11 +12,16 @@ find_package(rclcpp REQUIRED)
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
-add_executable(dstar src/dstar.cpp)
-ament_target_dependencies(dstar rclcpp)
+add_executable(path_planner src/path_planner.cpp src/dstar.cpp)
+ament_target_dependencies(path_planner rclcpp)
+
+target_include_directories(path_planner PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>
+)
 
 install(TARGETS
-  dstar
+  path_planner
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)

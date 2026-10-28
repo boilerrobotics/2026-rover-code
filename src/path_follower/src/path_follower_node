@@ -1,0 +1,182 @@
+#include <algorithm>
+#include <string>
+#include <cmath>
+#include <memory>
+#include <vector>
+#include <utility>
+
+#include "rclcpp/rclcpp.hpp"
+#include "geometry_msgs/msg/pose_stamped.hpp"
+#include "geometry_msgs/msg/twist.hpp"
+#include "geometry_msgs/msg/point_stamped.hpp"
+#include "nav_msgs/msg/path.hpp"
+#include "tf2/utils.hpp"
+
+class StandalonePurePursuitNode : public rclcpp::Node
+{
+public:
+  StandalonePurePursuitNode()
+  : Node("standalone_pure_pursuit_controller")
+  {
+    // Declare and initialize parameters
+    this->declare_parameter("lookahead_dist", 0.6);
+    this->declare_parameter("max_linear_vel", 0.5);
+    this->declare_parameter("max_angular_vel", 1.5);
+    this->declare_parameter("min_linear_vel", 0.1);
+    this->declare_parameter("max_lateral_accel", 1.0);  // Centripetal acceleration limit (m/s^2)
+    this->declare_parameter("controller_frequency", 20.0);
+
+    lookahead_dist_ = this->get_parameter("lookahead_dist").as_double();
+    max_linear_vel_ = this->get_parameter("max_linear_vel").as_double();
+    max_angular_vel_ = this->get_parameter("max_angular_vel").as_double();
+    min_linear_vel_ = this->get_parameter("min_linear_vel").as_double();
+    max_lateral_accel_ = this->get_parameter("max_lateral_accel").as_double();
+    double control_frequency = this->get_parameter("controller_frequency").as_double();
+
+    // Publishers
+    carrot_pub_ = this->create_publisher<geometry_msgs::msg::PointStamped>("lookahead_point", 10);
+    cmd_vel_pub_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", 10);
+
+    // Subscriptions
+    plan_sub_ = this->create_subscription<nav_msgs::msg::Path>(
+      "plan", 10, std::bind(&StandalonePurePursuitNode::planCallback, this, std::placeholders::_1));
+    
+    pose_sub_ = this->create_subscription<geometry_msgs::msg::PoseStamped>(
+      "pose", 10, std::bind(&StandalonePurePursuitNode::poseCallback, this, std::placeholders::_1));
+
+    // Control loop timer
+    timer_ = this->create_wall_timer(
+      std::chrono::duration<double>(1.0 / control_frequency),
+      std::bind(&StandalonePurePursuitNode::controlCycle, this));
+    
+    RCLCPP_INFO(this->get_logger(), "Standalone Pure Pursuit Controller Node Initialized.");
+  }
+
+private:
+  double lookahead_dist_;
+  double max_linear_vel_;
+  double max_angular_vel_;
+  double min_linear_vel_;
+  double max_lateral_accel_;
+
+  nav_msgs::msg::Path latest_plan_;
+  geometry_msgs::msg::PoseStamped latest_pose_;
+  bool has_plan_ = false;
+  bool has_pose_ = false;
+
+  rclcpp::Publisher<geometry_msgs::msg::PointStamped>::SharedPtr carrot_pub_;
+  rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr cmd_vel_pub_;
+  rclcpp::Subscription<nav_msgs::msg::Path>::SharedPtr plan_sub_;
+  rclcpp::Subscription<geometry_msgs::msg::PoseStamped>::SharedPtr pose_sub_;
+  rclcpp::TimerBase::SharedPtr timer_;
+
+  void planCallback(const nav_msgs::msg::Path::SharedPtr msg)
+  {
+    latest_plan_ = *msg;
+    has_plan_ = true;
+  }
+
+  void poseCallback(const geometry_msgs::msg::PoseStamped::SharedPtr msg)
+  {
+    latest_pose_ = *msg;
+    has_pose_ = true;
+  }
+
+  void controlCycle()
+  {
+    if (!has_plan_ || !has_pose_ || latest_plan_.poses.empty()) {
+      return;
+    }
+
+    // 1. Find the lookahead point (carrot) along the path
+    auto carrot_pose = getLookAheadPoint(lookahead_dist_, latest_pose_, latest_plan_);
+    publishCarrot(carrot_pose);
+
+    // 2. Transform carrot into the robot's local base frame
+    geometry_msgs::msg::Point local_carrot = transformToLocal(latest_pose_, carrot_pose);
+
+    // 3. Calculate path curvature (k = 2y / L^2)
+    double curvature = calculateCurvature(local_carrot);
+
+    // 4. Regulate linear velocity based on curvature (slow down on sharp turns)
+    double linear_vel = max_linear_vel_;
+    if (std::abs(curvature) > 0.001) {
+      double radius = 1.0 / std::abs(curvature);
+      // v = sqrt(a_lat * R)
+      double curvature_velocity = std::sqrt(max_lateral_accel_ * radius);
+      
+      linear_vel = std::min(linear_vel, curvature_velocity);
+      linear_vel = std::max(linear_vel, min_linear_vel_);
+    }
+
+    // 5. Compute angular velocity based on regulated linear speed and curvature
+    double angular_vel = linear_vel * curvature;
+    angular_vel = std::clamp(angular_vel, -max_angular_vel_, max_angular_vel_);
+
+    // 6. Publish command velocity
+    geometry_msgs::msg::Twist cmd_vel;
+    cmd_vel.linear.x = linear_vel;
+    cmd_vel.angular.z = angular_vel;
+    cmd_vel_pub_->publish(cmd_vel);
+  }
+
+  geometry_msgs::msg::PoseStamped getLookAheadPoint(
+    double lookahead_dist,
+    const geometry_msgs::msg::PoseStamped & robot_pose,
+    const nav_msgs::msg::Path & path)
+  {
+    auto target_pose = path.poses.back();
+    for (const auto & pose : path.poses) {
+      double dist = std::hypot(
+        pose.pose.position.x - robot_pose.pose.position.x,
+        pose.pose.position.y - robot_pose.pose.position.y);
+      if (dist >= lookahead_dist) {
+        target_pose = pose;
+        break;
+      }
+    }
+    return target_pose;
+  }
+
+  geometry_msgs::msg::Point transformToLocal(
+    const geometry_msgs::msg::PoseStamped & robot_pose,
+    const geometry_msgs::msg::PoseStamped & target_pose)
+  {
+    double dx = target_pose.pose.position.x - robot_pose.pose.position.x;
+    double dy = target_pose.pose.position.y - robot_pose.pose.position.y;
+    double yaw = tf2::getYaw(robot_pose.pose.orientation);
+
+    geometry_msgs::msg::Point local_point;
+    local_point.x = dx * std::cos(-yaw) - dy * std::sin(-yaw);
+    local_point.y = dx * std::sin(-yaw) + dy * std::cos(-yaw);
+    return local_point;
+  }
+
+  double calculateCurvature(const geometry_msgs::msg::Point & local_point)
+  {
+    const double carrot_dist2 = (local_point.x * local_point.x) + (local_point.y * local_point.y);
+    if (carrot_dist2 > 0.001) {
+      return 2.0 * local_point.y / carrot_dist2;
+    }
+    return 0.0;
+  }
+
+  void publishCarrot(const geometry_msgs::msg::PoseStamped & carrot_pose)
+  {
+    auto carrot_msg = std::make_unique<geometry_msgs::msg::PointStamped>();
+    carrot_msg->header = carrot_pose.header;
+    carrot_msg->point.x = carrot_pose.pose.position.x;
+    carrot_msg->point.y = carrot_pose.pose.position.y;
+    carrot_msg->point.z = 0.01;
+    carrot_pub_->publish(std::move(carrot_msg));
+  }
+};
+
+int main(int argc, char ** argv)
+{
+  rclcpp::init(argc, argv);
+  auto node = std::make_shared<StandalonePurePursuitNode>();
+  rclcpp::spin(node);
+  rclcpp::shutdown();
+  return 0;
+}

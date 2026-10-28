@@ -18,7 +18,7 @@ class ODriveTransform(Node):
             msgo.data = msg.input_vel
             self.gaz_msg_pub.publish(msgo)
         else:
-            msgo.data = msg.input_pos / (2 * pi)
+            msgo.data = msg.input_pos * (2 * pi)
             
             self.gaz_msg_pub.publish(msgo)
 

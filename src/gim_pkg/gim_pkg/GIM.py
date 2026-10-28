@@ -23,12 +23,14 @@ class GIMNode(Node):
 
         self.control_vals = []
 
+        self.axis_clients = []
+
         for i in range(10):
             self.control_vals.append(self.create_publisher(ControlMessage, f'/odrive_axis{i}/control_message', 10))
 
-        self.clients = []
+        
         for i in range(10):
-            self.clients.append(self.create_client(AxisState, f'/odrive/axis{i}/set_axis_state'))
+            self.axis_clients.append(self.create_client(AxisState, f'/odrive/axis{i}/request_axis_state'))
 
         self.declare_parameter('max_chassis_vel', 1.0) # Max velocity command for the chassis in m/s
         self.declare_parameter('max_chassis_ang_vel', 0.5) # Max angular command for the chassis in rad/s
@@ -123,17 +125,21 @@ class GIMNode(Node):
 
         # middle right and left wheel Speeds (m/s)
         theta_right = (self.Vc_x + (self.constants['WBASE'] * self.omega_c))
-        theta_left = (self.Vc_x - (self.constants['WBASE'] * self.omega_c))
-        self.tank_values["Middle Left"] = theta_left
-        self.tank_values["Middle Right"] = theta_right
+        theta_left = (self.Vc_x - (self.constants['WBASE'] * self.omega_c)) 
+        self.tank_values["Middle Left"] = theta_left / CONSTANTS.WRADIUS
+        self.tank_values["Middle Right"] = theta_right / CONSTANTS.WRADIUS
 
         # Calculate the motion component vectors of each swerve
         i = 1
         for swerve in self.swerve_values:
             V_x = self.Vc_x - (self.omega_c * CONSTANTS.WHEEL_COORDINATES[i][1])
             V_y = self.omega_c * CONSTANTS.WHEEL_COORDINATES[i][0]
-            phi = math.atan2(V_y, V_x)
-            V_f = math.sqrt(V_x**2 + V_y**2)
+            phi = math.atan2(V_y, V_x) / (2 * math.pi)
+            V_f = math.sqrt(V_x**2 + V_y**2) / (CONSTANTS.WRADIUS)
+            if phi > .25:
+                phi -= .5; V_f = -V_f
+            elif phi < -.25:
+                phi += 0.5; V_f = -V_f
             self.swerve_values[swerve] = [V_x, V_y, phi, V_f]
             i+=1
 

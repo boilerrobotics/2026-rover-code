@@ -33,12 +33,12 @@ class GIMNode(Node):
 
         self.status_subs = []
 
-        self.timers = []
+        #self.timers = []
 
         for i in range(10):
             self.control_vals.append(self.create_publisher(ControlMessage, f'/odrive_axis{i}/control_message', 10))
-            self.status_subs.append(self.create_subscription(ControllerStatus,f'/odrive_axis{i}/controller_status', lambda status: self.controller_status_callback(status,f'odrive_axis{i}')))
-            self.timers.append(self.create_timer())
+            #self.status_subs.append(self.create_subscription(ControllerStatus,f'/odrive_axis{i}/controller_status', lambda status: self.controller_status_callback(status,f'odrive_axis{i}')), 10)
+            #self.timers.append(self.create_timer())
         
         for i in range(10):
             self.axis_clients.append(self.create_client(AxisState, f'/odrive/axis{i}/request_axis_state'))
@@ -93,7 +93,7 @@ class GIMNode(Node):
             self.currentreq = -1
             self.get_logger().info(f"All axis states set to {self.currentreq}")
         
-    def controller_status_callback(self, status):
+    #def controller_status_callback(self, status):
         
 
     def cmd_vel_callback(self, msg):

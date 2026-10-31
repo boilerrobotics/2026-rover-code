@@ -26,7 +26,7 @@ class ODriveTransform(Node):
 
     def srv_callback(self, request, response):
         self.state = response.axis_state
-        if (self.state != request.axis_state):
+        #if (self.state != request.axis_state):
             
 
 

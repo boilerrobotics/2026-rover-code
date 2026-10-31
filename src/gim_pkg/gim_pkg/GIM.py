@@ -37,7 +37,7 @@ class GIMNode(Node):
             self.axis_clients.append(self.create_client(AxisState, f'/odrive/axis{i}/request_axis_state'))
 
         self.declare_parameter('max_chassis_vel', 1.0) # Max velocity command for the chassis in m/s
-        self.declare_parameter('max_chassis_ang_vel', 0.5) # Max angular command for the chassis in rad/s
+        self.declare_parameter('max_chassis_ang_vel', 1.0) # Max angular command for the chassis in rad/s
         self.declare_parameter('e-stop', False) # Max velocity command for the swerve in m/s
         self.Vc_x = 0.0  # Chassis velocity in the x direction (m/s)
         self.omega_c = 0.0  # Chassis angular velocity (rad/s)

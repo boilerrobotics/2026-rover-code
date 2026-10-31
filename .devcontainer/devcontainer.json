@@ -17,7 +17,14 @@
     // Linux/macOS/Windows (see README), and Stage 1 doesn't need real network
     // discovery anyway — it's local-only mock/bag-file work.
     // "runArgs": ["--network=host"],
-    "runArgs": ["--privileged"],
+    
+    "runArgs": [
+    "--privileged"
+    ],
+    "mounts":[
+      "source=/dev/input,target=/dev/input,type=bind"
+    ],
+    
     
     "containerEnv": {
         "ROS_DOMAIN_ID": "0",

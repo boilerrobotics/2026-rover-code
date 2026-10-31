@@ -43,6 +43,9 @@ struct PriorityNode {
   }
 };
 
+// Size (length and width) of a node in dstar map
+constexpr double NODE_SIZE = 1.00;
+
 class DStar {
  private:
   // Maximum slope the robot can traverse

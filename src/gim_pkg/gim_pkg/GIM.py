@@ -21,17 +21,24 @@ class GIMNode(Node):
         self.done = True
         self.count = 0
         self.currentreq = -1
+        self.expected_states = [1, 1, 1, 1, 1, 1, 1, 1]
 
         
         self.joystick_vals = self.create_subscription(Twist, 'cmd_vel', self.cmd_vel_callback, 10) # Joystick input command
+
 
         self.control_vals = []
 
         self.axis_clients = []
 
+        self.status_subs = []
+
+        self.timers = []
+
         for i in range(10):
             self.control_vals.append(self.create_publisher(ControlMessage, f'/odrive_axis{i}/control_message', 10))
-
+            self.status_subs.append(self.create_subscription(ControllerStatus,f'/odrive_axis{i}/controller_status', lambda status: self.controller_status_callback(status,f'odrive_axis{i}')))
+            self.timers.append(self.create_timer())
         
         for i in range(10):
             self.axis_clients.append(self.create_client(AxisState, f'/odrive/axis{i}/request_axis_state'))
@@ -67,36 +74,27 @@ class GIMNode(Node):
         
 
     def req_state(self, state):
-        if (self.clients[0].axis_requested_state == state):
-            self.get_logger().info(f"Axis state already set to {state}")
-            return
         self.done = False
         self.currentreq = state
         for i in range(10):
+            self.expected_states[i] = state
             req = AxisState.Request()
             req.axis_requested_state = state
             future = self.clients[i].call_async(req)
-            future.add_done_callback(self.check_success)
+            future.add_done_callback(lambda srv: self.check_success(i, srv))
 
     def check_success(self, future):
-        if (future.result().procedure_result == 0):
+        if (future.result().procedure_result == 0 or future.result().procedure_result == 1):
             self.get_logger().info(f'Result received successfully')
             self.count += 1
-        else:
-            startTime = time.time()
-            
-            while (AxisState.Request().axis_requested_state != self.currentreq):
-                newTime = time.time()
-                if (req.axis_requested_state != 1 or req.axis_requested_state != 8 or (newTime - startTime) > 1):
-                    raise Exception(f"Timer expired or axis state error: current state {req.axis_requested_state}")
-            self.count+=1
         if (self.count == 10):
             self.done = True
             self.count = 0
             self.currentreq = -1
             self.get_logger().info(f"All axis states set to {self.currentreq}")
         
-
+    def controller_status_callback(self, status):
+        
 
     def cmd_vel_callback(self, msg):
 
@@ -115,9 +113,9 @@ class GIMNode(Node):
                 publisher.publish(ControlMessage(input_vel=0))
             return
         if (self.done is True):
-            if (msg.angular.y == 1):
+            if (msg.angular.y == 1 and self.expected_states[0] != 1):
                 self.req_state(1)
-            elif (msg.angular.x == 1):
+            elif (msg.angular.x == 1 and self.expected_states[0] != 8):
                 self.req_state(8)
 
         # Chassis forward/backward linear speed (m/s)

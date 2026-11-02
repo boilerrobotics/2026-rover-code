@@ -65,6 +65,7 @@ class DStar {
  public:
   DStar(int width, int height);
   int to_index(int x, int y);
+  pair<int, int> get_start();
   double get_elevation(int x, int y);
   double get_cost(DNode& a, DNode& b);
   vector<DNode*> get_neighbors(DNode& s);
@@ -74,6 +75,7 @@ class DStar {
   void update_start(int x, int y);
   void update_goal(int x, int y);
   void add_obstacle(int x, int y);
+  vector<pair<int, int>> next_n_locations();
   pair<int, int> next_location();
   static double heuristic(const DNode& a, const DNode& b);
   Key calculate_key(const DNode& s);

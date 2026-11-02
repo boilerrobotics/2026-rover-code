@@ -21,7 +21,9 @@ class PathPlannerNode : public rclcpp::Node {
     OBJECT = 3
   }
 
-  PathPlannerNode() : Node("path_planner_node"), mode_(MODE::IDLE) {
+  PathPlannerNode() : Node("path_planner_node") {
+    lookahead_distance_ = 10;
+
     waypoints_pub_ = this->create_publisher<nav_mags::msg::Path>("next_waypoints", 10);
     obstacles_sub_ = this->create_subscription<obstacle_interfaces::msg::ObstacleLocations>(
       "obstacle_locations", 10,
@@ -35,24 +37,32 @@ class PathPlannerNode : public rclcpp::Node {
         this->position_callback(msg);
       }
     );
-    orientation_sub_ = this->create_susbcription<Quaternion>(
+    orientation_sub_ = this->create_subscription<Quaternion>(
       "current_orientation", 10,
       [this](const Quaternion::SharedPtr msg) {
         this.orientation_callback(msg);
       }
     )
 
+    set_mode(Mode::IDLE);
   }
 
  private:
+  rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr waypoints_pub_;
+  rclcpp::Subscription<obstacle_interfaces::msg::ObstacleLocations>::SharedPtr obstacles_sub_;
+  rclcpp::Subscription<Point32>::SharedPtr position_sub_;
+  rclcpp::Subscription<Quaternion>::SharedPtr orientation_sub_;
+
   rclcpp::Subscription<Point32>::SharedPtr global_destination_sub_;
+  
   DStar dstar_planner_;
   Pose pose_;
 
-  int dstarx_;
-  int dstary_;
+  int mode_;
+  int lookahead_distance_;
 
   void set_mode(int mode) {
+    mode_ = mode;
     if (mode == 0) {
       global_destination_sub_ = this->create_subscription<Point32>(
         "global_destination", 10,
@@ -84,23 +94,32 @@ class PathPlannerNode : public rclcpp::Node {
 
   }
 
-  void position_callback(const Point32::SharedPtr msg) const {
+  void position_callback(const Point32::SharedPtr msg) {
     pose_.position.x = msg->x;
     pose_.position.y = msg->y;
 
-    if (hypot(msg->x - dstarx_, ))
+    auto [dstar_x, dstar_y] = dstar_planner_.get_start();
 
-    if ((int) msg->x != dstarx_ || msg->y != dstary_) {
-      dstar_planner_.update_start()
+    // Convert from indices to meter distances
+    double prev_x = dstar_x + 0.5;
+    double prev_y = dstar_y + 0.5;
+
+    double buffer = 0.15;
+
+    if (abs(msg->x - prev_x) > 0.5 + buffer ||
+        abs(msg->y - prev_y) > 0.5 + buffer) {
+      
+      dstar_planner_.update_start((int) msg->x, (int) msg->y);
+      publish_path();
     }
   }
 
-  void orientation_callback(const Quaternion::SharedPtr msg) const {
+  void orientation_callback(const Quaternion::SharedPtr msg) {
     pose_.orientation.x = msg->x;
     pose_.orientation.y = msg->y;
   }
 
-  void obstacles_callback(const obstacle_interfaces::msg::ObstacleLocations::SharedPtr msg) const {
+  void obstacles_callback(const obstacle_interfaces::msg::ObstacleLocations::SharedPtr msg) {
     for (Point32 location : msg->locations) {
       Point32 global = local_to_global(location->x, location->y);
       dstar_planner_.add_obstacle(global.x, global.y);
@@ -108,7 +127,7 @@ class PathPlannerNode : public rclcpp::Node {
     publish_path();
   }
 
-  void global_destination_callback(const Point32::SharedPtr msg) const {
+  void global_destination_callback(const Point32::SharedPtr msg) {
     Point32 global = local_to_global(msg->x, msg->y);
     dstar_planner_.update_goal(global.x, global.y);
     publish_path();

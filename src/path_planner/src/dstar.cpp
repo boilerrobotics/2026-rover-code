@@ -49,6 +49,10 @@ int DStar::to_index(int x, int y) {
   return y * width_ + x;
 }
 
+pair<int, int> DStar::get_start() {
+  return {start_->x, start_->y};
+}
+
 double DStar::get_elevation(int x, int y) {
   // TODO: Get elevation from lidar data
   return 0.0;
@@ -217,6 +221,43 @@ void DStar::add_obstacle(int x, int y) {
   for (DNode* s : neighbors) {
     update_vertex(*s);
   }
+}
+
+/**
+ * Gets the next n waypoints for where the rover
+ * should move; Assumes that all nodes are consistent
+ * and that the start node is set; Stops early if it
+ * reaches the waypoint.
+ */
+vector<pair<int, int>> DStar::next_n_locations(int n) {
+  DNode* curr = start_;
+  vector<pair<int, int>> waypoints;
+  for (int i = 0; i < n; i++) {
+    vector<DNode*> neighbors = get_neighbors(*curr);
+
+    double min_val = INFINITY;
+    DNode* next = nullptr;
+
+    for (DNode* s : neighbors) {
+      double cost = get_count(*curr, *s) + s->g;
+      if (cost < min_val) {
+        min_val = cost;
+        next = s;
+      }
+    }
+
+    if (min_val == INFINITY) {
+      throw runtime_error("No valid next location found.");
+    }
+
+    curr = next;
+    waypoints.push_back({curr->x, curr->y});
+
+    if (curr == end_) {
+      break;
+    }
+  }
+  return waypoints;
 }
 
 /**

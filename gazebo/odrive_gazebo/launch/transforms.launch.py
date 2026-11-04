@@ -22,19 +22,19 @@ def generate_launch_description():
         Node(
             package='odrive_gazebo',
             executable='transformer',
-            name='left_rear_steer',
+            name='right_front_steer',
             remappings=[
                 ('cmd_in', '/odrive_axis2/control_message'),
-                ('cmd_out', '/rover/left_rear/steer/cmd_pos'),
+                ('cmd_out', '/rover/right_front/steer/cmd_pos'),
             ]
         ),
         Node(
             package='odrive_gazebo',
             executable='transformer',
-            name='right_front_steer',
+            name='left_rear_steer',
             remappings=[
                 ('cmd_in', '/odrive_axis4/control_message'),
-                ('cmd_out', '/rover/right_front/steer/cmd_pos'),
+                ('cmd_out', '/rover/left_rear/steer/cmd_pos'),
             ]
         ),
         Node(
@@ -58,19 +58,19 @@ def generate_launch_description():
         Node(
             package='odrive_gazebo',
             executable='transformer',
-            name='left_rear_wheel',
+            name='right_front_wheel',
             remappings=[
                 ('cmd_in', '/odrive_axis3/control_message'),
-                ('cmd_out', '/rover/left_rear/wheel/cmd_vel'),
+                ('cmd_out', '/rover/right_front/wheel/cmd_vel'),
             ]
         ),
         Node(
             package='odrive_gazebo',
             executable='transformer',
-            name='right_front_wheel',
+            name='left_rear_wheel',
             remappings=[
                 ('cmd_in', '/odrive_axis5/control_message'),
-                ('cmd_out', '/rover/right_front/wheel/cmd_vel'),
+                ('cmd_out', '/rover/left_rear/wheel/cmd_vel'),
             ]
         ),
         Node(

@@ -26,20 +26,30 @@ class GIMNode(Node):
         self.state_timeout_timer = None
         self.state_request_timeout = 3.0
         self.fatal_error = False
+        self.expected_states = [1, 1, 1, 1, 1, 1, 1, 1]
+
         
         self.joystick_vals = self.create_subscription(Twist, 'cmd_vel', self.cmd_vel_callback, 10) # Joystick input command
 
+
         self.control_vals = []
+
+        self.axis_clients = []
+
+        self.status_subs = []
+
+        #self.timers = []
 
         for i in range(10):
             self.control_vals.append(self.create_publisher(ControlMessage, f'/odrive_axis{i}/control_message', 10))
-
-        self.clients = []
+            #self.status_subs.append(self.create_subscription(ControllerStatus,f'/odrive_axis{i}/controller_status', lambda status: self.controller_status_callback(status,f'odrive_axis{i}')), 10)
+            #self.timers.append(self.create_timer())
+        
         for i in range(10):
-            self.clients.append(self.create_client(AxisState, f'/odrive/axis{i}/set_axis_state'))
+            self.axis_clients.append(self.create_client(AxisState, f'/odrive/axis{i}/request_axis_state'))
 
         self.declare_parameter('max_chassis_vel', 1.0) # Max velocity command for the chassis in m/s
-        self.declare_parameter('max_chassis_ang_vel', 0.5) # Max angular command for the chassis in rad/s
+        self.declare_parameter('max_chassis_ang_vel', 1.0) # Max angular command for the chassis in rad/s
         self.declare_parameter('e-stop', False) # Max velocity command for the swerve in m/s
         self.Vc_x = 0.0  # Chassis velocity in the x direction (m/s)
         self.omega_c = 0.0  # Chassis angular velocity (rad/s)
@@ -76,7 +86,9 @@ class GIMNode(Node):
         self.pending_axes = set(range(10))
         self.get_logger().info(f"Requesting state {state} from all ODrive axes")
 
-        self.state_timeout_timer = self.create_timer (self.state_request_timeout, self_state_request_timoout)        
+        self.state_timeout_timer = self.create_timer (self.state_request_timeout, self_state_request_timoout)
+        for i in range(10):
+            self.expected_states[i] = state
         
         for i, client in enumerate(self.clients):
             if not client.service_is_ready():
@@ -88,25 +100,19 @@ class GIMNode(Node):
             future.add_done_callback(lambda future, axis = i, req_state = state: 
                                      self.check_success(future, axis, req_state))
 
+
     def check_success(self, future):
-        if (future.result().procedure_result == 0):
+        if (future.result().procedure_result == 0 or future.result().procedure_result == 1):
             self.get_logger().info(f'Result received successfully')
             self.count += 1
-        else:
-            startTime = time.time()
-            
-            while (AxisState.Request().axis_requested_state != self.currentreq):
-                newTime = time.time()
-                if (req.axis_requested_state != 1 or req.axis_requested_state != 8 or (newTime - startTime) > 1):
-                    raise Exception(f"Timer expired or axis state error: current state {req.axis_requested_state}")
-            self.count += 1
+
         if (self.count == 10):
             self.done = True
             self.count = 0
             self.currentreq = -1
             self.get_logger().info(f"All axis states set to {self.currentreq}")
-        ### Blah blah blah
-
+        
+    #def controller_status_callback(self, status):
 
     def cmd_vel_callback(self, msg):
 
@@ -125,9 +131,9 @@ class GIMNode(Node):
                 publisher.publish(ControlMessage(input_vel=0))
             return
         if (self.done is True):
-            if (msg.angular.y == 1):
+            if (msg.angular.y == 1 and self.expected_states[0] != 1):
                 self.req_state(1)
-            elif (msg.angular.x == 1):
+            elif (msg.angular.x == 1 and self.expected_states[0] != 8):
                 self.req_state(8)
 
         # Chassis forward/backward linear speed (m/s)
@@ -155,17 +161,21 @@ class GIMNode(Node):
 
         # middle right and left wheel Speeds (m/s)
         theta_right = (self.Vc_x + (self.constants['WBASE'] * self.omega_c))
-        theta_left = (self.Vc_x - (self.constants['WBASE'] * self.omega_c))
-        self.tank_values["Middle Left"] = theta_left
-        self.tank_values["Middle Right"] = theta_right
+        theta_left = (self.Vc_x - (self.constants['WBASE'] * self.omega_c)) 
+        self.tank_values["Middle Left"] = theta_left / CONSTANTS.WRADIUS
+        self.tank_values["Middle Right"] = theta_right / CONSTANTS.WRADIUS
 
         # Calculate the motion component vectors of each swerve
         i = 1
         for swerve in self.swerve_values:
             V_x = self.Vc_x - (self.omega_c * CONSTANTS.WHEEL_COORDINATES[i][1])
             V_y = self.omega_c * CONSTANTS.WHEEL_COORDINATES[i][0]
-            phi = math.atan2(V_y, V_x)
-            V_f = math.sqrt(V_x**2 + V_y**2)
+            phi = math.atan2(V_y, V_x) / (2 * math.pi)
+            V_f = math.sqrt(V_x**2 + V_y**2) / (CONSTANTS.WRADIUS)
+            if phi > .25:
+                phi -= .5; V_f = -V_f
+            elif phi < -.25:
+                phi += 0.5; V_f = -V_f
             self.swerve_values[swerve] = [V_x, V_y, phi, V_f]
             i+=1
 

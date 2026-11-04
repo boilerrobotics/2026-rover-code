@@ -17,20 +17,20 @@
   <xacro:property name="PI" value="3.14159265359"/>
 
   <!-- Chassis -->
-  <xacro:property name="chassis_l" value="0.60"/>
-  <xacro:property name="chassis_w" value="0.40"/>
+  <xacro:property name="chassis_l" value="0.90"/>
+  <xacro:property name="chassis_w" value="0.80"/>
   <xacro:property name="chassis_h" value="0.15"/>
   <xacro:property name="chassis_m" value="15.0"/>
 
   <!-- Wheels -->
-  <xacro:property name="wheel_r" value="0.10"/>
+  <xacro:property name="wheel_r" value="0.127"/>
   <xacro:property name="wheel_w" value="0.08"/>
   <xacro:property name="wheel_m" value="0.8"/>
 
   <!-- Drivetrain geometry (edit these to match your kinematics controller) -->
-  <xacro:property name="wheelbase" value="0.80"/>   <!-- front axle to rear axle -->
+  <xacro:property name="wheelbase" value="0.90"/>   <!-- front axle to rear axle -->
   <xacro:property name="middle_x"  value="0.0"/>    <!-- middle axle position along x -->
-  <xacro:property name="wheel_y"   value="0.31"/>   <!-- wheel center lateral offset (track = 2 * this) -->
+  <xacro:property name="wheel_y"   value="0.45"/>   <!-- wheel center lateral offset (track = 2 * this) -->
   <xacro:property name="wheel_z"   value="0.25"/>   <!-- wheel center height below base_link -->
   <xacro:property name="steer_to_wheel" value="0.05"/>  <!-- steering axis to wheel center, vertical -->
   <xacro:property name="arm_z"     value="-0.05"/>  <!-- height of the mounting arms on the chassis -->

@@ -105,7 +105,7 @@ class GIMNode(Node):
             self.count = 0
             self.currentreq = -1
             self.get_logger().info(f"All axis states set to {self.currentreq}")
-        
+        ### Blah blah blah
 
 
     def cmd_vel_callback(self, msg):

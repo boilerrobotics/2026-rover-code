@@ -26,16 +26,15 @@ class GIMNode(Node):
         self.state_timeout_timer = None
         self.state_request_timeout = 3.0
         self.fatal_error = False
-        self.expected_states = [1, 1, 1, 1, 1, 1, 1, 1]
-
+        self.expected_states = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
         
         self.joystick_vals = self.create_subscription(Twist, 'cmd_vel', self.cmd_vel_callback, 10) # Joystick input command
-
+        
+        for i in range(10):
+            self.create_subscription(ControllerStatus, f'/odrive/axis{i}/controller_status', lambda msg: self.controller_status_callback(i, msg), 10)
 
         self.control_vals = []
-
         self.axis_clients = []
-
         self.status_subs = []
 
         #self.timers = []
@@ -101,7 +100,10 @@ class GIMNode(Node):
                                      self.check_success(future, axis, req_state))
 
 
-    def check_success(self, future):
+    def check_success(self, future, axis, req_state):
+        if self.fatal_error:
+            return
+
         if (future.result().procedure_result == 0 or future.result().procedure_result == 1):
             self.get_logger().info(f'Result received successfully')
             self.count += 1
@@ -112,7 +114,13 @@ class GIMNode(Node):
             self.currentreq = -1
             self.get_logger().info(f"All axis states set to {self.currentreq}")
         
-    #def controller_status_callback(self, status):
+    def controller_status_callback(self, index, status):
+        if self.expected_states[index] == status:
+            return
+        else:
+            self.fatal_shutdown(f"ODrive axis{index} entered an unexpected state." 
+                                f"Expected: {self.expected_states[index]}, " f"Actual: {status}")
+
 
     def cmd_vel_callback(self, msg):
 

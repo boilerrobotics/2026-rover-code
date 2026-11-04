@@ -19,6 +19,7 @@ class GIMNode(Node):
         super().__init__('gim_node')
         self.e_stop = False
         self.control_vals = []
+        self.axis_states = [1] * 10
         self.done = True
         self.count = 0
         self.currentreq = -1
@@ -26,12 +27,13 @@ class GIMNode(Node):
         self.state_timeout_timer = None
         self.state_request_timeout = 3.0
         self.fatal_error = False
-        self.expected_states = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+        self.watchlist = [False] * 10
+        self.watchlist_timer = [None] * 10
         
         self.joystick_vals = self.create_subscription(Twist, 'cmd_vel', self.cmd_vel_callback, 10) # Joystick input command
-        
+
         for i in range(10):
-            self.create_subscription(ControllerStatus, f'/odrive/axis{i}/controller_status', lambda msg: self.controller_status_callback(i, msg), 10)
+            self.create_subscription(ControllerStatus, f'/odrive/axis{i}/axis_state', lambda msg, motor=i: self.axis_state_callback(msg, motor), 10)
 
         self.control_vals = []
         self.axis_clients = []
@@ -45,7 +47,7 @@ class GIMNode(Node):
             #self.timers.append(self.create_timer())
         
         for i in range(10):
-            self.axis_clients.append(self.create_client(AxisState, f'/odrive/axis{i}/request_axis_state'))
+            self.axis_clients.append(self.create_client(ControllerStatus, f'/odrive/axis{i}/request_axis_state'))
 
         self.declare_parameter('max_chassis_vel', 1.0) # Max velocity command for the chassis in m/s
         self.declare_parameter('max_chassis_ang_vel', 1.0) # Max angular command for the chassis in rad/s
@@ -100,26 +102,38 @@ class GIMNode(Node):
                                      self.check_success(future, axis, req_state))
 
 
-    def check_success(self, future, axis, req_state):
-        if self.fatal_error:
-            return
 
+    def check_success(self, future, axis,):
         if (future.result().procedure_result == 0 or future.result().procedure_result == 1):
             self.get_logger().info(f'Result received successfully')
-            self.count += 1
+            if (future.result().procedure_result == 0):
+                self.count += 1
+            if (future.result().procedure_result == 1):
+                self.watchlist[axis] = True
+                self.watchlist_timer[axis] = time.time()
 
         if (self.count == 10):
             self.done = True
             self.count = 0
             self.currentreq = -1
             self.get_logger().info(f"All axis states set to {self.currentreq}")
-        
-    def controller_status_callback(self, index, status):
-        if self.expected_states[index] == status:
-            return
-        else:
-            self.fatal_shutdown(f"ODrive axis{index} entered an unexpected state." 
-                                f"Expected: {self.expected_states[index]}, " f"Actual: {status}")
+
+    def axis_state_callback(self, msg, motor):
+        axis_state = msg.axis_state
+        if (axis_state != 1 and axis_state != 8):
+            raise ValueError(f"Odrive axis {motor}: unexpected axis state {axis_state}")
+        if (axis_state != self.axis_states[motor]):
+            self.watchlist[motor] = False;
+            self.watchlist_timer[motor] = None;
+            self.axis_states[motor] = axis_state
+            self.count+= 1
+        if self.watchlist_timer[motor] is not None and time.time() - self.watchlist_timer[motor] > self.watchlist_timeout:
+            raise ValueError(f"Odrive axis {motor}: watchlist timeout exceeded")
+        if (self.count == 10):
+            self.done = True
+            self.count = 0
+            self.currentreq = -1
+            self.get_logger().info(f"All axis states set to {self.currentreq}")
 
 
     def cmd_vel_callback(self, msg):

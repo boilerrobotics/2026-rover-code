@@ -4,6 +4,7 @@ from geometry_msgs.msg import Twist
 from odrive_can.srv import AxisState
 import time
 
+from rclpy.executors import ExternalShutdownException 
 from odrive_can.msg import ControlMessage, ControllerStatus, ODriveStatus
 
 
@@ -21,7 +22,10 @@ class GIMNode(Node):
         self.done = True
         self.count = 0
         self.currentreq = -1
-
+        self.pending_axes = set()
+        self.state_timeout_timer = None
+        self.state_request_timeout = 3.0
+        self.fatal_error = False
         
         self.joystick_vals = self.create_subscription(Twist, 'cmd_vel', self.cmd_vel_callback, 10) # Joystick input command
 
@@ -65,16 +69,24 @@ class GIMNode(Node):
         
 
     def req_state(self, state):
-        if (self.clients[0].axis_requested_state == state):
-            self.get_logger().info(f"Axis state already set to {state}")
+        if self.fatal_error or not self.done:
             return
         self.done = False
         self.currentreq = state
-        for i in range(10):
+        self.pending_axes = set(range(10))
+        self.get_logger().info(f"Requesting state {state} from all ODrive axes")
+
+        self.state_timeout_timer = self.create_timer (self.state_request_timeout, self_state_request_timoout)        
+        
+        for i, client in enumerate(self.clients):
+            if not client.service_is_ready():
+                self.fatal_shutdown(f"Odrive axis {i}: state service is unavailable")
+                return
             req = AxisState.Request()
             req.axis_requested_state = state
-            future = self.clients[i].call_async(req)
-            future.add_done_callback(self.check_success)
+            future = self.client.call_async(req)
+            future.add_done_callback(lambda future, axis = i, req_state = state: 
+                                     self.check_success(future, axis, req_state))
 
     def check_success(self, future):
         if (future.result().procedure_result == 0):
@@ -87,7 +99,7 @@ class GIMNode(Node):
                 newTime = time.time()
                 if (req.axis_requested_state != 1 or req.axis_requested_state != 8 or (newTime - startTime) > 1):
                     raise Exception(f"Timer expired or axis state error: current state {req.axis_requested_state}")
-            self.count+=1
+            self.count += 1
         if (self.count == 10):
             self.done = True
             self.count = 0

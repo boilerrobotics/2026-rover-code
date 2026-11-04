@@ -21,9 +21,9 @@
     "runArgs": [
     "--privileged"
     ],
-    "mounts":[
-      "source=/dev/input,target=/dev/input,type=bind"
-    ],
+    // "mounts":[
+    //   "source=/dev/input,target=/dev/input,type=bind"
+    // ],
     
     
     "containerEnv": {

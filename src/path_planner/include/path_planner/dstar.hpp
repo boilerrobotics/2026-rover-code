@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include <math.h>
 #include <queue>
 
 using namespace std;
@@ -74,8 +75,9 @@ class DStar {
   void compute_shortest_path();
   void update_start(int x, int y);
   void update_goal(int x, int y);
-  void add_obstacle(int x, int y);
-  vector<pair<int, int>> next_n_locations();
+  void add_penalty(int x, int y, int penalty);
+  bool add_obstacle(int x, int y);
+  vector<pair<int, int>> next_n_locations(int n);
   pair<int, int> next_location();
   static double heuristic(const DNode& a, const DNode& b);
   Key calculate_key(const DNode& s);

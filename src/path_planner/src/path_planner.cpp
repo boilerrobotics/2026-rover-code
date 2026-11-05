@@ -91,7 +91,9 @@ class PathPlannerNode : public rclcpp::Node {
   }
 
   void publish_path() {
-
+    vector<pair<int, int>> waypoints = dstar_planner_.next_n_locations(lookahead_distance_);
+    nav_msgs::msgs::Path path = nav_msgs::msgs::Path();
+    path.poses = 
   }
 
   void position_callback(const Point32::SharedPtr msg) {

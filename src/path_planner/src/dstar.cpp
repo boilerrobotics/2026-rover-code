@@ -29,7 +29,7 @@
 #include <iostream>
 #include <tuple>
 
-#include "path_planner/dstar.hpp"
+#include "../include/path_planner/dstar.hpp"
 
 using namespace std;
 
@@ -207,10 +207,20 @@ void DStar::update_goal(int x, int y) {
   open_list_.push({k, goal_, ++goal_->version});
 }
 
-void DStar::add_obstacle(int x, int y) {
+void DStar::add_penalty(int x, int y, int penalty) {
+  DNode* u = &map_[to_index(x, y)];
+  u->z += penalty;
+}
+
+/**
+ * Returns true if the new obstacle is added;
+ * otherwise obstacle already exists-->no replan
+ * needed.
+ */
+bool DStar::add_obstacle(int x, int y) {
   DNode* u = &map_[to_index(x, y)];
 
-  if (u->z == INFINITY) return;
+  if (u->z == INFINITY) return false;
 
   u->z = INFINITY;
   u->g = INFINITY;
@@ -221,6 +231,8 @@ void DStar::add_obstacle(int x, int y) {
   for (DNode* s : neighbors) {
     update_vertex(*s);
   }
+
+  return true;
 }
 
 /**
@@ -239,7 +251,7 @@ vector<pair<int, int>> DStar::next_n_locations(int n) {
     DNode* next = nullptr;
 
     for (DNode* s : neighbors) {
-      double cost = get_count(*curr, *s) + s->g;
+      double cost = get_cost(*curr, *s) + s->g;
       if (cost < min_val) {
         min_val = cost;
         next = s;
@@ -253,7 +265,7 @@ vector<pair<int, int>> DStar::next_n_locations(int n) {
     curr = next;
     waypoints.push_back({curr->x, curr->y});
 
-    if (curr == end_) {
+    if (curr == goal_) {
       break;
     }
   }

@@ -139,6 +139,8 @@ class GIMNode(Node):
     def cmd_vel_callback(self, msg):
 
         #checks for emergency stop button press first
+        if (self.e_stop is True and e-stop button not pressed):
+            return
 
         #Needs E-stop button input to be properly integrated
         if (e-stop button pressed):

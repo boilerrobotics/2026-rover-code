@@ -19,6 +19,7 @@ class GIMNode(Node):
         super().__init__('gim_node')
         self.e_stop = False
         self.control_vals = []
+        self.axis_state_subscribers = []
         self.axis_states = [1] * 10
         self.done = True
         self.count = 0
@@ -33,7 +34,7 @@ class GIMNode(Node):
         self.joystick_vals = self.create_subscription(Twist, 'cmd_vel', self.cmd_vel_callback, 10) # Joystick input command
 
         for i in range(10):
-            self.create_subscription(ControllerStatus, f'/odrive/axis{i}/axis_state', lambda msg, motor=i: self.axis_state_callback(msg, motor), 10)
+            self.axis_state_subscribers.append(self.create_subscription(ControllerStatus, f'/odrive/axis{i}/axis_state', lambda msg, motor=i: self.axis_state_callback(msg, motor), 10))
 
         self.control_vals = []
         self.axis_clients = []
@@ -80,7 +81,7 @@ class GIMNode(Node):
         
 
     def req_state(self, state):
-        if self.fatal_error or not self.done:
+        if self.fatal_error:
             return
         self.done = False
         self.currentreq = state
@@ -135,23 +136,20 @@ class GIMNode(Node):
             self.currentreq = -1
             self.get_logger().info(f"All axis states set to {self.currentreq}")
 
-
     def cmd_vel_callback(self, msg):
 
         #checks for emergency stop button press first
 
-
-        #if (e-stop button pressed):
-            #if (self.e_stop is False):
-                #self.e_stop = True
-            #else:
-                #self.e_stop = False
-
-        if (self.get_parameter('e-stop').get_parameter_value().bool_value):
-            self.req_state(1, True)
-            for publisher in self.control_vals:
-                publisher.publish(ControlMessage(input_vel=0))
-            return
+        #Needs E-stop button input to be properly integrated
+        if (e-stop button pressed):
+            if (self.e_stop is False):
+                self.e_stop = True
+                self.state_request_timeout = 1.0
+                self.req_state(1)
+                # Should probably add a timer to prevent accidentally disabling the emergency stop for a short period
+            else:
+                self.e_stop = False
+                self.state_request_timeout = 3.0
         if (self.done is True):
             if (msg.angular.y == 1 and self.expected_states[0] != 1):
                 self.req_state(1)

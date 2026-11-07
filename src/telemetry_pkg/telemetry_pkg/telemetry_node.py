@@ -143,12 +143,12 @@ class TelemetryNode(Node):
         
            
         # Testing what telemetry data looks like and right now everything is empty :()
-        #print(f"Publishing telemetry data: average_voltage={voltage_sum/8}\n, average_current={current_sum/8}\n, estimated_pos={estimated_pos}\n, estimated_vel={estimated_vel}\n, active_errors={active_errors}\n")
+        #print(f"Publishing telemetry data: average_voltage={voltage_sum/10}\n, average_current={current_sum/10}\n, estimated_pos={estimated_pos}\n, estimated_vel={estimated_vel}\n, active_errors={active_errors}\n")
         #print("Length of Estimated Pos: ",len(estimated_pos), "\nLength of Estimated Vel: ", len(estimated_vel))
 
         self.telemetry_publisher.publish(TelemetryData(
-            average_voltage=voltage_sum/8, 
-            average_current=current_sum/8, 
+            average_voltage=voltage_sum/10, 
+            average_current=current_sum/10, 
             estimated_pos=estimated_pos, 
             estimated_vel=estimated_vel, 
             active_errors=active_errors))

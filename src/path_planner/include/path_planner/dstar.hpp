@@ -68,6 +68,7 @@ class DStar {
   int to_index(int x, int y);
   pair<int, int> get_start();
   double get_elevation(int x, int y);
+  double get_g(int x, int y);
   double get_cost(DNode& a, DNode& b);
   vector<DNode*> get_neighbors(DNode& s);
   bool is_consistent(DNode& s);

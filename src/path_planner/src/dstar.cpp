@@ -58,6 +58,9 @@ double DStar::get_elevation(int x, int y) {
   return 0.0;
 }
 
+double DStar::get_g(int x, int y) {
+  return map_[to_index(x, y)].g;
+}
 /**
  * Returns cost to go from a to b
  * Considers euclidean and vertical

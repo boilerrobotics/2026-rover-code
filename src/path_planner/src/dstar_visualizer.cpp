@@ -48,7 +48,7 @@ int main() {
   set<pair<int, int>> all_obstacles;
   set<pair<int, int>> known_obstacles;
 
-  int num_obstacles = 200;
+  int num_obstacles = 400;
   while (all_obstacles.size() < num_obstacles) {
     int obstacle_x = rand() % width;
     int obstacle_y = rand() % height;
@@ -87,9 +87,9 @@ int main() {
         }
       }
     }
-    if (found_obstacle) {
+    // if (found_obstacle) {
       dstar_planner_.compute_shortest_path();
-    }
+    // }
 
     // Drawing map
     clear_screen();
@@ -99,22 +99,43 @@ int main() {
           cout << BG_SCAN;
         }
         if (x == start_x && y == start_y) {
-          cout << GREEN << "S";
+          cout << GREEN << "SSS";
         } else if (x == goal_x && y == goal_y) {
-          cout << RED << "G";
+          cout << RED << "GGG";
         } else if (x == curr_x && y == curr_y) {
-          cout << CYAN << "R";
+          cout << CYAN << "RRR";
         } else if (known_obstacles.count({x,  y})) {
-          cout << GRAY << "#";
+          cout << GRAY << "###";
         } else if (visited.count({x, y})) {
-          cout << BLUE << ".";
+          int num = round(dstar_planner_.get_g(x, y));
+          string temp = to_string(num);
+          if (num < 0) {
+            temp = "INF";
+          } else {
+            while (temp.size() < 3) {
+              temp += ".";
+            }
+          }
+          cout << BLUE << temp;
         } else {
-          cout << " ";
+          int num = round(dstar_planner_.get_g(x, y));
+          string temp = to_string(num);
+          if (num < 0) {
+            temp = "INF";
+          } else {
+            while (temp.size() < 3) {
+              temp += ".";
+            }
+          }
+          cout << temp;
         }
         cout << RESET;
       }
       cout << endl;
     }
+
+    string tp;
+    cin >> tp;
     usleep(100000);
 
     // Computing next step
@@ -138,7 +159,10 @@ int main() {
 
       path.push({curr_x, curr_y});
     } catch (...) {
+      cout << "Error ";
+
       dstar_planner_.add_obstacle(curr_x, curr_y);
+      all_obstacles.insert({curr_x, curr_y});
 
       if (path.size() >= 2) {
         path.pop();

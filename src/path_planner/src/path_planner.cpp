@@ -7,6 +7,7 @@
 #include "geometry_msgs/msg/point32.hpp"
 #include "geometry_msgs/msg/quaternion.hpp"
 #include "geometry_msgs/msg/pose.hpp"
+#include "geometry_msgs/msg/pose_stamped.hpp"
 #include "obstacle_interfaces/msg/obstacle_locations.hpp"
 
 using namespace std;
@@ -19,12 +20,12 @@ class PathPlannerNode : public rclcpp::Node {
     ARUCO = 1,
     GLOBAL = 2,
     OBJECT = 3
-  }
+  };
 
   PathPlannerNode() : Node("path_planner_node") {
     lookahead_distance_ = 10;
 
-    waypoints_pub_ = this->create_publisher<nav_mags::msg::Path>("next_waypoints", 10);
+    waypoints_pub_ = this->create_publisher<nav_msgs::msg::Path>("next_waypoints", 10);
     obstacles_sub_ = this->create_subscription<obstacle_interfaces::msg::ObstacleLocations>(
       "obstacle_locations", 10,
       [this](const obstacle_interfaces::msg::ObstacleLocations::SharedPtr msg) {
@@ -42,7 +43,7 @@ class PathPlannerNode : public rclcpp::Node {
       [this](const Quaternion::SharedPtr msg) {
         this.orientation_callback(msg);
       }
-    )
+    );
 
     set_mode(Mode::IDLE);
   }
@@ -58,12 +59,14 @@ class PathPlannerNode : public rclcpp::Node {
   DStar dstar_planner_;
   Pose pose_;
 
-  int mode_;
+  stack<pair<int, int>> path_;
+
+  Mode mode_;
   int lookahead_distance_;
 
-  void set_mode(int mode) {
+  void set_mode(Mode mode) {
     mode_ = mode;
-    if (mode == 0) {
+    if (mode == Mode::GLOBAL) {
       global_destination_sub_ = this->create_subscription<Point32>(
         "global_destination", 10,
         [this](const Point32::SharedPtr msg) {
@@ -87,13 +90,31 @@ class PathPlannerNode : public rclcpp::Node {
     double global_x = curr_x + (rel_x * cos_theta - rel_y * sin_theta);
     double global_y = curr_y + (rel_x * sin_theta + rel_y * cos_theta);
 
-    return Point32{global_x, global_y};
+    Point32 point;
+    point.x = global_x;
+    point.y = global_y;
+    return point;
   }
 
   void publish_path() {
     vector<pair<int, int>> waypoints = dstar_planner_.next_n_locations(lookahead_distance_);
-    nav_msgs::msgs::Path path = nav_msgs::msgs::Path();
-    path.poses = 
+    nav_msgs::msg::Path path_msg;
+    path_msg.header.stamp = this->now();
+    path_msg.header.frame_id = "map";
+    
+    for (auto [x, y] : waypoints) {
+      PoseStamped pose_stamped;
+      pose_stamped.header = path_msg.header;
+      
+      pose_stamped.pose.position.x = x;
+      pose_stamped.pose.position.y = y;
+
+      pose_stamped.pose.orientation.w = 1;
+
+      path_msg.poses.push_back(pose_stamped);
+    }
+
+    waypoints_pub_->publish(path_msg);
   }
 
   void position_callback(const Point32::SharedPtr msg) {
@@ -123,7 +144,7 @@ class PathPlannerNode : public rclcpp::Node {
 
   void obstacles_callback(const obstacle_interfaces::msg::ObstacleLocations::SharedPtr msg) {
     for (Point32 location : msg->locations) {
-      Point32 global = local_to_global(location->x, location->y);
+      Point32 global = local_to_global(location.x, location.y);
       dstar_planner_.add_obstacle(global.x, global.y);
     }
     publish_path();

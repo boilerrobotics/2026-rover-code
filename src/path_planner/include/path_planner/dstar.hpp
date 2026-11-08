@@ -51,7 +51,7 @@ class DStar {
  private:
   // Maximum slope the robot can traverse
   static constexpr double kMaxSlope = 10;
-  static constexpr double kEpsilon = 1e-6;
+  static constexpr double kEpsilon = 1e-9;
 
   MinPriorityQueue<PriorityNode> open_list_;
   
@@ -76,7 +76,6 @@ class DStar {
   void compute_shortest_path();
   void update_start(int x, int y);
   void update_goal(int x, int y);
-  void add_penalty(int x, int y, int penalty);
   bool add_obstacle(int x, int y);
   vector<pair<int, int>> next_n_locations(int n);
   pair<int, int> next_location();

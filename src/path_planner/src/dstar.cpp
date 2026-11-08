@@ -19,6 +19,14 @@
  * 
  * Optional minor optimizations: put ++ before variable
  * rather than after.
+ * 
+ * Order of Operations
+ * 1. After D* Lite is constructed, update_start must be
+ * called followed by update_goal
+ * 2. compute_shortest_path should be called when changes
+ * are made to start, end, or the map before next_location
+ * 3. add_obstacles must be called after update_start
+ * (or just call compute_shortest_path after add_obstacles)
  */
 
 #include <vector>
@@ -117,10 +125,8 @@ void DStar::update_vertex(DNode& u) {
   // Works because both refer to the same
   // memory in map_
   if (&u != goal_) {
-    vector<DNode*> neighbors = get_neighbors(u);
-
     u.rhs = INFINITY;
-    for (DNode* s : neighbors) {
+    for (DNode* s : get_neighbors(u)) {
       double cost = get_cost(*s, u) + s->g;
       u.rhs = min(cost, u.rhs);
     }
@@ -144,19 +150,23 @@ void DStar::update_vertex(DNode& u) {
  */
 void DStar::compute_shortest_path() {
   while (!open_list_.empty()) {
-    const auto& [k_old, u, version] = open_list_.top();
-    open_list_.pop();
+    auto [k_old, u, version] = open_list_.top();
+    
+    // Lazy Deletion Part 2: Skips outdated nodes
+    if (version != u->version) {
+      open_list_.pop();
+      continue;
+    }
 
     if (k_old >= calculate_key(*start_) &&
         is_consistent(*start_)) break;
     
-    // Lazy Deletion Part 2: Skips outdated nodes
-    if (version != u->version) continue;
+    open_list_.pop();
 
     // Outdated because of km_ update
     Key k_new = calculate_key(*u);
     if (k_old < k_new) {
-      open_list_.push({k_new, u, ++u->version});
+      open_list_.push({k_new, u, ++(u->version)});
       continue;
     }
     
@@ -164,16 +174,19 @@ void DStar::compute_shortest_path() {
     if (u->g > u->rhs) {
       u->g = u->rhs;
       u->version++;
+
+      for (DNode* s : get_neighbors(*u)) {
+        update_vertex(*s);
+      }
     }
     // Locally under-consistent -> Locally over-consistent
-    else {
+    else if (u->g < u->rhs) {
       u->g = INFINITY;
-      update_vertex(*u);
-    }
 
-    vector<DNode*> neighbors = get_neighbors(*u);
-    for (DNode* s : neighbors) {
-      update_vertex(*s);
+      for (DNode* s : get_neighbors(*u)) {
+        update_vertex(*s);
+      }
+      update_vertex(*u);
     }
   }
 }
@@ -207,12 +220,7 @@ void DStar::update_goal(int x, int y) {
   goal_->rhs = 0.0;
   
   Key k = calculate_key(*goal_);
-  open_list_.push({k, goal_, ++goal_->version});
-}
-
-void DStar::add_penalty(int x, int y, int penalty) {
-  DNode* u = &map_[to_index(x, y)];
-  u->z += penalty;
+  open_list_.push({k, goal_, ++(goal_->version)});
 }
 
 /**
@@ -230,8 +238,9 @@ bool DStar::add_obstacle(int x, int y) {
   u->rhs = INFINITY;
   u->version++;
 
-  vector<DNode*> neighbors = get_neighbors(*u);
-  for (DNode* s : neighbors) {
+  update_vertex(*u);
+
+  for (DNode* s : get_neighbors(*u)) {
     update_vertex(*s);
   }
 
@@ -245,15 +254,19 @@ bool DStar::add_obstacle(int x, int y) {
  * reaches the waypoint.
  */
 vector<pair<int, int>> DStar::next_n_locations(int n) {
+
+  if (start_ == goal_) {
+    return {{start_->x, start_->y}};
+  }
+
   DNode* curr = start_;
   vector<pair<int, int>> waypoints;
   for (int i = 0; i < n; i++) {
-    vector<DNode*> neighbors = get_neighbors(*curr);
 
     double min_val = INFINITY;
     DNode* next = nullptr;
 
-    for (DNode* s : neighbors) {
+    for (DNode* s : get_neighbors(*curr)) {
       double cost = get_cost(*curr, *s) + s->g;
       if (cost < min_val) {
         min_val = cost;
@@ -282,11 +295,15 @@ vector<pair<int, int>> DStar::next_n_locations(int n) {
  * data type; Assuming start node is set
  */
 pair<int, int> DStar::next_location() {
+
+  if (start_ == goal_) {
+    return {start_->x, start_->y};
+  }
+
   double min_val = INFINITY;
   pair<int, int> next = {start_->x, start_->y};
 
-  vector<DNode*> neighbors = get_neighbors(*start_);
-  for (DNode* s : neighbors) {
+  for (DNode* s : get_neighbors(*start_)) {
     double cost = get_cost(*start_, *s) + s->g;
     if (cost < min_val) {
       min_val = cost;

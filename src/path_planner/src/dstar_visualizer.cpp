@@ -2,9 +2,8 @@
 #include <cstdlib>
 #include <unistd.h>
 #include <set>
-#include <stack>
 #include <ctime>
-#include <map>
+#include <stdexcept>
 #include "../include/path_planner/dstar.hpp"
 
 /**
@@ -38,7 +37,7 @@ int main() {
 
   DStar dstar_planner_(width, height);
   int start_x = 3, start_y = 3;
-  int goal_x = 37, goal_y = 13;
+  int goal_x = 36, goal_y = 12;
 
   dstar_planner_.update_start(start_x, start_y);
   dstar_planner_.update_goal(goal_x, goal_y);
@@ -48,7 +47,7 @@ int main() {
   set<pair<int, int>> all_obstacles;
   set<pair<int, int>> known_obstacles;
 
-  int num_obstacles = 400;
+  int num_obstacles = 350;
   while (all_obstacles.size() < num_obstacles) {
     int obstacle_x = rand() % width;
     int obstacle_y = rand() % height;
@@ -60,14 +59,11 @@ int main() {
   }
 
   set<pair<int, int>> visited;
-  stack<pair<int, int>> path;
 
   int curr_x = start_x;
   int curr_y = start_y;
   int prev_x = -1;
   int prev_y = -1;
-  
-  path.push({curr_x, curr_y});
 
   while (curr_x != goal_x || curr_y != goal_y) {
     // Finding new obstacles
@@ -87,11 +83,13 @@ int main() {
         }
       }
     }
-    // if (found_obstacle) {
+
+    if (found_obstacle) {
       dstar_planner_.compute_shortest_path();
-    // }
+    }
 
     // Drawing map
+    
     clear_screen();
     for (int y = 0; y < height; y++) {
       for (int x = 0; x < width; x++) {
@@ -106,18 +104,11 @@ int main() {
           cout << CYAN << "RRR";
         } else if (known_obstacles.count({x,  y})) {
           cout << GRAY << "###";
-        } else if (visited.count({x, y})) {
-          int num = round(dstar_planner_.get_g(x, y));
-          string temp = to_string(num);
-          if (num < 0) {
-            temp = "INF";
-          } else {
-            while (temp.size() < 3) {
-              temp += ".";
-            }
-          }
-          cout << BLUE << temp;
         } else {
+          if (visited.count({x, y})) {
+            cout << BLUE;
+          }
+
           int num = round(dstar_planner_.get_g(x, y));
           string temp = to_string(num);
           if (num < 0) {
@@ -134,8 +125,8 @@ int main() {
       cout << endl;
     }
 
-    string tp;
-    cin >> tp;
+    // string tp;
+    // cin >> tp;
     usleep(100000);
 
     // Computing next step
@@ -147,33 +138,11 @@ int main() {
 
       auto [next_x, next_y] = dstar_planner_.next_location();
 
-      if (next_x == prev_x && next_y == prev_y) {
-        throw runtime_error("Oscillation detected");
-      }
-
-      prev_x = curr_x;
-      prev_y = curr_y;
-
       curr_x = next_x;
       curr_y = next_y;
-
-      path.push({curr_x, curr_y});
-    } catch (...) {
-      cout << "Error ";
-
-      dstar_planner_.add_obstacle(curr_x, curr_y);
-      all_obstacles.insert({curr_x, curr_y});
-
-      if (path.size() >= 2) {
-        path.pop();
-        curr_x = path.top().first;
-        curr_y = path.top().second;
-      } else {
-        throw runtime_error("No valid path");
-      }
-      
-      dstar_planner_.update_start(curr_x, curr_y);
-      dstar_planner_.compute_shortest_path();
+    } catch (runtime_error& e) {
+      cout << e.what() << endl;
+      break;
     }
   }
 }

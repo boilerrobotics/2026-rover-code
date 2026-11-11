@@ -6,3 +6,16 @@ install/
 ros_odrive/
 .vscode
 bags/
+
+# Python / YOLO Prototype
+**/venv/
+**/.venv/
+**/__pycache__/
+*.py[cod]
+.DS_Store
+
+# Roboflow datasets and training run logs
+**/Hammer-Detection-2/
+runs/
+result*.jpg
+result*.mp4

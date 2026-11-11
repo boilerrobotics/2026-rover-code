@@ -53,11 +53,18 @@ DStar::DStar(int width, int height) {
   }
 }
 
+bool DStar::is_initialized() {
+  return start_ != nullptr && goal_ != nullptr;
+}
+
 int DStar::to_index(int x, int y) {
   return y * width_ + x;
 }
 
 pair<int, int> DStar::get_start() {
+  if (start_ == nullptr) {
+    throw runtime_error("Start not set.");
+  }
   return {start_->x, start_->y};
 }
 

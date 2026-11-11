@@ -65,6 +65,7 @@ class DStar {
   double km_ = 0.0;
  public:
   DStar(int width, int height);
+  bool is_initialized();
   int to_index(int x, int y);
   pair<int, int> get_start();
   double get_elevation(int x, int y);

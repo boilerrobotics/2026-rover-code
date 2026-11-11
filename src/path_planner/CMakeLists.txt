@@ -11,9 +11,12 @@ find_package(rclcpp REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
+find_package(obstacle_interfaces REQUIRED)
 
 add_executable(path_planner src/path_planner.cpp src/dstar.cpp)
-ament_target_dependencies(path_planner rclcpp)
+ament_target_dependencies(path_planner rclcpp geometry_msgs nav_msgs obstacle_interfaces)
 
 target_include_directories(path_planner PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>

@@ -22,8 +22,16 @@ class PathPlannerNode : public rclcpp::Node {
     OBJECT = 3
   };
 
-  PathPlannerNode() : Node("path_planner_node") {
+  PathPlannerNode() : Node("path_planner_node"), dstar_planner_(1600, 1600) {
     lookahead_distance_ = 10;
+
+    this->declare_parameter("mode", 0);
+    mode_sub_ = std::make_shared<rclcpp::ParameterEventHandler>(this);
+    mode_handle_ = mode_sub_->add_parameter_callback("mode",
+      [this](const rclcpp::Parameter& msg) {
+        this->mode_callback(msg);
+      }
+    );
 
     waypoints_pub_ = this->create_publisher<nav_msgs::msg::Path>("next_waypoints", 10);
     obstacles_sub_ = this->create_subscription<obstacle_interfaces::msg::ObstacleLocations>(
@@ -41,11 +49,9 @@ class PathPlannerNode : public rclcpp::Node {
     orientation_sub_ = this->create_subscription<Quaternion>(
       "current_orientation", 10,
       [this](const Quaternion::SharedPtr msg) {
-        this.orientation_callback(msg);
+        this->orientation_callback(msg);
       }
     );
-
-    set_mode(Mode::IDLE);
   }
 
  private:
@@ -54,19 +60,20 @@ class PathPlannerNode : public rclcpp::Node {
   rclcpp::Subscription<Point32>::SharedPtr position_sub_;
   rclcpp::Subscription<Quaternion>::SharedPtr orientation_sub_;
 
+  std::shared_ptr<rclcpp::ParameterEventHandler> mode_sub_;
+  shared_ptr<rclcpp::ParameterCallbackHandle> mode_handle_;
+
   rclcpp::Subscription<Point32>::SharedPtr global_destination_sub_;
   
   DStar dstar_planner_;
   Pose pose_;
 
-  stack<pair<int, int>> path_;
-
   Mode mode_;
   int lookahead_distance_;
 
-  void set_mode(Mode mode) {
-    mode_ = mode;
-    if (mode == Mode::GLOBAL) {
+  void mode_callback(const rclcpp::Parameter& p) {
+    mode_ = (Mode) p.as_int();
+    if (mode_ == Mode::GLOBAL) {
       global_destination_sub_ = this->create_subscription<Point32>(
         "global_destination", 10,
         [this](const Point32::SharedPtr msg) {
@@ -97,6 +104,11 @@ class PathPlannerNode : public rclcpp::Node {
   }
 
   void publish_path() {
+    if (!dstar_planner_.is_initialized()) {
+      return;
+    }
+
+    dstar_planner_.compute_shortest_path();
     vector<pair<int, int>> waypoints = dstar_planner_.next_n_locations(lookahead_distance_);
     nav_msgs::msg::Path path_msg;
     path_msg.header.stamp = this->now();
@@ -121,6 +133,11 @@ class PathPlannerNode : public rclcpp::Node {
     pose_.position.x = msg->x;
     pose_.position.y = msg->y;
 
+    if (!dstar_planner_.is_initialized()) {
+      dstar_planner_.update_start((int) msg->x, (int) msg->y);
+      return;
+    }
+    
     auto [dstar_x, dstar_y] = dstar_planner_.get_start();
 
     // Convert from indices to meter distances

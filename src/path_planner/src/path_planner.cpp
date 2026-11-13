@@ -1,3 +1,10 @@
+/**
+ * TODO: Add guards to prevent obstacle updates before
+ * DStar is fully initialized. Ignore obstacle and aruco
+ * tag detection before pose is established; or determine
+ * an initial pose for the rover.
+ */
+
 #include <iostream>
 #include <tuple>
 
@@ -168,8 +175,7 @@ class PathPlannerNode : public rclcpp::Node {
   }
 
   void global_destination_callback(const Point32::SharedPtr msg) {
-    Point32 global = local_to_global(msg->x, msg->y);
-    dstar_planner_.update_goal(global.x, global.y);
+    dstar_planner_.update_goal((int) msg->x, (int) msg->y);
     publish_path();
   }
 };

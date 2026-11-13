@@ -58,6 +58,9 @@ bool DStar::is_initialized() {
 }
 
 int DStar::to_index(int x, int y) {
+  if (x < 0 || x >= width_ || y < 0 || y >= height_) {
+    throw runtime_error("Index out of bounds. Received (" + to_string(x) + "," + to_string(y) + ")");
+  }
   return y * width_ + x;
 }
 
@@ -73,9 +76,6 @@ double DStar::get_elevation(int x, int y) {
   return 0.0;
 }
 
-double DStar::get_g(int x, int y) {
-  return map_[to_index(x, y)].g;
-}
 /**
  * Returns cost to go from a to b
  * Considers euclidean and vertical
@@ -156,6 +156,9 @@ void DStar::update_vertex(DNode& u) {
  * NOTE: u is a pointer here
  */
 void DStar::compute_shortest_path() {
+  if (!is_initialized()) {
+    throw runtime_error("Not initialized before computing shortest path.");
+  }
   while (!open_list_.empty()) {
     auto [k_old, u, version] = open_list_.top();
     
@@ -211,6 +214,10 @@ void DStar::update_start(int x, int y) {
 }
 
 void DStar::update_goal(int x, int y) {
+  if (start_ == nullptr) {
+    throw runtime_error("Start not set before updating goal.");
+  }
+
   DNode* new_goal = &map_[to_index(x, y)];
   if (new_goal == goal_) return;
   goal_ = new_goal;

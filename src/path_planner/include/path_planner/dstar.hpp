@@ -63,23 +63,24 @@ class DStar {
   DNode* goal_ = nullptr;
 
   double km_ = 0.0;
+
+  int to_index(int x, int y);
+  double get_elevation(int x, int y);
+  static double heuristic(const DNode& a, const DNode& b);
+  Key calculate_key(const DNode& s);
+  bool is_consistent(DNode& s);
+  void update_vertex(DNode& u);
+  vector<DNode*> get_neighbors(DNode& s);
+  double get_cost(DNode& a, DNode& b);
+  
  public:
   DStar(int width, int height);
   bool is_initialized();
-  int to_index(int x, int y);
   pair<int, int> get_start();
-  double get_elevation(int x, int y);
-  double get_g(int x, int y);
-  double get_cost(DNode& a, DNode& b);
-  vector<DNode*> get_neighbors(DNode& s);
-  bool is_consistent(DNode& s);
-  void update_vertex(DNode& u);
   void compute_shortest_path();
   void update_start(int x, int y);
   void update_goal(int x, int y);
   bool add_obstacle(int x, int y);
   vector<pair<int, int>> next_n_locations(int n);
   pair<int, int> next_location();
-  static double heuristic(const DNode& a, const DNode& b);
-  Key calculate_key(const DNode& s);
 };

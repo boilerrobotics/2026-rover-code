@@ -1,2 +1,1 @@
-# Locations in relative coordinates
-geometry_msgs/Point32[] locations
+geometry_msgs/Polygon[] locations

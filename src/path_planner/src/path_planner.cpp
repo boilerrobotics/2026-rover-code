@@ -1,10 +1,3 @@
-/**
- * TODO: Add guards to prevent obstacle updates before
- * DStar is fully initialized. Ignore obstacle and aruco
- * tag detection before pose is established; or determine
- * an initial pose for the rover.
- */
-
 #include <iostream>
 #include <tuple>
 
@@ -78,6 +71,9 @@ class PathPlannerNode : public rclcpp::Node {
   Mode mode_;
   int lookahead_distance_;
 
+  bool has_position_ = false;
+  bool has_orientation_ = false;
+
   void mode_callback(const rclcpp::Parameter& p) {
     mode_ = (Mode) p.as_int();
     if (mode_ == Mode::GLOBAL) {
@@ -140,6 +136,8 @@ class PathPlannerNode : public rclcpp::Node {
     pose_.position.x = msg->x;
     pose_.position.y = msg->y;
 
+    has_position_ = true;
+
     if (!dstar_planner_.is_initialized()) {
       dstar_planner_.update_start((int) msg->x, (int) msg->y);
       return;
@@ -164,9 +162,15 @@ class PathPlannerNode : public rclcpp::Node {
   void orientation_callback(const Quaternion::SharedPtr msg) {
     pose_.orientation.x = msg->x;
     pose_.orientation.y = msg->y;
+
+    has_orientation_ = true;
   }
 
   void obstacles_callback(const obstacle_interfaces::msg::ObstacleLocations::SharedPtr msg) {
+    if (!has_orientation_ || !has_position_) {
+      return;
+    }
+
     for (Point32 location : msg->locations) {
       Point32 global = local_to_global(location.x, location.y);
       dstar_planner_.add_obstacle(global.x, global.y);

@@ -50,7 +50,7 @@ class JointManager(Node):
         else:
             message = ControlMessage()
             motor_position = msg.x / 360
-            message.position = motor_position
+            message.input_pos = motor_position
             self.publish_control_message(10, message)
 
     def req_state(self, state):
@@ -83,7 +83,6 @@ class JointManager(Node):
             if (future.result().procedure_result == 0):
                 self.count += 1
             if (future.result().procedure_result == 1):
-                self.watchlist[axis] = True
                 self.watchlist_timer[axis] = time.time()
 
         if (self.count == 10):
@@ -99,11 +98,10 @@ class JointManager(Node):
         if (axis_state != 1 and axis_state != 8):
             raise ValueError(f"Odrive axis {motor}: unexpected axis state {axis_state}")
         if (axis_state != self.axis_states[motor]):
-            self.watchlist[motor] = False;
-            self.watchlist_timer[motor] = None;
+            self.watchlist_timer[motor] = None
             self.axis_states[motor] = axis_state
             self.count+= 1
-        if self.watchlist_timer[motor] is not None and time.time() - self.watchlist_timer[motor] > self.watchlist_timeout:
+        if (self.watchlist_timer[motor] is not None and time.time() - self.watchlist_timer[motor] > self.watchlist_timeout):
             raise ValueError(f"Odrive axis {motor}: watchlist timeout exceeded")
         if (self.count == 10):
             self.done = True

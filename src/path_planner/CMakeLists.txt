@@ -14,9 +14,17 @@ find_package(rclcpp REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(obstacle_interfaces REQUIRED)
+find_package(aruco_interfaces REQUIRED)
 
 add_executable(path_planner src/path_planner.cpp src/dstar.cpp)
-ament_target_dependencies(path_planner rclcpp geometry_msgs nav_msgs obstacle_interfaces)
+ament_target_dependencies(
+  path_planner
+  rclcpp
+  geometry_msgs
+  nav_msgs
+  obstacle_interfaces
+  aruco_interfaces
+)
 
 target_include_directories(path_planner PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>

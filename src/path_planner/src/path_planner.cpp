@@ -1,3 +1,7 @@
+/**
+ * TODO: Potentially collapse mode_ and the mode parameter
+ */
+
 #include <iostream>
 #include <tuple>
 
@@ -9,6 +13,7 @@
 #include "geometry_msgs/msg/pose.hpp"
 #include "geometry_msgs/msg/pose_stamped.hpp"
 #include "obstacle_interfaces/msg/obstacle_locations.hpp"
+#include "aruco_interfaces/msg/aruco_locations.hpp"
 
 using namespace std;
 using namespace geometry_msgs::msg;
@@ -52,6 +57,20 @@ class PathPlannerNode : public rclcpp::Node {
         this->orientation_callback(msg);
       }
     );
+
+    global_destination_sub_ = this->create_subscription<Point32>(
+      "global_destination", 10,
+      [this](const Point32::SharedPtr msg) {
+        this->global_destination_callback(msg);
+      }
+    );
+
+    aruco_locations_sub_ = this->create_subscription<aruco_interfaces::msg::ArucoLocations>(
+      "aruco_locations", 10,
+      [this](const aruco_interfaces::msg::ArucoLocations::SharedPtr msg) {
+        this->aruco_locations_callback(msg);
+      }
+    );
   }
 
  private:
@@ -64,6 +83,7 @@ class PathPlannerNode : public rclcpp::Node {
   shared_ptr<rclcpp::ParameterCallbackHandle> mode_handle_;
 
   rclcpp::Subscription<Point32>::SharedPtr global_destination_sub_;
+  rclcpp::Subscription<aruco_interfaces::msg::ArucoLocations>::SharedPtr aruco_locations_sub_;
   
   DStar dstar_planner_;
   Pose pose_;
@@ -76,14 +96,6 @@ class PathPlannerNode : public rclcpp::Node {
 
   void mode_callback(const rclcpp::Parameter& p) {
     mode_ = (Mode) p.as_int();
-    if (mode_ == Mode::GLOBAL) {
-      global_destination_sub_ = this->create_subscription<Point32>(
-        "global_destination", 10,
-        [this](const Point32::SharedPtr msg) {
-          this->global_destination_callback(msg);
-        }
-      );
-    }
   }
 
   Point32 local_to_global(double rel_x, double rel_y) {
@@ -167,9 +179,7 @@ class PathPlannerNode : public rclcpp::Node {
   }
 
   void obstacles_callback(const obstacle_interfaces::msg::ObstacleLocations::SharedPtr msg) {
-    if (!has_orientation_ || !has_position_) {
-      return;
-    }
+    if (!has_orientation_ || !has_position_) return;
 
     for (Point32 location : msg->locations) {
       Point32 global = local_to_global(location.x, location.y);
@@ -179,9 +189,27 @@ class PathPlannerNode : public rclcpp::Node {
   }
 
   void global_destination_callback(const Point32::SharedPtr msg) {
+    if (mode_ != Mode::GLOBAL) return;
+
     dstar_planner_.update_goal((int) msg->x, (int) msg->y);
     publish_path();
   }
+
+  void aruco_locations_callback(const aruco_interfaces::msg::ArucoLocations::SharedPtr msg) {
+    if (mode_ != Mode::ARUCO) return;
+
+    if (!has_orientation_ || !has_position_) return;
+
+    vector<Point32> locations = msg->markers;
+    if (locations.size() == 0) return;
+
+    Point32 location = msg->markers[0];
+    location = local_to_global(location.x, location.y);
+
+    dstar_planner_.update_goal((int) location.x, (int) location.y);
+    publish_path();
+  }
+
 };
 
 int main(int argc, char* argv[])

@@ -19,6 +19,10 @@ PID2=$!
 ros2 topic pub /obstacle_locations obstacle_interfaces/msg/ObstacleLocations '{locations: [{x: 12.0, y: -7.0, z: 0.0}]}' &
 PID3=$!
 
+# Should map to coordinate (14, 30)
+ros2 topic pub /aruco_locations aruco_interfaces/msg/ArucoLocations '{markers: [{x: 10.0, y: -4.0, z: 0.0}]}' &
+PID3=$!
+
 # Facing positive y-direction
 ros2 topic pub /current_orientation geometry_msgs/msg/Quaternion '{x: 0.0, y: 1.0, z: 0.0, w: 1.0}' &
 PID4=$!

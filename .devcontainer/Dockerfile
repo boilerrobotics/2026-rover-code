@@ -1,68 +1,113 @@
-# Stage 1 dev environment: ROS2 Humble + rclpy + rviz2 + colcon
-# Uses the "desktop" flavor (not ros-base) specifically because it bundles
-# rviz2, rqt, and other GUI tools that ros-base leaves out.
+
+# Stage 1: ROS 2 Humble + Python + C++ + PCL + RViz2 + Gazebo
+
 FROM osrf/ros:humble-desktop
 
 ARG USERNAME=devuser
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 
-# --- Base tooling -------------------------------------------------------
-    RUN apt-get update && apt-get install -y --no-install-recommends \
-        python3-pip \
-        python3-colcon-common-extensions \
-        python3-rosdep \
-        python3-argcomplete \
-        git curl wget nano vim bash-completion sudo \
-        # GUI / graphics support
-        mesa-utils \
-        libgl1-mesa-dri \
-        x11-apps \
-        # extra rqt plugins (many are already in desktop, these are harmless)
-        ros-humble-rqt-common-plugins \
-        ros-humble-rqt-tf-tree \
-        ros-humble-rqt-robot-steering \
-        # rosbag2 + MCAP storage plugin
-        ros-humble-rosbag2 \
-        ros-humble-rosbag2-storage-mcap \
-        # Gazebo Fortress + ROS 2 integration (ros_gz_sim, ros_gz_bridge, ros_gz_image, ...)
-        ros-humble-ros-gz \
-        ros-humble-ros-gz-sim-demos \
-        # ros2_control + Gazebo hooks (commonly needed for robot sims; drop if unused)
-        ros-humble-gz-ros2-control \
-        ros-humble-ros2-control \
-        ros-humble-ros2-controllers \
-        && rm -rf /var/lib/apt/lists/* \
-        && pip3 install --no-cache-dir gdown mcap
+# ----------------------------------------------------------------------
+# System tools, Python, GCC/G++, CMake, and PCL
+# ----------------------------------------------------------------------
 
-# Helps Qt apps (rqt, rviz2) behave over X11 forwarding
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    # Python development
+    python3-pip \
+    python3-colcon-common-extensions \
+    python3-rosdep \
+    python3-argcomplete \
+    \
+    # General development tools
+    git \
+    curl \
+    wget \
+    nano \
+    vim \
+    bash-completion \
+    sudo \
+    \
+    # C++ development
+    build-essential \
+    gcc \
+    g++ \
+    cmake \
+    pkg-config \
+    \
+    # Point Cloud Library
+    libpcl-dev \
+    pcl-tools \
+    libeigen3-dev \
+    ros-humble-pcl-ros \
+    ros-humble-pcl-conversions \
+    \
+    # GUI / graphics support
+    mesa-utils \
+    libgl1-mesa-dri \
+    x11-apps \
+    \
+    # RQT plugins
+    ros-humble-rqt-common-plugins \
+    ros-humble-rqt-tf-tree \
+    ros-humble-rqt-robot-steering \
+    \
+    # ROS bags + MCAP
+    ros-humble-rosbag2 \
+    ros-humble-rosbag2-storage-mcap \
+    \
+    # Gazebo Fortress + ROS 2 integration
+    ros-humble-ros-gz \
+    ros-humble-ros-gz-sim-demos \
+    \
+    # ROS 2 control
+    ros-humble-gz-ros2-control \
+    ros-humble-ros2-control \
+    ros-humble-ros2-controllers \
+    \
+    && rm -rf /var/lib/apt/lists/* \
+    && pip3 install --no-cache-dir gdown mcap
+
+# ----------------------------------------------------------------------
+# GUI / graphics environment
+# ----------------------------------------------------------------------
+
 ENV QT_X11_NO_MITSHM=1
-# Only matters if you have an NVIDIA GPU + nvidia-container-toolkit
 ENV NVIDIA_DRIVER_CAPABILITIES=all
 
-# numpy + a few Python libs that come up constantly in ROS2/robotics code.
-# rclpy itself is already provided by the base ROS2 image.
+# ----------------------------------------------------------------------
+# Python scientific libraries
+# ----------------------------------------------------------------------
+
 RUN pip3 install --no-cache-dir \
     numpy \
     scipy \
     matplotlib
 
-# --- rosdep ---------------------------------------------------------------
+# ----------------------------------------------------------------------
+# Create non-root development user
+# ----------------------------------------------------------------------
 
-# --- Non-root user (VS Code / devcontainers best practice) -----------------
 RUN groupadd --gid $USER_GID $USERNAME \
     && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME \
     && echo "$USERNAME ALL=(root) NOPASSWD:ALL" > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
 
-# Source the base ROS2 environment automatically in every new shell.
-# The workspace's own install/setup.bash is sourced manually after
-# `colcon build` (see README) since its path depends on where VS Code
-# mounts the repo, which varies by repo folder name.
+# ----------------------------------------------------------------------
+# Automatically source ROS 2 Humble in every terminal
+# ----------------------------------------------------------------------
+
 RUN echo "source /opt/ros/humble/setup.bash" >> /home/$USERNAME/.bashrc
+
+# ----------------------------------------------------------------------
+# ROS dependencies
+# ----------------------------------------------------------------------
 
 USER $USERNAME
 
 RUN rosdep update
+
+# ----------------------------------------------------------------------
+# Default shell
+# ----------------------------------------------------------------------
 
 CMD ["/bin/bash"]
